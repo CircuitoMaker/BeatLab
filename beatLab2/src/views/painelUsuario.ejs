@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/painel-usuario.css">
+    <script src="/javascripts/painelUsuario.js" defer></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <header class="menuprincipal">
+        <div class="barra1"></div>
+        <section id="banner">
+           
+            <div class="banner"><a href="/home"><img src="/images/home-img/hand-1850120 1.png" alt="dj"></a>
+               <div class="banner-inf">
+                <h1>BeatLab</h1>
+                <h2>Your voice to the world!</h2>
+                <input type="text" placeholder="Search">
+                </div>                         
+        </section>
+        <section class="perfil">
+            <img class="fotoPerfil" src="/images/painelUsario-img/bottao perfil (1).png" alt="">
+            <h4 class="nomePerfil">nome do usuario</h1>            
+
+        </section>          
+    </header>  
+ 
+    
+    <main class="conteudo">
+        <section>
+            <nav class="conteudoprincipal">
+                <button class="botao">Conta</button>
+                <button class="botao">Alterar Cadastro</button>
+                <button class="botao">Historico de compras</button>          
+                      
+            </nav> 
+        </section>
+
+        <form class="conteudoprincipal1" method="post" action="/registro"> 
+            <div class="alterardados1">          
+                <h2 class="alterarDados">Alterar Dados</h2>                          
+                <input class="imput1" type="email" name="email" placeholder="Digite seu e-mail" required>                
+                <input class="imput1" type="text" name="name" placeholder="Digite seu primeiro nome" required>
+                <input class="imput1" type="text" name="surname" placeholder="Digite seu último sobrenome" required>
+                <input class="imput1" type="text" name="username" placeholder="Digite seu nome de usuario" required>
+                <button class="AlterarSenha"> Alterar senha? </button>                
+                <button type="submit" class="AlterarSenha">
+                         Salvar alteração
+                </button> 
+            </div>  
+                <div class="conteudoprincipal2">
+                    <img class="fotoPerfil" src="/images/painelUsario-img/bottao perfil (1).png" alt="">
+                    <button class="AlterarSenha"> Alterar foto? </button>
+                </div>       
+
+            </form>       
+    </main>
+
+    <footer>
+
+    </footer>
+      
+    
+</body>
+</html>

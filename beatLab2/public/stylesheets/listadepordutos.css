@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap');
+
+
+body {
+    background: linear-gradient(49.5deg, #1B1B2C 57.92%, #3C3C73 89.34%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: row nowrap;
+    justify-content: space-between;      
+    height: 13rem;
+    width: 100%;
+    top: 0%;       
+    right: 0%;
+  z-index: 100;
+}
+.barra1{
+    width: 46rem;
+    height: 3rem;
+    background-color: #08F3C9;
+    position: fixed;
+    top: 2rem;
+    left: 7rem;
+}
+.banner img{
+    width: 17rem;
+    height: 12rem;
+    position: relative;
+}
+
+.fotoPerfil {
+    width: 8rem;
+    height: 8rem;
+    position: relative;   
+
+}
+#banner .banner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: row nowrap;
+  
+}
+
+.banner-inf{
+    display: flex;
+    flex-direction: column;
+}
+.banner-inf h1{
+    font-family: 'Kantumruy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 63px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    width: 25rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+.banner-inf h2{
+    color: #08F3C9;
+    position: relative;
+    bottom: 3rem;
+    left: 2rem;
+}
+.banner-inf input{
+    background: #514869;
+box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+width: 9rem;
+height: 1.6rem;
+position: relative;
+bottom: 3.5rem;
+}
+
+.nomePerfil  {
+    font-family: 'Kantumruy';
+    font-style: normal;
+    font-weight: 30px;
+    font-size: 20px;
+    line-height: 30px;        
+    color: #FFFFFF;     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nome-lista {    
+    font-family: 'Kantumruy';
+    font-style: normal;
+    font-weight: 30px;
+    font-size: 20px;
+    line-height: 30px;        
+    color: #FFFFFF;     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.produto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    
+}
+
+.nome-artista1 {
+    color: aliceblue;
+
+}
+
+.descricao {
+    color: aliceblue;
+}
+
+.categoria {
+    color: aliceblue;
+}
+
+.preco {
+    color: aliceblue;
+}
+
+.primeiro-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #514869;
+    font-family: 'Kantumruy';    
+    font-size: 20px;
+    border-radius: 10px;    
+    position: relative;
+    justify-content: center
+
+}
+
+.segundo-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #514869;
+    font-family: 'Kantumruy';    
+    font-size: 20px;
+    border-radius: 10px;    
+    position: relative;
+    justify-content: center
+
+}
+
+.terceiro-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #514869;
+    font-family: 'Kantumruy';    
+    font-size: 20px;
+    border-radius: 10px;    
+    position: relative;
+    justify-content: center
+    
+}
+
+.quarto-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #514869;
+    font-family: 'Kantumruy';    
+    font-size: 20px;
+    border-radius: 10px;    
+    position: relative;
+    justify-content: center
+    
+}
+
+.img1 {
+    width: 17rem;
+    height: 12rem;
+    
+}
+
+.img-botao {
+     width: 3rem;
+    height: 2rem;    
+    
+}
