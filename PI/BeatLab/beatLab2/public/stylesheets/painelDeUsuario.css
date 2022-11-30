@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+body{
+    background: linear-gradient(49.5deg, #1B1B2C 57.92%, #3C3C73 89.34%);
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    justify-content: space-between;
+    margin:  1rem;
+    flex-wrap: wrap;
+}
+#player{
+    width: 17rem;
+    height: 7rem;
+    background-color: #514869;
+    border-radius: 15px;
+    box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25); 
+}
+.menu{
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ right: 25rem;
+ top: 2.5rem;
+}
+.menu a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+}
+.menu a:hover{
+    font-size: 20px;
+    color: #08F3C9;
+}
+.profile{
+    font-size: 20px;
+    width: 29rem;
+    height: 3.5rem;
+    border-bottom: .7rem solid #08F3C9;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2.9rem;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 17rem;
+    height: 10rem;
+    background-color: #514869;
+    position: relative;
+    left: 1.2rem;
+    border-radius: 15px;
+    box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25); 
+}
+#container1 button{
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 2rem;
+    background-color: #514869;
+    border-color: transparent;
+    font-size: 22px;
+    transition: 200ms;
+}
+#container1 button:hover{
+    width: 80%;
+    background-color: #08F3C9;
+    position: relative;
+    left: 1.7rem;
+    box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
+}
+#container2{
+    display: block;
+    flex-direction: row;
+    position: relative;
+    top: 0rem;
+}
+#container2 h1{
+    position: relative;
+    
+}
+.inf-profile{
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ right: 50rem;
+ top: 4rem;
+}
+.inf-profile input{
+    width: 17rem;
+    height: 1.9rem;
+    margin-bottom: 1.5rem;
+    margin-top: .3rem;
+    background: #514869;
+    box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+#password{
+    width: 12rem;
+    height: 2rem;
+    margin-bottom: 1.5rem;
+    background: #514869;
+    box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-color: transparent;
+}
+#password a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+}
+#password:hover{
+    background-color: #5449729c;
+}
+#bt-save{
+    width: 15rem;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    background: #08F3C9;
+    box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-color: transparent;
+    position: relative;
+    top: 4rem;
+    transition: 150ms;
+    font-size: 19px;
+}
+#bt-save:hover{
+    background-color: rgba(8, 243, 200, 0.705);
+}
+#container3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    right: 22rem;
+    bottom: 19rem; 
+}
+#container3 img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: relative;
+    bottom: 4.5rem;
+    right: .1rem;
+}
+.inf-img{
+    background-color: #514869;
+    width: 12rem;
+    height: 8rem;
+    box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.inf-img button{
+    position: relative;
+    bottom: 4rem;
+    left: .1rem;
+    width: 7rem;
+    height: 2rem;
+    background-color: #514869;
+    border-color: transparent;
+    font-size: 15px;
+    transition: 150ms;
+    border-radius: 15px;
+}
+.inf-img button:hover{
+    background-color: #63548bf3;
+}
+#aboutMe{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 12rem;
+    bottom: 8rem;
+}
+#aboutMe label{
+   position: relative;
+   bottom: 7.7rem;
+   right: 12rem;
+}
+#aboutMe textarea{
+    background-color: #514869;
+    color: #ffffff;
+    margin-top: .5rem;
+}
+#container4{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 24rem;
+    bottom: 25rem;
+
+}
+#card{
+    display: flex;
+    flex-direction: row;
+    width: 25rem;
+    height: 10rem;
+    background-color: #514869;
+    
+}
+#card footer{
+    text-align: justify;
+    color: #FFFFFF;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+  
+
+}
+#card span{
+    width: 8rem;
+    height: 4rem;
+    font-size: 18px;
+}
+
+#card img{
+ width: 15rem;
+height: 10rem;
+
+}
+
+
+
+
