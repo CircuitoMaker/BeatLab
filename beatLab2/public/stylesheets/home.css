@@ -490,28 +490,6 @@ display: none;
     cursor: pointer;
 }
 
-footer h1{
-    /* position: relative; */
-    top: 41rem;
-    color: #FFFFFF;
-}
-.barra-lateral1{
-    background-color: #08F3C9;
-    /* position: relative; */
-    top: 44rem;
-    height: 2rem;
-    width: 45rem;
-    right: 1rem;
-}
-.barra-lateral2{
-    background-color: #08F3C9;
-    /* position: relative; */
-    height: 2rem;
-    width: 35rem;
-    top: 42.6rem;
-    left: 83.3rem;
-    
-};
 
 
 
