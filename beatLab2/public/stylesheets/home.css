@@ -11,19 +11,18 @@ body{
 header{
     display: flex;
     flex-direction: row;
-    flex-wrap: row nowrap;
-    justify-content: space-between;
-    position: fixed ;   
+    justify-content: space-between;    
+   
     height: 8.6rem;
     width: 100%;
     top: 0%;
-    flex-wrap: wrap;
+   position: fixed;
     background:  #1B1B2C;
     right: 0%;
     z-index: 100;
     padding-top: .5rem;
 }
-.barra1{
+/* .barra1{
     width: 24.9rem;
     height: 2rem;
     background-color: #08F3C9;
@@ -32,50 +31,51 @@ header{
     left: 7rem;
     border-top-right-radius: 25px;
     animation: beatlab 1.5s alternate infinite ease-in-out;
+} */
+#banner{
+    display: flex;
+    flex-direction: column;
 }
-
 
 .banner img{
     width: 15rem;
     height: 7rem;
-    position: relative;
+    /* position: relative; */
 }
 #banner .banner{
     display: flex;
     flex-direction: row;
     flex-wrap: row nowrap;
+    
  
 }
 .banner-inf{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 .banner-inf h1{
 font-family: 'Kantumruy';
 font-style: normal;
-font-weight: 400;
 font-size: 28px;
-line-height: 63px;
-letter-spacing: 0.02em;
 color: #FFFFFF;
-width: 25rem;
-height: 3rem;
-display: flex;
-justify-content: center;
-position: relative;
-right: 9.3rem;
+background-color: #08F3C9;
+width: 10rem;
+height: 1.8rem;
+border-top-right-radius: 15px;
 
 }
 
 .banner-inf h2{
     color: #08F3C9;
-    position: relative;
-    bottom: 3rem;
-    right: .1rem;
+    font-size: 18px;
+    height: 1rem;
+    margin-top: -15px;
 }
 
 .search{
     color: white;
+    margin-top: 8px;
 }
 
 #menu{
@@ -94,7 +94,8 @@ padding: .5rem;
 }
 .menuH{
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
+    margin-top: -15px;
 }
 .menuH input{
 background: #514869;
@@ -102,7 +103,7 @@ box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
 width: 9rem;
 height: 1.6rem;
-position: relative;
+/* position: relative; */
 bottom: 3.7rem;
 left: 7rem;
 
@@ -116,13 +117,13 @@ left: 7rem;
 #menu a {
 display: block;
 padding: .5rem;
-position: relative;
+/* position: relative; */
 bottom: 4.5rem;
 }
 
 #btn-mobile{
     display: none;
-    position: relative;
+    /* position: relative; */
     bottom: 3rem;
 }
 #menu a{
@@ -139,14 +140,16 @@ bottom: 4.5rem;
 
  #profile-player{
     display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
+   flex-direction: row;
+   justify-content: flex-start;
+   /* padding-right: 30rem; */
+   align-items: center;
 
  }
  .profile{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+ 
+  
+    
  }
  .profile img{
     width: 5rem;
@@ -162,7 +165,7 @@ font-size: 14px;
 line-height: 32px;
 letter-spacing: 0.02em;
 color: #FFFFFF;
-position: relative;
+/* position: relative; */
 right: 1.5rem;
 bottom: 1rem;
 
@@ -177,32 +180,32 @@ bottom: 1rem;
     width: 20rem;
     height: 7rem;
     border-radius: 1rem;
-    text-align: center;
-    position: relative;
-    right: 43.5rem;
+    padding-right: 47.8rem;
+    /* position: relative; */
+   
    
 }
 main{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .new{
     margin: 0 auto;
     width: 25rem;
     height: 25rem;
     overflow: hidden;
-    position: relative;
-    top: 15rem;
+    padding-top: 10rem;
+   
+    
 }
 .new h1{
     background-color: #08F3C9;
-    width: 55rem;
-    height: 1.8rem;
-    position: relative;
-    right: 15rem;
-    text-align: center;
+    width:  100%;
+    height: 1.8rem;   
     font-size: 22px;
+    text-align: center;
 }
 .newMusic{
     width: 400%;
@@ -214,11 +217,11 @@ main{
 }
 .cardsMusic{
     width: 25%;
-    position: relative;
     background-color: #514869;
     cursor: pointer;
     margin-bottom: 5.8rem;
     transition: 2s;
+    
 }
 
 .cardsMusic img{
@@ -226,19 +229,23 @@ main{
     height: 15rem;
 }
 .navigation-manual{
-    position: absolute;
-    width: 25rem;
-    margin-top: -40px;
+    width: 2rem;
     display: flex;
     justify-content: center;
-    top: 26.3rem;
+    padding-left: 12rem;
+   position: absolute;
+   top: 35rem;
+   
+   
 }
 .manual-btn{
-    border: 2px solid #fff;
-    padding: 5px;
-    border-radius: 10px;
+    border: 3px solid #fff;
+    padding: 2px;
+    border-radius: 50px;
     cursor: pointer;
     transition: 1s;
+   
+  
 }
 .manual-btn:not(:last-child){
     margin-right: 40px;
@@ -264,13 +271,13 @@ main{
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
-    position:relative;
-    bottom: 2.8rem;
+    position: absolute;
+    top: 35rem;
+    left: -6rem;
+    
 }
 .navigation-auto{
-    position: absolute;
-    width: 25rem;
-    margin-top: 360px;
+   
     display: flex;
     justify-content: center;
 }
@@ -293,25 +300,21 @@ main{
 .top{
  
 width: 75rem;
-height: 12rem;
+height: 15rem;
 display:flex;
 flex-direction: column;
 overflow: hidden;
-position: relative;
-top: 18rem;
-left: 17rem;
-padding: 3rem;
+padding-top: 2  rem;
+padding-left: 25rem;
 justify-content: center;
+
 
   
 }
 .container-scroll{
     display: flex;
-    padding: 1rem;
     display: flex;
     flex-direction: row;
-   
-    
 }
 .container1{
     display: flex;
@@ -322,10 +325,8 @@ justify-content: center;
     background-color: #08F3C9;
     width: 55rem;
     height: 1.8rem;
-   position: relative;
-   top: 20rem;
-   right: 1.7rem;
-    text-align: center;
+  margin-left: -.5rem;
+    text-align: start;
     font-size: 22px;
 }
 .container-scroll input{
@@ -333,12 +334,12 @@ display: none;
 }
 .container-scroll{
    width: 25%;
-   position: relative;
+   /* position: relative; */
 }
 .navigation-manual-top{
-    position: absolute;
+    /* position: absolute; */
     width:  75rem;
-    margin-top: 15rem;
+    
     display: flex;
     justify-content: center;
    
@@ -390,18 +391,17 @@ display: none;
    }
 #recentes{
     width: 55rem;
-    height: 1.8rem;
-    text-align: center  ;
-    right: 2rem;
-     background-color: #08F3C9;
-      position: relative; 
-     top: 23rem;
+   height: 13rem;
   
 }
 #recentes h1{
     font-size: 22px;
-    position: relative;
+    /* position: relative; */
     bottom: 1rem;
+    background-color: #08F3C9;
+    text-align: start;
+    margin-left: -.5rem;
+    margin-bottom: 3rem;
 }
 .container-recentes{
     width: 5rem;
@@ -410,10 +410,9 @@ display: none;
     align-items: center;
     flex-direction: row;
     margin: 2rem;
-    position: relative;
-    left: 30rem;
-    top: 2rem;
-  
+    margin-left: 19rem;
+    padding-top: 2rem;
+   
 }
 .card-recente img{
     width: 7rem;
@@ -437,17 +436,15 @@ display: none;
   
 }
 #playlist{
-    width: 15rem;
-    height: 10rem;
+    width: 55rem;
+    height: 15rem;
     display: flex;
     flex-direction: row;
-    position: relative;
-    top: 35rem ;
-    right: 3rem;
+    margin-bottom: 12rem;
+   
 }
 .card-playlist{
-    position: relative;
-    top: 5rem;
+    
     display: flex;
     flex-direction: row;
     color: #FFFFFF;
@@ -458,21 +455,25 @@ display: none;
 .cardPlay{
     display: flex;
     flex-direction: row;
-    position: relative;
-    right: 6rem;
+    padding-top: 5rem;
+   position: relative;
+   left: -29rem;
+    
+
 }
 #playlist a{
     text-decoration: none;
     color: black;
-    font-size: 20px;   
+     
    }
    #playlist a h1{
     width: 55rem;
     height: 1.8rem;
-    text-align: center  ;
+    text-align: start;
     right: 3rem;
-     background-color: #08F3C9;
-     font-size: 22px;
+    background-color: #08F3C9;
+    font-size: 22px;
+    margin-left: -.5rem;
 }
 
 .card-playlist img{
@@ -490,13 +491,13 @@ display: none;
 }
 
 footer h1{
-    position: relative;
+    /* position: relative; */
     top: 41rem;
     color: #FFFFFF;
 }
 .barra-lateral1{
     background-color: #08F3C9;
-    position: relative;
+    /* position: relative; */
     top: 44rem;
     height: 2rem;
     width: 45rem;
@@ -504,7 +505,7 @@ footer h1{
 }
 .barra-lateral2{
     background-color: #08F3C9;
-    position: relative;
+    /* position: relative; */
     height: 2rem;
     width: 35rem;
     top: 42.6rem;
@@ -523,13 +524,13 @@ footer h1{
 
 @keyframes animate {
 	0% {
-		background-position: 0% 50%;
+		/* background-position: 0% 50%; */
 	}
 	50% {
-		background-position: 100% 50%;
+		/* background-position: 100% 50%; */
 	}
 	100% {
-		background-position: 0% 50%;
+		/* background-position: 0% 50%; */
 	}
 }
 
@@ -586,7 +587,7 @@ footer h1{
     #menu{
         display: block;
     
-        position: absolute;
+        /* position: absolute; */
         width: 10%;
         top: 5rem;
         right: 105rem;
@@ -641,7 +642,7 @@ footer h1{
     background: currentColor;
     margin-top: 5px;
     transition: .3s;
-position: relative;
+/* position: relative; */
 }
 
 #nav.active #hamburguer{
@@ -661,7 +662,7 @@ position: relative;
 /* main */
 
 .new{
-    position: relative;
+    /* position: relative; */
     right:3rem;
     top: 5rem;
     width: 20rem;
@@ -787,10 +788,10 @@ position: relative;
 }
 .box .content{
     margin: 20px 0 0 0;
-    position: relative;
+    /* position: relative; */
 }
 .box .content:after{
-    position: absolute;
+    /* position: absolute; */
     content: '';
     width: 15%;
     height: 2px;
@@ -798,7 +799,7 @@ position: relative;
     top: -10px;
 }
 .box .content:before{
-    position: absolute;
+    /* position: absolute; */
     content: '';
     height: 2px;
     width: 100%;
@@ -904,7 +905,7 @@ position: relative;
 }
 @media screen and (max-width: 900px){
     footer{
-        position: fixed;
+        /* position: fixed; */
         bottom: 0px;
     }
     .main-content{
