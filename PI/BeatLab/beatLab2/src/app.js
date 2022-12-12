@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// para stream
+var fs = require('fs')
+var getStat = require('util').promisify(fs.stat);
 
 
 var indexRouter = require('./routes/index');
@@ -15,8 +18,15 @@ var listaDeProdutosRouter = require('./routes/listaDeProdutos');
 var loginRouter = require('./routes/login');
 var painelUsuarioRouter = require('./routes/painelUsuario');
 var signupRouter = require('./routes/signup');
+var servicosRouter = require('./routes/servicos');
+
+var incrementaRouter = require("./routes/incrementa")
+var decrementaRouter = require("./routes/decrementa")
+var audioRouter = require("./routes/audio")
 
 var app = express();
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,6 +38,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
+
+// const upload = multer({storage})
+   
+const user = {
+ firstName: 'Fillipe',
+ lastName: 'Welausen',
+}
+
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/home', homeRouter);
@@ -37,6 +57,11 @@ app.use('/listaDeProdutos', listaDeProdutosRouter);
 app.use('/login', loginRouter);
 app.use('/painelUsuario', painelUsuarioRouter);
 app.use('/signup', signupRouter);
+app.use('/servicos', servicosRouter);
+
+app.use('/incrementa', incrementaRouter);
+app.use('/decrementa', decrementaRouter);
+app.use('/audio', audioRouter);
 
 
 
@@ -55,5 +80,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;

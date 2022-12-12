@@ -29,6 +29,10 @@ header{
     position: relative;
 }
 
+.banner input{
+    color: white;
+}
+
 .fotoPerfil {
     width: 8rem;
     height: 8rem;
@@ -160,6 +164,11 @@ bottom: 3.5rem;
     line-height: 8rem;
 }
 
+.alterardados1 input{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
 .AlterarSenha {
     font-family: 'Kantumruy';
     font-size: 20px;
@@ -202,7 +211,7 @@ bottom: 3.5rem;
 
 .botao:hover {
     background-color: #08F3C9;
-    width: 15rem;
+    width: 11rem;
 }
 
 

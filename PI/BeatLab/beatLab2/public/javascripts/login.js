@@ -11,7 +11,7 @@ infCadastro.onsubmit = evento => {
     //verificar se o campo esta em branco 
     if(email === "") {
     evento.preventDefault();
-    document.getElementById('msgAlerta').innerHTML = '<p> Hum...Algo deu errado.</p><p>Campo Email é obrigatorio!</p>'
+    document.getElementById('msgAlerta').innerHTML = '<p>Campo Email é obrigatorio!</p>'
     return;
 }
    
@@ -19,7 +19,7 @@ infCadastro.onsubmit = evento => {
     //verificar se o campo esta em branco 
     if(password === "") {
     evento.preventDefault();
-    document.getElementById('msgAlerta').innerHTML = '<p> Hum...Algo deu errado.</p><p>Você Não pode esquecer da sua senha!</p>'
+    document.getElementById('msgAlerta').innerHTML = '<p>Esqueceu sua senha?</p>'
     return;
 }
  

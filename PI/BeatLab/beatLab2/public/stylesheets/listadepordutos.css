@@ -34,11 +34,24 @@ header{
 }
 
 .fotoPerfil {
-    width: 8rem;
-    height: 8rem;
+    width: 7rem;
+    height: 7rem;
     position: relative;   
 
 }
+
+.nomePerfil  {
+    font-family: 'Kantumruy';
+    font-style: normal;
+    font-weight: 30px;
+    font-size: 20px;
+    line-height: 5px;        
+    color: #FFFFFF;     
+ 
+    position: relative;
+
+}
+
 #banner .banner{
     display: flex;
     flex-direction: row;
@@ -49,7 +62,9 @@ header{
 .banner-inf{
     display: flex;
     flex-direction: column;
+ 
 }
+
 .banner-inf h1{
     font-family: 'Kantumruy';
     font-style: normal;
@@ -65,14 +80,15 @@ header{
     align-items: center;
     justify-content: center;
     position: relative;
-
 }
+
 .banner-inf h2{
     color: #08F3C9;
     position: relative;
     bottom: 3rem;
     left: 2rem;
 }
+
 .banner-inf input{
     background: #514869;
 box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
@@ -81,20 +97,11 @@ width: 9rem;
 height: 1.6rem;
 position: relative;
 bottom: 3.5rem;
+color: white;
 }
 
-.nomePerfil  {
-    font-family: 'Kantumruy';
-    font-style: normal;
-    font-weight: 30px;
-    font-size: 20px;
-    line-height: 30px;        
-    color: #FFFFFF;     
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
+
+
 
 .nome-lista {    
     font-family: 'Kantumruy';
@@ -115,7 +122,7 @@ bottom: 3.5rem;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    
+
     
 }
 
@@ -126,6 +133,7 @@ bottom: 3.5rem;
 
 .descricao {
     color: aliceblue;
+    
 }
 
 .categoria {
@@ -145,8 +153,8 @@ bottom: 3.5rem;
     font-size: 20px;
     border-radius: 10px;    
     position: relative;
-    justify-content: center
-
+    justify-content: center;
+    margin-top: 0.5rem;
 }
 
 .segundo-produto {
@@ -158,8 +166,8 @@ bottom: 3.5rem;
     font-size: 20px;
     border-radius: 10px;    
     position: relative;
-    justify-content: center
-
+    justify-content: center;
+    margin-top: 0.5rem;
 }
 
 .terceiro-produto {
@@ -171,8 +179,8 @@ bottom: 3.5rem;
     font-size: 20px;
     border-radius: 10px;    
     position: relative;
-    justify-content: center
-    
+    justify-content: center;
+    margin-top: 0.5rem;
 }
 
 .quarto-produto {
@@ -184,8 +192,8 @@ bottom: 3.5rem;
     font-size: 20px;
     border-radius: 10px;    
     position: relative;
-    justify-content: center
-    
+    justify-content: center;
+    margin-top: 0.5rem;
 }
 
 .img1 {
@@ -198,4 +206,12 @@ bottom: 3.5rem;
      width: 3rem;
     height: 2rem;    
     
+}
+
+.Comprar {
+    margin-bottom: 1rem;
+}
+
+.marginFooter{
+    margin: 1rem;
 }

@@ -6,14 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/Login.css">
    <script src="/javascripts/login.js" defer ></script>
-    <title>login</title>
+    <title>Login</title>
 </head>
 <body>
-    <header></span>
-    </header>
+  
+
+    
     <main>
       
-        <section id="tela-login">
+        <section class="banner"> 
+            <figure class="caixas">                    
+               
+                        <a href="/home"> <img class="banner1" src="/images/login-img/hand-1850120 1.png" alt=""></a>
+        </figure>
+        <div class="logo">
+            <h5>BeatLab </h5>
+        <h6> Your voice to the world!</h6>
+        </div>  
+        </section>
+
+        <section class="tela-login">
            <span id="msgAlerta"></span>
             <div class="caixa-login">
                 <h1>Login</h1>
@@ -32,27 +44,14 @@
                 <h4>Ainda não tem uma conta? <a href="/signup">Registre-se</a></h4>              
                 <a href="htps:www.google.com"><button ><img src="/images/login-img/google.png" alt="" >Continuar com o Google?</button></a>
           </div>
-          </div>
-           
+          </div>        
         
         </section>
 
-      
-        <section class="banner"> 
-            <figure class="caixas">
-                     <div class="barra-lateral1"></div>
-                 <div class="barra-lateral2"></div>
-               
-                        <a href="/home"> <img class="banner1" src="/images/login-img/hand-1850120 1.png" alt=""></a>
-        </figure>
-        <div class="logo">
-            <h5>BeatLab </h5>
-        <h6> Your voice to the word!</h6>
-        </div>  
-        </section>
+
+
        
         
          </main>
     
-</body>
-</html>
+         <%- include('partials/footer')%>
