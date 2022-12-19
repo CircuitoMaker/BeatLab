@@ -1,26 +1,3 @@
-
-
-
-
-
-
-//carrossel 1
-// let count = 1;
-// document.getElementById("radio1").checked = true;
-// document.getElementById("carrosselScroll1").checked = true;
-
-
-// setInterval(function(){
-//     nextImage();
-// }, 5000);
-// //função carossel 
-// function nextImage(){
-//     count++;
-//     if(count>4){
-//         count=1;
-//     }
-//     document.getElementById("radio"+count).checked = true;
-// }
  //menu hamburguer
 const btnMobile = document.getElementById("btn-mobile")
 
@@ -43,26 +20,71 @@ function toggleMenu(event){
 btnMobile.addEventListener("click", toggleMenu)
 btnMobile.addEventListener("touchstart", toggleMenu)
 
-// Funcionando  
+
+// COMANDOS DOS PLAYER
 let botaoNext = document.getElementById('next')
 let botaoRew = document.getElementById('rew')
 
+ let artistaLabel  = document.getElementById('artistaLabel')
+ let musicaLabel   = document.getElementById('musicaLabel')
+ let playListLabel = document.getElementById('playListLabel')
+ let capaAlbum     = document.getElementById('capaAlbum')
  
-function rew(){
 
-   botaoRew.innerHTML="Está"
+// carrega os dados na tela ao iniciar ************
+window.onload = () => {
+   const response =  fetch('/api/i')//, {  
+      .then((response) => response.json())
+      .then((data) => {
+        artistaLabel.innerHTML = 'Artista: '   + data[0].artista;
+        musicaLabel.innerHTML = 'Música: '     + data[0].musica;
+        playListLabel.innerHTML = 'PlayList: ' + data[0].genero;
+        capaAlbum.src = data[0].imagem
+     })
+     document.getElementById("player").src = '/audio'
+
+}
+//************************************************* */
+
+botaoNext.addEventListener('click', async _ => {
+     
+     const response = await fetch('/api/1')//, {
+    .then((response) => response.json())
+    .then((data) => {
+      artistaLabel.innerHTML = 'Artista: '   + data[0].artista;
+      musicaLabel.innerHTML = 'Música: '     + data[0].musica;
+      playListLabel.innerHTML = 'PlayList: ' + data[0].genero;
+      capaAlbum.src = data[0].imagem
+   })
+   document.getElementById("player").src = '/audio'
+  
+ });
+
+
+ botaoRew.addEventListener('click', async _ => {
+  
+     const response = await fetch('/api/0')//, {
+      .then((response) => response.json())
+      .then((data) => {
+        artistaLabel.innerHTML = 'Artista: '   + data[0].artista;
+        musicaLabel.innerHTML = 'Música: '     + data[0].musica;
+        playListLabel.innerHTML = 'PlayList: ' + data[0].genero;
+        capaAlbum.src = data[0].imagem
+     });
+
+     document.getElementById("player").src = '/audio'
+ });
+ 
+
+
+
+function rew(){
+  // document.getElementById("player").src = '/audio'
 }
 
 
 function next(){
-  
-   botaoNext.innerHTML="gato"
-
-  
-   
-   botaoNext.innerHTML="OK"
-
- 
+ //  document.getElementById("player").src = '/audio'
 }
 
 
@@ -71,19 +93,20 @@ function next(){
 
 //  let car = cars.find(car => car.color === "red" && car.type === "cabrio");
 
-    let contPlayPause = false;
+let contPlayPause = false;
  function playPause(){
   
       let labelPlayPause = document.getElementById('playPauseBtn')
-      //let playPause =document.getElementById('playPause')
  
       if(contPlayPause == false){
          document.getElementById('player').play()
+         document.getElementById("player").autoplay = true
          labelPlayPause.innerHTML="Pause";
-      //playPause.src"/img/player-img/play2.png"
+      
        }
      else{
          document.getElementById('player').pause()
+         document.getElementById("player").autoplay = false
          labelPlayPause.innerHTML="Play";
       }
       contPlayPause =! contPlayPause;  
@@ -102,20 +125,20 @@ function next(){
  
     var duracaoMusica = document.getElementById('player').duration;
     var tempoAtual = document.getElementById('player').currentTime;
-    var tempoTotalLabel = "00:00"; 
-    var tempoDecorridoLabel = "00:00"
+    var tempoTotalLabel = "0:00"; 
+    var tempoDecorridoLabel = "0:00"
  
  // Converte o tempo total da musica "de segundos" para "minutos e segundos"   
  var minT = parseInt(duracaoMusica /60)
  var segT = parseInt(duracaoMusica %60)
- var minTStr = "00" 
+ var minTStr = "0" 
  var segTStr = "00"
  
- if(minT <= 9){
-    minTStr = "0" + minT
- }else{
+//  if(minT <= 9){
+//     minTStr = "0" + minT
+//  }else{
     minTStr = minT
- }
+ //}
  
  if(segT <= 9){
  segTStr = "0" + segT
@@ -126,19 +149,19 @@ function next(){
  
  
  tempoTotalLabel = minTStr + ":" + segTStr 
- if(tempoTotalLabel == "NaN:NaN"){tempoTotalLabel = "00:00"}
+ if(tempoTotalLabel == "NaN:NaN"){tempoTotalLabel = "0:00"}
  
  // Converte o tempo DECORRIDO da musica "de segundos" para "minutos e segundos" 
  var minD = parseInt(tempoAtual /60)
  var segD = parseInt(tempoAtual %60)
- var minDStr = "00" 
+ var minDStr = "0" 
  var segDStr = "00"
  
- if(minD <= 9){
-    minDStr = "0" + minD
- }else{
+//  if(minD <= 9){
+//     minDStr = "0" + minD
+//  }else{
     minDStr=minD;
- }
+ //}
  
  if(segD <= 9){
  segDStr = "0" + segD;
@@ -153,10 +176,18 @@ function next(){
  
  
      if(tempoAtual >= duracaoMusica){
-         // chama a proxima musica
-         window.location.href = "/incrementa"; 
+      const response =  fetch('/api/1')
+         .then((response) => response.json())
+         .then((data) => {
+           artistaLabel.innerHTML = 'Artista: '   + data[0].artista;
+           musicaLabel.innerHTML = 'Música: '     + data[0].musica;
+           playListLabel.innerHTML = 'PlayList: ' + data[0].genero;
+           capaAlbum.src = data[0].imagem
+        })
+        document.getElementById("player").src = '/audio'
   }
  
+
   // Movimenta a progressBar
  var tempoAtualBar = parseInt(document.getElementById('player').currentTime); 
  var aux =  100/duracaoMusica ;
@@ -182,14 +213,33 @@ function next(){
  
  if(apertar.key === "Enter"){
     playPause()
+    
  }
  
  if(apertar.key === "ArrowRight"){
-    window.location.href = "/incrementa";
+    //window.location.href = "/incrementa";
+    const response =  fetch('/api/1')
+    .then((response) => response.json())
+    .then((data) => {
+      artistaLabel.innerHTML = 'Artista: '   + data[0].artista;
+      musicaLabel.innerHTML = 'Música: '     + data[0].musica;
+      playListLabel.innerHTML = 'PlayList: ' + data[0].genero;
+      capaAlbum.src = data[0].imagem
+   })
+   document.getElementById("player").src = '/audio'
  }
  
  if(apertar.key === "ArrowLeft"){
-    window.location.href = "/decrementa";
+    //window.location.href = "/decrementa";
+    const response =  fetch('/api/0')
+    .then((response) => response.json())
+    .then((data) => {
+      artistaLabel.innerHTML = 'Artista: '   + data[0].artista;
+      musicaLabel.innerHTML = 'Música: '     + data[0].musica;
+      playListLabel.innerHTML = 'PlayList: ' + data[0].genero;
+      capaAlbum.src = data[0].imagem
+   })
+   document.getElementById("player").src = '/audio'
  }
  
  
@@ -199,6 +249,5 @@ function next(){
  
 
 
-
-
+//********************************* */
 

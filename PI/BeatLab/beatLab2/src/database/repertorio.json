@@ -46,7 +46,7 @@
     {
         "artista": "Detonautas",
         "musica": "Melhor plantar o bem",
-        "album": "Melhor plantar o bem",
+        "album": "Melhor Plantar o bem",
         "imagem": "https://i.ytimg.com/vi/vzvMKWS2rf4/maxresdefault.jpg",
         "genero": "Rock",
         "endereco": "./src/audios/Detonautas - Melhor plantar o bem.mp3",
@@ -55,84 +55,36 @@
         "ID": 4
     },
     {
-        "nome": "sds",
-        "valor": "sds",
-        "descricao": "sds",
-        "imagem": "sdsdsdsds"
+        "artista": "Horizonte",
+        "musica": "Solo Tu",
+        "album": "Horizonte",
+        "imagem": "https://i.ytimg.com/vi/AduJZV8-SX8/0.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Solo Tu.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ID": 5
     },
     {
-        "id": {
-            "nome": "sds",
-            "valor": "sds",
-            "descricao": "sds",
-            "imagem": "sdsdsdsds"
-        },
-        "imagem": [
-            "Captura de tela_20221123_203548.png",
-            "Sha la la.mp3"
-        ]
+        "artista": "Vinny",
+        "musica": "Mexe a Cadeira",
+        "album": "Na Gandaia",
+        "imagem": "../images/imagensAlbuns/vinnymexeacadeira.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/VINNY - MEXE A CADEIRA.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ID": 6
     },
     {
-        "id": {
-            "id": {
-                "nome": "sds",
-                "valor": "sds",
-                "descricao": "sds",
-                "imagem": "sdsdsdsds"
-            },
-            "imagem": [
-                "Captura de tela_20221123_203548.png",
-                "Sha la la.mp3"
-            ]
-        },
-        "artista": "123",
-        "musica": "456",
-        "imagem": [
-            "Captura de tela_20221123_203548.png",
-            "Sha la la.mp3"
-        ],
-        "album": "./src/imagensAlbuns/789",
-        "genero": "000",
-        "endereco": "./src/audios/undefined",
-        "preco": "111",
-        "relevancia": 0
-    },
-    {
-        "id": {
-            "id": {
-                "id": {
-                    "nome": "sds",
-                    "valor": "sds",
-                    "descricao": "sds",
-                    "imagem": "sdsdsdsds"
-                },
-                "imagem": [
-                    "Captura de tela_20221123_203548.png",
-                    "Sha la la.mp3"
-                ]
-            },
-            "artista": "123",
-            "musica": "456",
-            "imagem": [
-                "Captura de tela_20221123_203548.png",
-                "Sha la la.mp3"
-            ],
-            "album": "./src/imagensAlbuns/789",
-            "genero": "000",
-            "endereco": "./src/audios/undefined",
-            "preco": "111",
-            "relevancia": 0
-        },
-        "artista": "123",
-        "musica": "123",
-        "imagem": [
-            "jhonny.jpg",
-            "Disturbed  - The Sound Of Silence [Official Music Video].mp3"
-        ],
-        "album": "./src/imagensAlbuns/123",
-        "genero": "123",
-        "endereco": "./src/audios/undefined",
-        "preco": "123",
-        "relevancia": 0
+        "artista": "Fear Factory",
+        "musica": "Bite The Hand That Bleeds",
+        "album": "BSO - SAW",
+        "imagem": "../images/imagensAlbuns/hqdefault.jpg",
+        "genero": "Metal",
+        "endereco": "./src/audios/BSO - Saw - Fear Factory - Bite The Hand That Bleeds.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ID": 7
     }
 ]

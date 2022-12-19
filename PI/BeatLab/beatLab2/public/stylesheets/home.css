@@ -247,6 +247,11 @@ justify-content: space-around;
     transition: 0.1s all ease-in-out;
 }
 
+#formBtn{
+    width: 10px;
+    height: 10px;
+}
+
 #playPauseBtn:hover  {
     transform: scale(1.1);
 }

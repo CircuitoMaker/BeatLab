@@ -20,9 +20,9 @@ var painelUsuarioRouter = require('./routes/painelUsuario');
 var signupRouter = require('./routes/signup');
 var servicosRouter = require('./routes/servicos');
 
-var incrementaRouter = require("./routes/incrementa")
-var decrementaRouter = require("./routes/decrementa")
+var apiRouter = require('./routes/api')
 var audioRouter = require("./routes/audio")
+var imagemRouter = require('./routes/imagem')
 
 var app = express();
 
@@ -41,10 +41,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // const upload = multer({storage})
    
-const user = {
- firstName: 'Fillipe',
- lastName: 'Welausen',
-}
+
 
 
 
@@ -59,9 +56,9 @@ app.use('/painelUsuario', painelUsuarioRouter);
 app.use('/signup', signupRouter);
 app.use('/servicos', servicosRouter);
 
-app.use('/incrementa', incrementaRouter);
-app.use('/decrementa', decrementaRouter);
+app.use('/api', apiRouter);
 app.use('/audio', audioRouter);
+app.use('/imagem', imagemRouter);
 
 
 
