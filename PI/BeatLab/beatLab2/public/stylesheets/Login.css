@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100&display=swap');
 body{ 
+display: flex;
+flex-direction: column;
+align-items: center;
+
 
 background: linear-gradient(49.5deg, #1B1B2C 57.92%, #3C3C73 89.34%);
 font-family: Arial, Helvetica, sans-serif;
@@ -49,7 +53,9 @@ main{
   position: relative;
  bottom: 3rem;
 }
+
 .tela-login{
+margin: auto;
  background-color: #3A3359;
  width: 26.3rem;
  height: 28.3rem;
@@ -170,16 +176,18 @@ justify-content: center;
  display: flex;
  flex-direction: column;
 justify-content: center;
- top: 2rem;
+align-items: center;
+ top: 0rem;
  position: relative;
  z-index: 15;
 }
 
 
 .banner .caixas .banner1{
- position: relative;
- left: 1rem;
+ /* position: relative;
+ left: 1rem; */
  bottom: 0px;
+ margin: auto;
  background: url(hand-1850120.jpg);
  border-radius: 47px;
  z-index: 50;
@@ -187,35 +195,34 @@ justify-content: center;
 }
 
 
-.logo{
-    position: relative;
-    bottom: 15rem;
-    right: 5rem;
-}
 
-.logo h5 {
+
+.banner h5 {
 font-family: 'Kantumruy Pro', sans-serif;
 font-style: normal;
 font-size: 35px;
-line-height: 63px;
+/* line-height: 63px; */
 text-align: center;
 letter-spacing: 0.2rem;
-position: relative;
+/* position: relative;
 top: 9.5rem;
-left: 7.6rem;
-
+left: 7.6rem; */
+height: auto;
+margin: auto;
 color: #FFFFFF;
 }
 
-.logo h6{
+.banner h6{
 font-style: normal;
 font-weight: 400;
 font-size: 15px;
 text-align: center;
 letter-spacing: 0.02em;
-position: relative;
+margin: auto;
+margin-bottom: 1rem;
+/* position: relative;
 top: 5rem;
-left: 7.6rem;
+left: 7.6rem; */
 color: #08F3C9;
 
 }
@@ -236,10 +243,8 @@ main{
     left: 19rem;
     margin-bottom: 2rem;
  }
- .banner{
-   top: -3rem;
-   right: 17rem;
- }
+
+
  .banner1{
   width: 12rem;
   height: 7rem;
@@ -247,23 +252,23 @@ main{
  }
  
 
- .logo{
-    left:4rem;
-    bottom: 10rem;
 
- }
- .logo h5{
+ .banner h5{
     /* top: -9rem; */
     /* left:  11.5rem; */
     background-color: #08F3C9;
-    height: 3rem;
+    height: 0.1rem;
     width: 10.5rem;
     border-top-right-radius: 25px;
     font-size: 25px;
-
+display: none;
  }
- .logo h6{
-    top: 7rem;
+ .banner h6{
+    /* top: 7rem; */
     font-size: 15px;
+    height: 0.1rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    display: none;
  }
 }

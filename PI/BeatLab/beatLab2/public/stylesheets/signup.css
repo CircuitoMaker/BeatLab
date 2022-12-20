@@ -1,85 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 body{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #1B1B2C;
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     }
     
-    header {
-     display: flex;
-        justify-content: flex-start;
-
+    .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     }
-    header h1{
-        position: absolute;
-    width: 14rem;
-    height: 6rem;
-    left: 5rem;
-    top: 0rem;
 
+    header h1{
     font-family: 'Kantumruy';
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
-    line-height: 63px;
-    text-align: center;
+   margin: auto;
     letter-spacing: 0.02em;
-
     color: #FFFFFF;
     }
-    header h6{
-        position: absolute;
-    width: 15rem;
-    height: 2rem;
-    left: 6.9rem;
-    top: 2rem;
 
+    header h6{
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
-    line-height: 22px;
-    text-align: center;
+margin: 0.5rem;
     letter-spacing: 0.02em;
-
     color: #08F3C9;
     }
-    .barra1{
-        position: absolute;
-    width: 1.9rem;
-    height: 32rem;
-    left: 5.4rem;
-    top: -16px;
-
-
-background: #08F3C9;
-    }
-    .barra2{
-        position: absolute;
-    width: 1.9rem;
-    height: 22.5rem;
-    left: 7.9rem;
-    top: 600px;
-
-background: #08F3C9;
-    }
+   
     main{
         display: flex;
-        justify-content: center;
-        flex-direction: column;
+        flex-direction: column;     
         width: 33rem;
         height: 40rem;
         background: #3A3359;
         box-shadow: 6px 0px 8px 8px rgba(0, 0, 0, 0.29);
         border-radius: 15px;
-        position: absolute;
-        bottom: 11.5rem;
-    
-      
     }
+
     #msgAlerta {
         display: flex;
         flex-direction: column;
@@ -90,17 +53,18 @@ background: #08F3C9;
        height: 6rem;
        margin: 0%;
     }
+
     #msgAlerta p{
         margin: 0%;
     }
+
     .sing-up{
         display: flex;
-  
-        position: fixed;
         bottom: 12rem;
     }
+
     #sign-up h1{
-        font-family: 'Italiana';
+    font-family: 'Italiana';
     font-style: normal;
     font-weight: 400;
     font-size: 60px;
@@ -116,7 +80,6 @@ background: #08F3C9;
 .inf-cadastro-caixas{
     display: flex;
     flex-direction: column;
-   justify-content: flex-start;
 }
 
 .inf-cadastro-caixas input{
@@ -130,7 +93,9 @@ background: #08F3C9;
     position: relative;
     left: 11.9rem;
     bottom: 6rem;
+    color: white;
 }
+
 .inf-cadastro-caixas label{
     display: flex;
     justify-content: flex-start;
@@ -164,90 +129,83 @@ position: relative;
 bottom: 3rem;
 left: 10.8rem;
 }
+
 button:hover{
     filter: brightness(130%);
     background-color: #08f3c8;
     border-color: transparent;
 }
-.barra3{
-    position: absolute;
-width: 18rem;
-height: 1.9rem;
-left:  75rem;
-top: 18rem;
-background: #08F3C9;
-}
-.barra4{
-    position: absolute;
-    width: 20rem;
-    height: 2rem;
-    left:   55.9rem;
-    top: 12.5rem;
-    background: #08F3C9;
-}
+
 
 .janela-modal{
-    width: 99.9vw;
-    height: 52.55vw;
-    position: absolute;
-    right: -43.43rem;
-    font-size: 12px;
-    background-color: #00000088;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height:50vw ;
+  margin: -40rem;
     
+  font-size: 12px;
+  background-color: #00000088;
+  display: none;   
+  z-index: 1000;  
 }
-.inf-modal{
-    width: 28rem;
-    height: 18rem;
-    background-color: #ffffff71;
-    backdrop-filter: blur(10px);
-    position: relative;
-    bottom: 5rem;
-    padding:1rem;
-    border-radius: 15px;
 
-    
+
+.inf-modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    width: 33rem;
+    height: 30rem;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    z-index: 1100;  
 }
+
 .janela-modal.abrir{
     display: flex;
 }
 
+.btnModal{
+width: 100px;
+height: 45px;
+font-size: 23px;
+background: #08F3C9;
+box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+letter-spacing: 0.04em;
+color: #000000;
+margin-top: 5rem;
+bottom: 3rem;
 
-@media screen and (min-width: 0px) and (max-width: 440px){
-    .barra3{ 
-        display: none;
-}}
-@media screen and (min-width: 0px) and (max-width: 440px){
-    .barra4{ 
-        display: none;
-}}
+}
+
+
 
 @media screen and (max-width: 440px){
     main  {
           display: flex;
           align-items: center;
           flex-direction: column;
-      position: absolute;
-  
+          position: absolute;
           width: 24rem;
           height: 35rem;
-          left: 2rem;
-          
-      }}
-      @media screen and (max-width: 440px){
-       .inf-cadastro-caixas label{
-            font-size: 17px;
-            position: relative;
-            right:  5rem;
-            
-         
-           
-        }
+          left: 2rem;         
+      }
+    
+      .inf-cadastro-caixas label{
+        font-size: 17px;
+        position: relative;
+        right:  5rem;         
     }
+    
+    }
+     
+
     @media screen and (min-width: 0px) and (max-width: 440px){
         .inf-cadastro-caixas input{
             width: 12rem;
@@ -256,9 +214,7 @@ background: #08F3C9;
             left: 3.5rem;
         
         }
-    }
 
-    @media screen and (min-width: 0px) and (max-width: 440px){
         .bt{
             font-size: 15px;
             width: 10rem;
@@ -269,4 +225,5 @@ background: #08F3C9;
             
         }
     }
- 
+
+  

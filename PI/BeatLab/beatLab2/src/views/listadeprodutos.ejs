@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="menuprincipal">
-        <div class="barra1"></div>
+       
         <section id="banner">
            
             <div class="banner"><a href="/home"><img src="/images/home-img/hand-1850120 1.png" alt="dj"></a>
@@ -32,51 +32,30 @@
             <h1>Escolha seu estilo!</h1>
 
         </div>
-        <div class="produto">
-            <div class="primeiro-produto">
-                <img class="img1"  src="/images/info-produto-img/foto2.jpg" alt="">
-                <h2 class="nome-artista1">Artista?</h2>
-                <p class="descricao">descriçao do produto</p>
-                <p class="categoria">categoria</p>
-                <button>
-                    <img class="img-botao"  src="/images/info-produto-img/375.png" alt="">
-                </button>
-                <p class="preco">preço</p> 
-                <button class="Comprar">Comprar</button>           
-            </div>
-            <div class="segundo-produto">
-                <img class="img1"  src="/images/info-produto-img/foto3.jpg" alt="">
-                <h2 class="nome-artista1">Artista?</h2>
-                <p class="descricao">descriçao do produto</p>
-                <p class="categoria">categoria</p>
-                <button>
-                    <img class="img-botao"  src="/images/info-produto-img/375.png" alt="">
-                </button>
-                <p class="preco">preço</p> 
-                <button class="Comprar">Comprar</button>           
-            </div>
-            <div class="terceiro-produto">
-                <img class="img1"  src="/images/info-produto-img/foto4.jpg" alt="">
-                <h2 class="nome-artista1">Artista?</h2>
-                <p class="descricao">descriçao do produto</p>
-                <p class="categoria">categoria</p>
-                <button>
-                    <img class="img-botao"  src="/images/info-produto-img/375.png" alt="">
-                </button>
-                <p class="preco">preço</p>
-                <button class="Comprar">Comprar</button>             
-            </div>
-            <div class="quarto-produto">
-                <img class="img1"  src="/images/info-produto-img/foto5.jpg" alt="">
-                <h2 class="nome-artista1">Artista?</h2>
-                <p class="descricao">descriçao do produto</p>
-                <p class="categoria">categoria</p>
-                <button>
-                    <img class="img-botao"  src="/images/info-produto-img/375.png" alt="">
-                </button>
-                <p class="preco">preço</p>
-                <button class="Comprar">Comprar</button>             
-            </div>
+
+
+        <div class="produtos-container">
+
+
+
+            <% for(var i=0; i < coletanea.length; i++) { %>
+                
+                <div class="produto">
+                    <img class="img"  src= <%= coletanea[i].imagem %> alt="">
+                    <h2 class="nome-artista1"> <%= coletanea[i].artista %> </h2>
+                    <p class="descricao">descriçao do produto</p>
+                    <p class="categoria"><%= coletanea[i].genero %> </p>
+                    <p class="preco">preço: <%= coletanea[i].preco %> </p> 
+                    <button class="Comprar">Comprar</button>           
+                </div>
+             
+             <% } %>
+
+
+
+
+
+            
         </div>
           
 
