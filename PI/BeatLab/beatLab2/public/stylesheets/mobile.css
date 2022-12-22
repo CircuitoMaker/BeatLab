@@ -1,0 +1,110 @@
+*{
+    border:1px solid red
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  justify-content: center;
+}
+
+.likes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+   
+    margin: 1rem;
+
+width: 90%;
+    height: 60px; 
+  
+    
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     
+    width: 30%;
+}
+
+.dados p{
+    margin: 0.1rem;
+
+}
+
+.capaAlbum{
+    border-radius: 15px;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+  height: 6rem;
+
+}
+
+
+.botoes .next{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.botoes .rew{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.botoes .btnPlay{
+    width: 6rem;
+    height: 4rem;
+   
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.capaAlbum{
+    height: 220px;
+    width: 320px;
+    margin-right: 1rem;
+
+}
+
+
+.progress-label{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+  }
+
+  .progress-label label{
+    color: white;
+    font-size: 30px;
+    margin: 1rem;
+  }
+
+  .timer{
+    font-size: 18px;
+  }

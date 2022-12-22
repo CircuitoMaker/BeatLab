@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/javascripts/mobile.js" defer></script>
+    <link rel="stylesheet" href="/stylesheets/mobile.css">  
+    <title>BeatLab</title>
+</head>
+<body>
+    <p>BeatLab</p>
+
+    <audio id="player" controls="controls" hidden  preload="preload" >
+        <source src="/audio" type="audio/ogg"> 
+    </audio>
+    
+
+
+<img class="capaAlbum" id="capaAlbum" src="../images/home-img/foto9.jpg" alt="">
+
+
+
+<div class="likes">
+<div>
+<img src="../images/likes-img/unlike.png" alt="" width="30px">
+</div>
+
+<div class="dados">
+<p class="musicaLabel" id="musicaLabel">Música</p>
+<p class="artistaLabel" id="artistaLabel">Artista</p>
+</div>
+
+<div>
+<img src="../images/likes-img/like.png" alt="" width="30px">
+</div>
+
+</div>
+
+<div class="botoes">
+<button class="rew" id="rew" ><<</button>
+<button class="btnPlay" id="playPauseBtn" onclick=" playPause()"> Play</button>
+<button class="next" id="next">>></button>
+</div>
+
+
+
+<div class="progress-label">
+    <div id="myProgress">
+    <div id="myBar"></div>
+    </div>
+    <p class="timer" id="timer" for="">0:00 / 0:00</p>
+  </div>
+
+
+
+<div class="horizontalScroll">
+    <button>PlayList 1</button>
+    <button>PlayList 2</button>
+    <button>PlayList 3</button>
+</div>
+
+<section>
+
+
+</section>
+
+
+</body>
+</html>

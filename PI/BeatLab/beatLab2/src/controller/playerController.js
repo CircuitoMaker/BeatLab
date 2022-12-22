@@ -5,7 +5,7 @@ var router = express.Router();
 const fs = require('fs')
 const path = require('path')
 
-const PlayerModel = require('../models/PlayerModel');
+//const PlayerModel = require('../models/PlayerModel');
 var coletanea = require('../database/repertorio.json');
 var musicaAtual = require('../database/musicaAtual.json');
 var index = require('../database/index.json');

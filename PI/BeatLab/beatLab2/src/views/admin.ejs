@@ -6,8 +6,11 @@
 
     <main class="container-main">
 
-      <!-- POST -->
-      <form method="post" action="/servicos/create">
+      <!-- POST                                   multipart/form-data funcao que permite enviar arquivos -->
+      
+      <!-- <input type="file" name="userImage">  para usar o multer-->
+      
+      <form method="post" action="/servicos/create" enctype="multipart/form-data">
         <h2>CREATE</h2>
         <input type="text" name="artista" required placeholder="Artista">
         <input type="text" name="musica" required placeholder="Música">

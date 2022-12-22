@@ -51,8 +51,6 @@
      
       
         </div>
-
-
         </section>
 
     
@@ -61,146 +59,38 @@
        
 
 
-        <section id="recentes">
-            <a href="/home.html/recentes"><h1>Ouvidas recentes</h1></a>
-           
-            <div class="container-recentes">
-            <div class="card-recente">
-                <img src="/images/home-img/foto3.jpg" alt="">
-               
-                <footer>
-                    <span>musica</span>
-                    <span>nome artista</span>
-                </footer>
-               
-            </div>
-                
-                <div class="card-recente">
-                    <img src="../images/home-img/foto2.jpg" alt="">
-                    <footer>
-                        <span>musica</span>
-                        <span>nome artista</span>
-                    </footer>
-                    </div><div class="card-recente">
-                        <img src="../images/home-img/foto9.jpg" alt="">
-                        <footer>
-                            <span>musica</span>
-                            <span>nome artista</span>
-                        </footer>
-                        </div><div class="card-recente">
-                            <img src="../images/home-img/foto4.jpg" alt="">
-                            <footer>
-                                <span>musica</span>
-                                <span>nome artista</span>
-                            </footer>
-                            </div><div class="card-recente">
-                                <img src="../images/home-img/foto6.png" alt="">
-                                <footer>
-                                    <span>musica</span>
-                                    <span>nome artista</span>
-                                </footer>
-                                </div>
-            </div>
-        </section>
-
-
-
-        <h1 class="topH1">Top 10 cover da semana </h1>
-        <section class="top">
-            
-            <div class="container-scroll" >
-                <input type="radio" name="radio-btn-scroll" id="carrosselScroll1">
-                <input type="radio" name="radio-btn-scroll" id="carrosselScroll2">
-                
-                <div class="container1 scroll">
-                <div class="card">
-                    <img src="../images/home-img/foto2.jpg" alt="">
-                    <footer>
-                    <span>musica</span> 
-                    <span>nome do artista1</span>
-                    </footer>
-                </div>
-                <div class="card">
-                    <img src="../images/home-img/foto3.jpg" alt="">
-                    <footer>
-                    <span>musica</span> 
-                    <span>nome do artista2</span>
-                    </footer>
-                </div> 
-                  <div class="card">
-                    <img src="../images/home-img/foto4.jpg" alt="">
-                    <footer>
-                    <span>musica</span> 
-                    <span>nome do artista3</span>
-                    </footer>
-                </div>  
-                  <div class="card">
-                    <img src="../images/home-img/foto6.png" alt="">
-                    <footer>
-                    <span>musica</span> 
-                    <span>nome do artista4</span>
-                    </footer>
-                </div>  
-            </div>
-
-
-            <div class="container1">
-                 <div class="card">
-                    <img src="../images/home-img/foto5.jpg" alt="">
-                    <footer>
-                    <span>musica</span> 
-                    <span>nome do artista5</span>
-                    </footer>
-                </div>  
-                 <div class="card">
-                    <img src="../images/home-img/foto6.png" alt="">
-                    <footer>
-                    <span>musica</span> 
-                    <span>nome do artista6</span>
-                    </footer>
-                </div>   
-                <div class="card">
-                    <img src="../images/home-img/foto7.jpg" alt="">
-                    <footer>
-                    <span>musica</span> 
-                    <span>nome do artista7</span>
-                    </footer>
-                </div>
-                </div>
-                <div class="container1">
-                <div class="card">
-                    <img src="../images/home-img/foto9.jpg" alt="">
-                    <footer>
-                    <span>musica</span> 
-                    <span>nome do artista8</span>
-                    </footer>
-                </div>
-                <div class="card">
-                    <img src="../images/home-img/foto5.jpg" alt="">
-                    <footer>
-                    <span>musica</span> 
-                    <span>nome do artista9</span>
-                    </footer>
-                </div>
-                <div class="card">
-                    <img src="../images/home-img/foto2.jpg" alt="">
-                    <footer>
-                    <span>musica</span>
-                    <span>nome do artista0</span>
-                    </footer>
-                </div>
-                
-            </div>
-        </div>
-
-            <div class="navigation-manual-top">
-                <label for="carrosselScroll1" class="manual-btn-scroll"></label>
-                <label for="carrosselScroll2" class="manual-btn-scroll"></label>
-               
-            </div>
-            
-        </section>
         
+            <h1 class="recentes">Ouvidas Recentes</h1> 
+            <div class="container-recentes">                  
+                    <% for(var i=ouvidasRecentes.length-1; i >  ouvidasRecentes.length-6; i--) { %>               
+                        <div class="card-recente">                           
+                            <img id=<%= 'capaAlbum' + i %> src= <%= ouvidasRecentes[i].imagem %> alt="">   
+                            <span id=<%= 'labelMusica' + i %> ><%= ouvidasRecentes[i].musica %></span>                                                                                                                                                                                                       
+                        </div>                 
+                     <% } %>   
+            </div>
+       
+
+
+
+        <h1 class="topH1">Top 5 Covers da Semana </h1>     
+            <div class="container-top5" >                           
+                <% for(var i=coletanea.length-1; i >  coletanea.length-6; i--) { %>               
+                    <div class="card">
+                        <img src= <%= coletanea[i].imagem %> alt="">   
+                        <div class="price"><div class="espaco"></div> R$<%= coletanea[i].preco %> </div>                    
+                            
+                        <span><%= coletanea[i].artista %></span>
+                            <span><%= coletanea[i].musica %> </span>                                                                                                                    
+                    </div>                 
+                 <% } %>             
+            </div>
+       
+    
+        
+
+
+
       </main>
 
 

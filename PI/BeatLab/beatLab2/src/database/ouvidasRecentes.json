@@ -1,0 +1,62 @@
+[
+    {
+        "artista": "OneRepublic",
+        "musica": "Counting Stars",
+        "album": "Native",
+        "imagem": "https://i1.sndcdn.com/artworks-000040814493-eu3kr3-t500x500.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Counting Stars.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "2013",
+        "ID": 0
+    },
+    {
+        "artista": "Seether",
+        "musica": "Hang On",
+        "album": "Disclaimer ll",
+        "imagem": "https://i.ytimg.com/vi/DhCHniOZC6s/0.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Seether - Hang On.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "2003",
+        "ID": 1
+    },
+    {
+        "artista": "Rammstein",
+        "musica": "Rosenrot",
+        "album": "Rosenrot",
+        "imagem": "https://m.media-amazon.com/images/I/41-ADvqGMFL._AC_.jpg",
+        "genero": "Metal",
+        "endereco": "./src/audios/rammstein_rosenrot.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "2011",
+        "ID": 2
+    },
+    {
+        "artista": "Charlie Brown Jr",
+        "musica": "Confisco",
+        "album": "Acústico MTV",
+        "imagem": "https://i.ytimg.com/vi/26n5o0QJILQ/mqdefault.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Charlie-Brown-JR-Confisco.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "1997",
+        "ID": 3
+    },
+    {
+        "artista": "Detonautas",
+        "musica": "Melhor Plantar o Bem",
+        "album": "Melhor Plantar o bem",
+        "imagem": "https://i.ytimg.com/vi/vzvMKWS2rf4/maxresdefault.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Detonautas - Melhor plantar o bem.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "2015",
+        "ID": 4
+    }
+]

@@ -8,6 +8,7 @@
         "endereco": "./src/audios/Counting Stars.mp3",
         "preco": "2,99",
         "relevancia": 0,
+        "ano":"2013",
         "ID": 0
     },
     {
@@ -19,6 +20,7 @@
         "endereco": "./src/audios/Seether - Hang On.mp3",
         "preco": "2,99",
         "relevancia": 0,
+        "ano":"2003",
         "ID": 1
     },
     {
@@ -30,6 +32,7 @@
         "endereco": "./src/audios/rammstein_rosenrot.mp3",
         "preco": "2,99",
         "relevancia": 0,
+        "ano":"2011",
         "ID": 2
     },
     {
@@ -41,17 +44,19 @@
         "endereco": "./src/audios/Charlie-Brown-JR-Confisco.mp3",
         "preco": "2,99",
         "relevancia": 0,
+        "ano":"1997",
         "ID": 3
     },
     {
         "artista": "Detonautas",
-        "musica": "Melhor plantar o bem",
+        "musica": "Melhor Plantar o Bem",
         "album": "Melhor Plantar o bem",
         "imagem": "https://i.ytimg.com/vi/vzvMKWS2rf4/maxresdefault.jpg",
         "genero": "Rock",
         "endereco": "./src/audios/Detonautas - Melhor plantar o bem.mp3",
         "preco": "2,99",
         "relevancia": 0,
+        "ano":"2015",
         "ID": 4
     },
     {
@@ -63,17 +68,19 @@
         "endereco": "./src/audios/Solo Tu.mp3",
         "preco": "2,99",
         "relevancia": 0,
+        "ano":"2019",
         "ID": 5
     },
     {
         "artista": "Vinny",
         "musica": "Mexe a Cadeira",
         "album": "Na Gandaia",
-        "imagem": "../images/imagensAlbuns/vinnymexeacadeira.jpg",
+        "imagem": "../images/imagensAlbuns/vinny.jpg",
         "genero": "Rock",
         "endereco": "./src/audios/VINNY - MEXE A CADEIRA.mp3",
         "preco": "2,99",
         "relevancia": 0,
+        "ano":"1998",
         "ID": 6
     },
     {
@@ -85,6 +92,43 @@
         "endereco": "./src/audios/BSO - Saw - Fear Factory - Bite The Hand That Bleeds.mp3",
         "preco": "2,99",
         "relevancia": 0,
+        "ano":"2004",
         "ID": 7
+    },
+    {
+        "artista": "Acústicos e Valvulados",
+        "musica": "Quintal",
+        "album": "AntiDoto",
+        "imagem": "../images/imagensAlbuns/315291380300968.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Acústicos e Valvulados - Quintal.mp3",
+        "preco": "9,90",
+        "relevancia": 0,
+        "ano":"1999",
+        "ID": 8
+    },
+    {
+        "artista": "Skillet",
+        "musica": "Monster",
+        "album": "Awake",
+        "imagem": "../images/imagensAlbuns/ab67616d0000b27343e531d5f69170aba281ef43.jpg",
+        "genero": "Metal",
+        "endereco": "./src/audios/skillet - monster.mp3",
+        "preco": "49,90",
+        "relevancia": 0,
+        "ano":"2009",
+        "ID": 9
+    },
+    {
+        "artista": "Smile.DK",
+        "musica": "Butterfly",
+        "album": "Version",
+        "imagem": "../images/imagensAlbuns/R-1291287-1218313462.jpg",
+        "genero": "Electronic",
+        "endereco": "./src/audios/butterfly.mp3",
+        "preco": "149,90",
+        "relevancia": 0,
+        "ano":"1998",
+        "ID": 10
     }
 ]

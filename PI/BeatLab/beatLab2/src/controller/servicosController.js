@@ -1,8 +1,7 @@
 const ServicoModel = require('../models/ServicoModel')
 var coletanea = require('../database/repertorio.json')
 var musicaAtual = require('../database/musicaAtual.json')
-//var index = 1;
-//var musicaAtual = coletanea[index]
+
 
 
 module.exports = {

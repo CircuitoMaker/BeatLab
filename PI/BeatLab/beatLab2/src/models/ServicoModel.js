@@ -3,6 +3,26 @@ const fs = require('fs')
 const path = require('path')
 const { receiveMessageOnPort } = require('worker_threads')
 
+const multer = require('multer')
+
+// exemplo de uso do multer *****
+// const storage = multer.diskStorage({ 
+//     destination: function (req, file, cb) { 
+//        cb(null, './public/images/avatars'); 
+//     }, 
+//     filename: function (req, file, cb) { 
+//        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
+//   })
+
+//definindo a variavel que sera usada como middleware
+//const uploadFile = multer({ storage });
+
+//Na rota onde queremos processar arquivos com o Multer, teremos que passar isso como middleware:
+//router.post('/register', uploadFile.single('avatar'), usersController.create); 
+
+//****************************** */
+
+
 module.exports={
     index:()=>{
         return servicos

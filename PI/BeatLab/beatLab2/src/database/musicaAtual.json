@@ -1,13 +1,14 @@
 [
     {
-        "artista": "Rammstein",
-        "musica": "Rosenrot",
-        "album": "Rosenrot",
-        "imagem": "https://m.media-amazon.com/images/I/41-ADvqGMFL._AC_.jpg",
-        "genero": "Metal",
-        "endereco": "./src/audios/rammstein_rosenrot.mp3",
+        "artista": "Detonautas",
+        "musica": "Melhor Plantar o Bem",
+        "album": "Melhor Plantar o bem",
+        "imagem": "https://i.ytimg.com/vi/vzvMKWS2rf4/maxresdefault.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Detonautas - Melhor plantar o bem.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ID": 2
+        "ano": "2015",
+        "ID": 4
     }
 ]

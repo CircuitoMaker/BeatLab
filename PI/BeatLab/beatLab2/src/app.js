@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var methodOverride = require('method-override')
 
 // para stream
 var fs = require('fs')
@@ -23,6 +24,8 @@ var servicosRouter = require('./routes/servicos');
 var apiRouter = require('./routes/api')
 var audioRouter = require("./routes/audio")
 var imagemRouter = require('./routes/imagem')
+var mobileRouter = require('./routes/mobile');
+const router = require('./routes/listaDeProdutos');
 
 var app = express();
 
@@ -37,11 +40,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
-
+app.use(methodOverride('_method'))
 
 // const upload = multer({storage})
    
-
 
 
 
@@ -59,6 +61,8 @@ app.use('/servicos', servicosRouter);
 app.use('/api', apiRouter);
 app.use('/audio', audioRouter);
 app.use('/imagem', imagemRouter);
+app.use('/mobile', mobileRouter);
+
 
 
 

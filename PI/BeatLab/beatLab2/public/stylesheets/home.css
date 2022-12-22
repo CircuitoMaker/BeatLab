@@ -337,45 +337,8 @@ main{
     height: 15rem;
 }
 
-.navigation-manual{
-    width: 2rem;
-    display: flex;
-    justify-content: center;
-    padding-left: 12rem;
-   position: absolute;
-   top: 35rem;
-}
 
-.manual-btn{
-    border: 3px solid #fff;
-    padding: 2px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 1s;
-}
 
-.manual-btn:not(:last-child){
-    margin-right: 40px;
-}
-
-.manual-btn:hover{
-    background-color: #FFFFFF;
-}
-
-#radio1:checked ~ .first{
-    margin-left: 0%;
-}
-
-#radio2:checked ~ .first{
-    margin-left: -25%;
-}
-
-#radio3:checked ~ .first{
-    margin-left: -50%;
-}
-#radio4:checked ~ .first{
-    margin-left: -75%;
-}
 
 .navigation-auto div{
     border:  2px solid #fff;
@@ -398,18 +361,7 @@ main{
 
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: #fff;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: #fff;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: #fff;
-}
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: #fff;
-}
+
 
 .top{ 
 width: 75rem;
@@ -422,9 +374,10 @@ padding-left: 1rem;
 justify-content: center;
 }
 
-.container-scroll{
-    display: flex;
-    flex-direction: row;
+.container-top5{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
     
 }
 
@@ -445,114 +398,113 @@ justify-content: center;
     text-align: center; 
 }
 
-.container-scroll input{
-display: none;
-}
-.container-scroll{
-   width: 25%;
-   /* position: relative; */
-}
-.navigation-manual-top{
-    /* position: absolute; */
-    width:  75rem;  
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3rem;
-   
-}
-.manual-btn-scroll{
-    border: 2px solid #fff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-  
-}
-.manual-btn-scroll:not(:last-child){
-    margin-right: 4rem;
-}
-.manual-btn-scroll:hover{
-    background-color: #fff;
-}
-#carrosselScroll1:checked ~ .scroll{
-    margin-left: 0%;
-}
-#carrosselScroll2:checked ~ .scroll{
-    margin-left: -429%;
-}
+
+
+
 .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 1.2rem;
     background-color: #514869;
     color: white;
+    width: 15rem;
+    height: 11.5rem;
+    border-radius: 7px;
+    border: 1px solid transparent;
+ 
 }
 .card img{
+    margin-top: 0.2rem;
     width: 13rem;
     height: 8rem;
-    transition: all .5s;
-    border: .0rem solid transparent;
+    /* transition: all .5s;
+    border: .0rem solid transparent; */
+    border-radius: 10px;
     background-color: #08F3C9;
    
 }
+.card span{
+margin-top: 0.3rem;
+}
+
 .card:hover{
-    zoom: 1.;
-    transition: all 0.5s;
+    /* transition: all 0.3s; */
     cursor: pointer;
-    border: 13px solid  rgba(0, 0, 0, 0.466);
-    border-radius: 15px;
-
+    border: 1px solid white
 }
-#recentes a{ 
-    text-decoration: none;
-    color: black;
-    font-size: 20px;   
-   }
-
-#recentes{
-    width: 100%;
-   height: 13rem;
-  
-}
-#recentes h1{
-    font-size: 22px;
-    /* position: relative; */
-    bottom: 1rem;
-    background-color: #08F3C9;
-    text-align: start;
-    margin-left: -.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
-}
-.container-recentes{
-    width: 5rem;
-    height: 1rem;
-    display: flex; 
-    align-items: center;
+ 
+.card .price{
+    display: flex;
     flex-direction: row;
-  
-    margin: 2rem;
+    align-items: center;
+    justify-content: flex-start;
+    background:  linear-gradient(-45deg, red, green, blue, yellow);
+    color: white;
+    font-weight: bold;
+    width: 13rem;
+    margin-top: -1.3rem;
+    height: 2rem;
+    background-size: 400% 400%;
+    animation: animate 15s ease infinite;
+}
+
+.card .price .espaco{
+margin-right: 1.2rem;
+}
+
+
+
+.recentes {
+    width: 100%;
+    height: 2rem;
+    font-size: 22px; 
+    background-color: #08F3C9;
+    margin-left: -.5rem;
+    margin-bottom: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.container-recentes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+    align-items: center;
+ 
+    height: 8rem;
+    margin: 0rem;
     margin-left: 1rem;
     padding-top: 2rem;
 }
+
+.card-recente{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    height: 7rem;
+    margin: 2rem;   
+    color: white;
+    text-align: justify;
+    border: 1px solid transparent;
+    background-color: #514869;;
+    border-radius: 5px;
+    align-items: center;
+}
+
+
+.card-recente :hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
+
 .card-recente img{
     width: 7rem;
     height: 5rem;
     margin-right: .5rem;
-    transition: all .5s;
-    border: .0rem solid transparent;
+    margin-bottom: 0.5rem;
+    border-radius: 3px;
     background-color: #08F3C9;
-}
-.card-recente img:hover{
-    zoom: 1.1;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-.card-recente{
-    margin: 2rem;
-    display: flex;
-    flex-direction: row;
-    color: #FFFFFF;
-    text-align: justify;
 }
 
 
@@ -804,14 +756,7 @@ display: none;
     height: 1.1rem;
     font-size: 15px;
 }
-.top{
-    overflow-x: scroll;
-   top: 5rem;
-   left: 1.5rem;
-   width: 19rem;
-   height: 15rem;
 
-}
 .card img{
     width: 7rem;
     height: 5rem;
@@ -820,20 +765,7 @@ display: none;
     display: none;
 
 }
- #recentes{
-    top: 4rem;
-    width: 5rem;
-    height: 5rem;
-    right: 30rem;
- }
- #recentes h1{
-    font-size: 15px;
-    text-align: center;
-    top: -.58rem;
-    left: 29rem;
-  background-color: #08F3C9;
-  width: 15rem;
- }
+ 
 .container-recentes{
     overflow-x: scroll;
     width: 25rem;
@@ -1030,7 +962,31 @@ display: none;
         flex-wrap: wrap;
         flex-direction: column;
     }
-    .main-content .box{
-        margin: 5px 0;
+   
+
+    .main-content .center{
+        display: none;
+    }
+    
+    .main-content .right{
+        display: none;
+    }
+
+.main-content .left h2 {
+   margin: auto;
+}
+
+.main-content .left p {
+    margin: auto;
+ }
+
+.main-content .content{
+    margin: auto;
+
+
+
+}
+    .bottom{
+        display: none; 
     }
 }
