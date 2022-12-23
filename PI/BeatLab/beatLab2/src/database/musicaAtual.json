@@ -1,14 +1,14 @@
 [
     {
-        "artista": "Detonautas",
-        "musica": "Melhor Plantar o Bem",
-        "album": "Melhor Plantar o bem",
-        "imagem": "https://i.ytimg.com/vi/vzvMKWS2rf4/maxresdefault.jpg",
+        "artista": "Vinny",
+        "musica": "Mexe a Cadeira",
+        "album": "Na Gandaia",
+        "imagem": "../images/imagensAlbuns/vinny.jpg",
         "genero": "Rock",
-        "endereco": "./src/audios/Detonautas - Melhor plantar o bem.mp3",
+        "endereco": "./src/audios/VINNY - MEXE A CADEIRA.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano": "2015",
-        "ID": 4
+        "ano": "1998",
+        "ID": 6
     }
 ]

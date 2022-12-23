@@ -37,12 +37,12 @@ let botaoRew = document.getElementById('rew')
  let playListLabel = document.getElementById('playListLabel')
  let capaAlbum     = document.getElementById('capaAlbum')
  
-
+let carrinho = document.getElementById('carinhoLabel')
 
 
 // carrega os dados na tela ao iniciar ************
 window.onload = () => {
-   const response =  fetch('/api/i')//, {  
+   const response =  fetch('/api/i')
       .then((response) => response.json())
       .then((data) => {
         artistaLabel.innerHTML = 'Artista: '   + data[0].artista;
@@ -52,6 +52,19 @@ window.onload = () => {
          
      })
      document.getElementById("player").src = '/audio'
+
+
+const atualizaCarrinho = fetch('/carrinhoApi/a')
+.then((atualizaCarrinho)=> atualizaCarrinho.json())
+.then((dados) => {
+   
+   if(dados.length <= 0){
+ carrinho.style.display = "none";
+   }else{
+      carrinho.innerHTML = dados.length
+   }
+})
+
 
 }
 //************************************************* */
@@ -100,6 +113,36 @@ botaoNext.addEventListener('click', async _ => {
      document.getElementById("player").src = '/audio'
  });
  
+
+
+ // INCLUI AS TOP 5 COVERS DA SEMANA NO CARRINHO 
+ for(let x=0; x<5; x++){
+   document.getElementById("imgTop5-" + x).addEventListener("click", function() {
+      console.log('teste' + x)
+      var product = document.getElementById('imgTop5-' + x).getAttribute('alt');
+      carrinhoImg(product)
+   },);
+ }
+
+
+function carrinhoImg(add){
+   
+   const atualizaCarrinho = fetch('/carrinhoApi/A'+ add)
+.then((atualizaCarrinho)=> atualizaCarrinho.json())
+.then((dados) => {
+   
+   if(dados.length <= 0){
+ carrinho.style.display = "none";
+   }else{
+      carrinho.style.display = "flex";
+      carrinho.style.justifyContent = "center";
+      carrinho.innerHTML = dados.length
+   }
+})
+
+}
+/// FIM DA FUNCAO
+
 
 
 

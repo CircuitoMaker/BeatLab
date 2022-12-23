@@ -1,29 +1,5 @@
 [
     {
-        "artista": "OneRepublic",
-        "musica": "Counting Stars",
-        "album": "Native",
-        "imagem": "https://i1.sndcdn.com/artworks-000040814493-eu3kr3-t500x500.jpg",
-        "genero": "Rock",
-        "endereco": "./src/audios/Counting Stars.mp3",
-        "preco": "2,99",
-        "relevancia": 0,
-        "ano": "2013",
-        "ID": 0
-    },
-    {
-        "artista": "Seether",
-        "musica": "Hang On",
-        "album": "Disclaimer ll",
-        "imagem": "https://i.ytimg.com/vi/DhCHniOZC6s/0.jpg",
-        "genero": "Rock",
-        "endereco": "./src/audios/Seether - Hang On.mp3",
-        "preco": "2,99",
-        "relevancia": 0,
-        "ano": "2003",
-        "ID": 1
-    },
-    {
         "artista": "Rammstein",
         "musica": "Rosenrot",
         "album": "Rosenrot",
@@ -58,5 +34,29 @@
         "relevancia": 0,
         "ano": "2015",
         "ID": 4
+    },
+    {
+        "artista": "Horizonte",
+        "musica": "Solo Tu",
+        "album": "Horizonte",
+        "imagem": "https://i.ytimg.com/vi/AduJZV8-SX8/0.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Solo Tu.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "2019",
+        "ID": 5
+    },
+    {
+        "artista": "Vinny",
+        "musica": "Mexe a Cadeira",
+        "album": "Na Gandaia",
+        "imagem": "../images/imagensAlbuns/vinny.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/VINNY - MEXE A CADEIRA.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "1998",
+        "ID": 6
     }
 ]

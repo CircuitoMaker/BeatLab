@@ -74,14 +74,16 @@
 
 
         <h1 class="topH1">Top 5 Covers da Semana </h1>     
-            <div class="container-top5" >                           
+            <div class="container-top5" >  
+                <% var index = 0 %>                         
                 <% for(var i=coletanea.length-1; i >  coletanea.length-6; i--) { %>               
-                    <div class="card">
-                        <img src= <%= coletanea[i].imagem %> alt="">   
-                        <div class="price"><div class="espaco"></div> R$<%= coletanea[i].preco %> </div>                    
-                            
+                    <div class="card">                  
+                        <img id=<%= 'imgTop5-' + index  %>   src= <%= coletanea[i].imagem %> alt=<%= coletanea[i].ID %>>   
+                        <% index++ %>
+                        <div class="price"><div class="espaco"></div> R$<%= coletanea[i].preco %></div>                           
                         <span><%= coletanea[i].artista %></span>
-                            <span><%= coletanea[i].musica %> </span>                                                                                                                    
+                            <span><%= coletanea[i].musica %> </span>  
+                                                                                                                                          
                     </div>                 
                  <% } %>             
             </div>

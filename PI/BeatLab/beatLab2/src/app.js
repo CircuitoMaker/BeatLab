@@ -22,10 +22,15 @@ var signupRouter = require('./routes/signup');
 var servicosRouter = require('./routes/servicos');
 
 var apiRouter = require('./routes/api')
+
 var audioRouter = require("./routes/audio")
 var imagemRouter = require('./routes/imagem')
 var mobileRouter = require('./routes/mobile');
-const router = require('./routes/listaDeProdutos');
+var ListaDeProdutosRouter = require('./routes/listaDeProdutos');
+
+var carrinhoApiRouter = require('./routes/carrinhoApi')
+var carrinhoRouter = require('./routes/carrinho')
+
 
 var app = express();
 
@@ -62,8 +67,8 @@ app.use('/api', apiRouter);
 app.use('/audio', audioRouter);
 app.use('/imagem', imagemRouter);
 app.use('/mobile', mobileRouter);
-
-
+app.use('/carrinhoApi', carrinhoApiRouter);
+app.use('/carrinho', carrinhoRouter);
 
 
 // catch 404 and forward to error handler
