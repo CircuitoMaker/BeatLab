@@ -1,17 +1,5 @@
 [
     {
-        "artista": "Rammstein",
-        "musica": "Rosenrot",
-        "album": "Rosenrot",
-        "imagem": "https://m.media-amazon.com/images/I/41-ADvqGMFL._AC_.jpg",
-        "genero": "Metal",
-        "endereco": "./src/audios/rammstein_rosenrot.mp3",
-        "preco": "2,99",
-        "relevancia": 0,
-        "ano": "2011",
-        "ID": 2
-    },
-    {
         "artista": "Charlie Brown Jr",
         "musica": "Confisco",
         "album": "Acústico MTV",
@@ -58,5 +46,17 @@
         "relevancia": 0,
         "ano": "1998",
         "ID": 6
+    },
+    {
+        "artista": "Fear Factory",
+        "musica": "Bite The Hand That Bleeds",
+        "album": "BSO - SAW",
+        "imagem": "../images/imagensAlbuns/hqdefault.jpg",
+        "genero": "Metal",
+        "endereco": "./src/audios/BSO - Saw - Fear Factory - Bite The Hand That Bleeds.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "2004",
+        "ID": 7
     }
 ]

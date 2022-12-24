@@ -1,14 +1,14 @@
 [
     {
-        "artista": "Vinny",
-        "musica": "Mexe a Cadeira",
-        "album": "Na Gandaia",
-        "imagem": "../images/imagensAlbuns/vinny.jpg",
-        "genero": "Rock",
-        "endereco": "./src/audios/VINNY - MEXE A CADEIRA.mp3",
+        "artista": "Fear Factory",
+        "musica": "Bite The Hand That Bleeds",
+        "album": "BSO - SAW",
+        "imagem": "../images/imagensAlbuns/hqdefault.jpg",
+        "genero": "Metal",
+        "endereco": "./src/audios/BSO - Saw - Fear Factory - Bite The Hand That Bleeds.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano": "1998",
-        "ID": 6
+        "ano": "2004",
+        "ID": 7
     }
 ]
