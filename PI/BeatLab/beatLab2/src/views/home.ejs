@@ -4,60 +4,21 @@
 
 
       <main>
-       
-        <section id="playlist">
             
 
-            <a href="/Playlists"><h1>Playlists </h1></a>
-           
-
-            <div class="container-cardPlay">
-            
-            <div class="card-playlist">
-
-                <img src="../images/home-img/foto6.png" alt="">
-                <footer>
-                    <span>Playlist</span>
-                </footer>
-            </div>
-
-            <div class="card-playlist">
-                <img src="../images/home-img/foto9.jpg" alt="">
-                <footer>
-                    <span>Playlist</span>                   
-                </footer>
-            </div>
-
-            <div class="card-playlist">
-                <img src="../images/home-img/foto5.jpg " alt="">
-                <footer>
-                    <span>Playlist</span>
-                </footer>
-            </div>
-
-            <div class="card-playlist">
-                <img src="../images/home-img/foto7.jpg " alt="">
-                <footer>
-                    <span>Playlist</span>
-                </footer>
-            </div>
-
-            <div class="card-playlist">
-                <img src="../images/home-img/foto2.jpg " alt="">
-                <footer>
-                    <span>Playlist</span>
-                </footer>         
-            </div>
-     
-      
+            <h1 class="playLists">Playlists </h1>
+            <div class="container-cardPlay">       
+            <% for(var i=0; i < 5  ; i++) { %>               
+                <div class="card-playlist">
+                    <img src= <%= "../images/home-img/foto" + i + ".jpg "%> alt="" >
+                    <footer>
+                        <span><%="Playlist" + i %></span>
+                    </footer>         
+                </div>           
+             <% } %>   
         </div>
-        </section>
-
-    
-   
-
-       
-
+        
+     
 
         
             <h1 class="recentes">Ouvidas Recentes</h1> 
@@ -82,8 +43,7 @@
                         <% index++ %>
                         <div class="price"><div class="espaco"></div> R$<%= coletanea[i].preco %></div>                           
                         <span><%= coletanea[i].artista %></span>
-                            <span><%= coletanea[i].musica %> </span>  
-                                                                                                                                          
+                            <span><%= coletanea[i].musica %></span>                                                                                                                                        
                     </div>                 
                  <% } %>             
             </div>

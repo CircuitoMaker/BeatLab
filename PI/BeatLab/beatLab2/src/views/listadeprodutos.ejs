@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/listadepordutos.css">
+    <script src="/javascripts/listaDeProdutos.js" defer></script>
     <title>ListadeProdutos</title>
 </head>
+
 <body>
     <header class="menuprincipal">
        
@@ -30,13 +32,10 @@
     <main>
         <div class="nome-lista">
             <h1>Escolha seu estilo!</h1>
-
         </div>
 
 
-        <div class="produtos-container">
-
-
+        <div class="produtos-container" id="quantidade" tagDeQuantidade=<%=coletanea.length %>>
 
             <% for(var i=0; i < coletanea.length; i++) { %>
                 
@@ -46,18 +45,26 @@
                     <p  class="descricao"><%= coletanea[i].musica %> </p>
                     <p  class="categoria"><%= coletanea[i].genero %> </p>
                     <p  class="preco">R$ <%= coletanea[i].preco %> </p> 
-                    <button class="Comprar">Comprar</button>           
+                    <button class="Comprar" novaTag=<%= coletanea[i].ID %> id=<%="ID" + i %>>Comprar</button>           
                 </div>
              
              <% } %>
-
-
-
-
-
             
         </div>
           
+
+      
+          
+          <div class="modal-container">
+            <div class="modal">
+              <p>
+               Um ítem foi Adicionado ao seu Carrinho!
+              </p>
+              <input id="botaoCarrinho" type="button" value="Seguir para Carrinho" onclick="location.href='/carrinho'">
+            </div>
+          </div>
+          
+
 
               
     </main>

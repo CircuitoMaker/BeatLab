@@ -130,5 +130,17 @@
         "relevancia": 0,
         "ano":"1998",
         "ID": 10
+    },
+    {
+        "artista": "Imagine Dragons",
+        "musica": "Radioactive",
+        "album": "Night Visions",
+        "imagem": "../images/imagensAlbuns/maxresdefault.jpg",
+        "genero": "Electronic",
+        "endereco": "./src/audios/Imagine Dragons - Radioactive.mp3",
+        "preco": "19,90",
+        "relevancia": 0,
+        "ano":"2022",
+        "ID": 11
     }
 ]

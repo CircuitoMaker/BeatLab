@@ -1,12 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
-</head>
-<body>
-    <h1>Carrinho View</h1>
-</body>
-</html>
+
+
+    <%- include('partials/header')%>
+
+    <link rel="stylesheet" href="/stylesheets/carrinho.css">
+    <script src="/javascripts/carrinho.js" defer></script>
+
+    <main>
+
+    <h1 id="label">Seu Carrinho</h1>
+
+<div class="carrinho-container">
+
+    <% for( let x = 0; x < carrinho.length; x++ ) { %>
+    
+      
+    <div class="card-carrinho" id="quantidade" quantidade=<%= carrinho.length %>>
+    <img class="imagem" src=<%= carrinho[x].imagem %> alt="">  
+    <div class="pilha">
+    <span> <%= carrinho[x].musica %> </span>
+    <span id= <%='preco' + x %> valor= <%= carrinho[x].preco %> > R$<%= carrinho[x].preco %></span>
+    </div>
+    <input id=<%= 'ID' + x %> tagID="<%= carrinho[x].ID %>" class="button" type="button"  value="Remover">
+   
+   </div>
+    <% } %>
+
+
+<div class="card-pagar">
+
+     <span><%= 'Quantidade de itens: ' + carrinho.length%></span>
+
+     <div>
+    <span  id="valorTotal" >Total: R$</span>
+    <input type="button" value="Pagar" class="button">
+</div>
+
+</div> 
+
+
+
+</main>
+
+<%- include('partials/footer')%>
