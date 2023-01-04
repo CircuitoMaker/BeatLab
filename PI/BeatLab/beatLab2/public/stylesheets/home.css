@@ -13,7 +13,7 @@ header{
     justify-content: space-around;    
     align-items: center;
    
-    height: 8.6rem;
+    height: 9rem;
     width: 100%;
     top: 0%;
    /* position: fixed; */
@@ -79,29 +79,34 @@ border-top-right-radius: 15px;
 
 #btn-mobile{
     display: none;
+    border-style: solid white;
 }
 
-.menuH{
- display: flex;
- flex-direction: row;
- justify-content: center;
- align-items: center;
- margin: 0px;
-} 
 
 .headerM{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     z-index: 1;
     background: linear-gradient(-45deg, red, green, blue, yellow);
     background-size: 400% 400%;
     box-sizing: border-box;    
     height: 70px;
     padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     animation: animate 15s ease infinite;
 }
+
+.menuH{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ margin: 0px;
+ height: 70px;
+} 
+
+
 
 .menuH input{
  background: #514869;
@@ -133,8 +138,10 @@ border-top-right-radius: 15px;
 
 #btn-mobile{
     display: none;
-    /* position: relative; */
-    bottom: 3rem;
+   
+    /* position: relative;  */
+     bottom: 3rem; 
+ 
 }
 
 #menu a:hover{
@@ -403,11 +410,12 @@ justify-content: center;
 .topH1{
     background-color: #08F3C9;
     width: 100%;
-    height: 1.8rem;
-    /* margin-left: -.5rem; */
+    height: 2rem;
+  
     text-align: start;
     font-size: 22px;
     text-align: center; 
+
 }
 
 
@@ -525,14 +533,18 @@ margin-top: 0.3rem;
 
 
 .card-playlist{
-    margin: 2rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
     color: #FFFFFF; 
     right: 1rem;
 
 }
 
+.card-playlist footer{
+    margin-top: .3rem;
+}
 
 .container-cardPlay{
     align-items: center;
@@ -561,14 +573,12 @@ margin-top: 0.3rem;
     width: 7rem;
     height: 5rem;
     margin-right: .5rem;
-    transition: all .5s;
-    border: .0rem solid transparent;
-    background-color: #08F3C9;
+    border: 1px solid transparent; 
+    border-radius: 3px;
 }
 
 .card-playlist img:hover{
-    zoom: 1.1;
-    transition: all 0.5s;
+    border: 1px solid white; 
     cursor: pointer;
 }
 
@@ -598,21 +608,15 @@ margin-top: 0.3rem;
 
 
 
-
-
-
 @media (max-width:600px){
     header{
-        height: 5.5rem;
-        margin-bottom: 1rem;
+        height: 7rem;
+        margin-bottom: 0.5rem;
         
     }
     .banner img{
         display: none;
         
-    }
-    .barra1{
-       display: none;
     }
   
     .banner-inf{
@@ -651,13 +655,14 @@ margin-top: 0.3rem;
     #menu{
         display: block;
     
-        position: absolute;
+        position: absolute; 
         width: 100%;
+        margin-top: 120px;
         top: 70px;
         right: 0;
         background: #e7e7e7;
         
-        transition: .6s;
+        transition: .1s;
         z-index: 1000;
         height: 0px;
         visibility: hidden;
@@ -666,10 +671,12 @@ margin-top: 0.3rem;
     }
 
     #nav.active #menu{
-        height: calc(100vh - 70px);
+      
+       height: calc(100vh - 70px);
        visibility: visible;
        overflow-y: auto;
-        /*display: flex;*/
+        display: flex;
+        flex-direction: column;
     }
 
     #menu a {
@@ -711,10 +718,13 @@ margin-top: 0.3rem;
 }
 
 #nav.active #hamburguer{
+ 
     border-top-color: transparent;
+
 }
 
 #nav.active #hamburguer::before{
+ 
     transform: rotate(135deg);
 }
 
@@ -744,12 +754,7 @@ margin-top: 0.3rem;
 .navigation-auto div{
     left: -2rem;
 }
-.topH1{
-    top:    8rem;
-    width: 15rem;
-    height: 1.1rem;
-    font-size: 15px;
-}
+
 
 .card img{
     width: 7rem;
@@ -761,7 +766,7 @@ margin-top: 0.3rem;
 }
  
 .container-recentes{
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     width: 25rem;
     height: 12rem;
     top: -4rem;

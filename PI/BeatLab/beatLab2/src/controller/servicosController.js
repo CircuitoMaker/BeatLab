@@ -9,16 +9,25 @@ module.exports = {
         const servicos = ServicoModel.index();
         return res.render('servicos', {listaServicos: servicos, title:"Lista de Serviços"})
     }, 
+
     mostraAdminServicos:(req,res) => {
         res.render("admin", {musicaAtual})
     },
 
     criaServico:(req,res) => {
-        console.log(req.body)
+        console.log('requi ponto body => '+ req.body.musica)
         ServicoModel.createOne(req)
-        res.send("A Música " + req.body.nome + " Foi adicionada com sucesso!")
+        res.send("A Música " + req.body.musica + " Foi adicionada com sucesso!")
     },
+
     buscaServico: (req,res) =>{
-     res.send(ServicoModel.findOne(req))   
-    }
+     res.send(ServicoModel.findOne(req))
+    },
+
+
+    removeServico: (req,res) =>{
+        ServicoModel.deleteOne(req)
+        res.send("A Música " + req.body.musica + " Foi adicionada EXCLUÍDA!")
+       }
+
 }

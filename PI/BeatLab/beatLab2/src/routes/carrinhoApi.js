@@ -26,7 +26,7 @@ console.log(recebe)
  
 if(funcao=='A'){ // "A" de adiciona item
 let item = coletanea.find(function(item) {
-    return item.ID == recebe;
+    return item.id == recebe;
   });
 
   console.log(item)
@@ -35,7 +35,7 @@ let item = coletanea.find(function(item) {
 if(item){
   
  let outroItem = carrinho.find(function(outroItem) {
-    return outroItem.ID == item.ID;
+    return outroItem.id == item.id;
   });
 
   if(outroItem){
@@ -58,7 +58,7 @@ if(item){
 if(funcao=='R'){ // "R" de remove item
 
     let buscaItem = carrinho.find(function(buscaItem) {
-        return buscaItem.ID == recebe;
+        return buscaItem.id == recebe;
       });
 
       if(buscaItem){
@@ -66,7 +66,7 @@ if(funcao=='R'){ // "R" de remove item
 
    
    for(var x=0; x < carrinho.length; x++){
-   if(carrinho[x].ID == buscaItem.ID){
+   if(carrinho[x].id == buscaItem.id){
 carrinho.splice(x,1)
    }
    }

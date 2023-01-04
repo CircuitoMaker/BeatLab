@@ -45,7 +45,7 @@ console.log('imprimindo o index  ===== ' + index[0].index);
 console.log('imprimindo a Musica ===== ' + musicaAtual[0].musica);
 
 // gera historico de musicas ouvidas
-if(ouvidasRecentes[ouvidasRecentes.length-1].ID != musicaAtual[0].ID){
+if(ouvidasRecentes[ouvidasRecentes.length-1].id != musicaAtual[0].id){
 ouvidasRecentes.shift();
 ouvidasRecentes.push(musicaAtual[0])
 fs.writeFileSync(path.join(__dirname , "../database/ouvidasRecentes.json"), JSON.stringify(ouvidasRecentes,null,4))

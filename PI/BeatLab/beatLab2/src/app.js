@@ -13,7 +13,6 @@ var getStat = require('util').promisify(fs.stat);
 var indexRouter = require('./routes/index');
 var homeRouter = require('./routes/home');
 var usersRouter = require('./routes/users');
-var cestaRouter = require('./routes/cesta');
 var finalizarCompraRouter = require('./routes/finalizarCompra');
 var listaDeProdutosRouter = require('./routes/listaDeProdutos');
 var loginRouter = require('./routes/login');
@@ -55,7 +54,6 @@ app.use(methodOverride('_method'))
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/home', homeRouter);
-app.use('/cesta', cestaRouter);
 app.use('/finalizarCompra', finalizarCompraRouter);
 app.use('/listaDeProdutos', listaDeProdutosRouter);
 app.use('/login', loginRouter);

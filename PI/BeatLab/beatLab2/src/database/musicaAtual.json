@@ -1,14 +1,14 @@
 [
     {
-        "artista": "Seether",
-        "musica": "Hang On",
-        "album": "Disclaimer ll",
-        "imagem": "https://i.ytimg.com/vi/DhCHniOZC6s/0.jpg",
+        "artista": "Horizonte",
+        "musica": "Solo Tu",
+        "album": "Horizonte",
+        "imagem": "https://i.ytimg.com/vi/AduJZV8-SX8/0.jpg",
         "genero": "Rock",
-        "endereco": "./src/audios/Seether - Hang On.mp3",
+        "endereco": "./src/audios/Solo Tu.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano": "2003",
-        "ID": 1
+        "ano": "2019",
+        "id": 5
     }
 ]

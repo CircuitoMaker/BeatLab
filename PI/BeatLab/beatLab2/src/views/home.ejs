@@ -5,14 +5,14 @@
 
       <main>
             
-
+        <% var playLists=["Ar Puro","Heavy Metal","Café da Manhã","Eletrônicas","Treino"] %>
             <h1 class="playLists">Playlists </h1>
             <div class="container-cardPlay">       
             <% for(var i=0; i < 5  ; i++) { %>               
                 <div class="card-playlist">
-                    <img src= <%= "../images/home-img/foto" + i + ".jpg "%> alt="" >
+                    <img src= <%= "../images/playlists-img/" + i + ".jpg "%> alt="" >
                     <footer>
-                        <span><%="Playlist" + i %></span>
+                        <span class="span"><%= playLists[i]   %></span>
                     </footer>         
                 </div>           
              <% } %>   
@@ -39,7 +39,7 @@
                 <% var index = 0 %>                         
                 <% for(var i=coletanea.length-1; i >  coletanea.length-6; i--) { %>               
                     <div class="card">                  
-                        <img id=<%= 'imgTop5-' + index  %>   src= <%= coletanea[i].imagem %> alt=<%= coletanea[i].ID %>>   
+                        <img id=<%= 'imgTop5-' + index  %>   src= <%= coletanea[i].imagem %> alt=<%= coletanea[i].id %>>   
                         <% index++ %>
                         <div class="price"><div class="espaco"></div> R$<%= coletanea[i].preco %></div>                           
                         <span><%= coletanea[i].artista %></span>

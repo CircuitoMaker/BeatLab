@@ -8,8 +8,8 @@
         "endereco": "./src/audios/Counting Stars.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano":"2013",
-        "ID": 0
+        "ano": "2013",
+        "id": 0
     },
     {
         "artista": "Seether",
@@ -20,8 +20,8 @@
         "endereco": "./src/audios/Seether - Hang On.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano":"2003",
-        "ID": 1
+        "ano": "2003",
+        "id": 1
     },
     {
         "artista": "Rammstein",
@@ -32,8 +32,8 @@
         "endereco": "./src/audios/rammstein_rosenrot.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano":"2011",
-        "ID": 2
+        "ano": "2011",
+        "id": 2
     },
     {
         "artista": "Charlie Brown Jr",
@@ -44,8 +44,8 @@
         "endereco": "./src/audios/Charlie-Brown-JR-Confisco.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano":"1997",
-        "ID": 3
+        "ano": "1997",
+        "id": 3
     },
     {
         "artista": "Detonautas",
@@ -56,8 +56,8 @@
         "endereco": "./src/audios/Detonautas - Melhor plantar o bem.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano":"2015",
-        "ID": 4
+        "ano": "2015",
+        "id": 4
     },
     {
         "artista": "Horizonte",
@@ -68,8 +68,8 @@
         "endereco": "./src/audios/Solo Tu.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano":"2019",
-        "ID": 5
+        "ano": "2019",
+        "id": 5
     },
     {
         "artista": "Vinny",
@@ -80,8 +80,8 @@
         "endereco": "./src/audios/VINNY - MEXE A CADEIRA.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano":"1998",
-        "ID": 6
+        "ano": "1998",
+        "id": 6
     },
     {
         "artista": "Fear Factory",
@@ -92,8 +92,8 @@
         "endereco": "./src/audios/BSO - Saw - Fear Factory - Bite The Hand That Bleeds.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano":"2004",
-        "ID": 7
+        "ano": "2004",
+        "id": 7
     },
     {
         "artista": "Acústicos e Valvulados",
@@ -104,8 +104,8 @@
         "endereco": "./src/audios/Acústicos e Valvulados - Quintal.mp3",
         "preco": "9,90",
         "relevancia": 0,
-        "ano":"1999",
-        "ID": 8
+        "ano": "1999",
+        "id": 8
     },
     {
         "artista": "Skillet",
@@ -116,8 +116,8 @@
         "endereco": "./src/audios/skillet - monster.mp3",
         "preco": "49,90",
         "relevancia": 0,
-        "ano":"2009",
-        "ID": 9
+        "ano": "2009",
+        "id": 9
     },
     {
         "artista": "Smile.DK",
@@ -128,8 +128,8 @@
         "endereco": "./src/audios/butterfly.mp3",
         "preco": "149,90",
         "relevancia": 0,
-        "ano":"1998",
-        "ID": 10
+        "ano": "1998",
+        "id": 10
     },
     {
         "artista": "Imagine Dragons",
@@ -140,7 +140,7 @@
         "endereco": "./src/audios/Imagine Dragons - Radioactive.mp3",
         "preco": "19,90",
         "relevancia": 0,
-        "ano":"2022",
-        "ID": 11
+        "ano": "2022",
+        "id": 11
     }
 ]

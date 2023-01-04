@@ -2,7 +2,8 @@
 
 
 
-    <link rel="stylesheet" href="/stylesheets/admin.css">
+    <link rel="stylesheet" href="/stylesheets/admin.css" enctype="multipart/form-data">
+    <script src="/javascripts/admin.js" defer></script>
 
     <main class="container-main">
 
@@ -10,11 +11,11 @@
       
       <!-- <input type="file" name="userImage">  para usar o multer-->
       
-      <form method="post" action="/servicos/create" enctype="multipart/form-data">
+      <form method="post" action="/servicos/create" >
         <h2>CREATE</h2>
-        <input type="text" name="artista" required placeholder="Artista">
-        <input type="text" name="musica" required placeholder="Música">
-        <input type="text" name="album" required placeholder="Álbum">
+        <input type="text" name="artista" required placeholder="Artista" value="gato">
+        <input type="text" name="musica" required placeholder="Música" value="ahan">
+        <input type="text" name="album" required placeholder="Álbum" value="miau">
 
 
         <select name="genero">
@@ -33,20 +34,26 @@
           <option value="mpb">MPB</option>
         </select>
         
-        
-        <!-- <textarea type="text" name="descricao" placeholder="descricao"></textarea> -->
-        <input type="text" name="preco" required placeholder="Preco R$">
+
         
         <div class="imagem">
-        <p>Imagem</p>
-        <img src="../images/home-img/foto3.jpg" alt="">
+        <p>Capa Album</p>
+        <img src="../images/imagensAlbuns/wait.jpg" alt="">
         <input type="file" name="imagem" accept="image/*" placeholder="imagem">
       </div>
+
+        
+        <!-- <textarea type="text" name="descricao" placeholder="descricao"></textarea> -->
+        <input type="text" name="preco" required placeholder="Preco R$" value="reais">
+
+          
+        <!-- <textarea type="text" name="descricao" placeholder="descricao"></textarea> -->
+        <input type="text" name="ano" required placeholder="Ano" value="1999">
 
         <p>Musica</p>
         <input type="file" name="endereco" accept="audio/mp3" placeholder="MP3">
         
-        <button>Adicionar Música</button>
+        <button >Adicionar Música</button>
       </form>
 
 
@@ -56,9 +63,18 @@
       <!-- GET -->
       <form method="get" action="/servicos/search">
         <h2>READ</h2>
-        <input type="text" name="id" placeholder="id">
-        <button>pesquisar</button>
+        <label for="id">ID:</label>
+        <input type="text" name="id" id="id" placeholder="id">
+        
+        <label for="artista">Musica:</label>
+        <input type="text" name="musica" placeholder="Musica">
+
+
+        <button id="botaoRead"> Buscar</button>
       </form>
+
+
+
 
       <!-- PUT -->
       <form method="post" action="/servicos/edit">
@@ -71,8 +87,8 @@
         <button>editar</button>
       </form>
 
-      <!-- DELETE -->
-      <form method="post" action="/servicos/remove">
+      <!-- DELETE post -->
+      <form method="get" action="/servicos/remove">
         <h2>DELETE</h2>
         <input type="text" name="id" placeholder="id">
         <button>apagar</button>
