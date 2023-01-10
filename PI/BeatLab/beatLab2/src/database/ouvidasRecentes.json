@@ -1,29 +1,5 @@
 [
     {
-        "artista": "Seether",
-        "musica": "Hang On",
-        "album": "Disclaimer ll",
-        "imagem": "https://i.ytimg.com/vi/DhCHniOZC6s/0.jpg",
-        "genero": "Rock",
-        "endereco": "./src/audios/Seether - Hang On.mp3",
-        "preco": "2,99",
-        "relevancia": 0,
-        "ano": "2003",
-        "id": 1
-    },
-    {
-        "artista": "Rammstein",
-        "musica": "Rosenrot",
-        "album": "Rosenrot",
-        "imagem": "https://m.media-amazon.com/images/I/41-ADvqGMFL._AC_.jpg",
-        "genero": "Metal",
-        "endereco": "./src/audios/rammstein_rosenrot.mp3",
-        "preco": "2,99",
-        "relevancia": 0,
-        "ano": "2011",
-        "id": 2
-    },
-    {
         "artista": "Charlie Brown Jr",
         "musica": "Confisco",
         "album": "Acústico MTV",
@@ -58,5 +34,29 @@
         "relevancia": 0,
         "ano": "2019",
         "id": 5
+    },
+    {
+        "artista": "Vinny",
+        "musica": "Mexe a Cadeira",
+        "album": "Na Gandaia",
+        "imagem": "../images/imagensAlbuns/vinny.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/VINNY - MEXE A CADEIRA.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "1998",
+        "id": 6
+    },
+    {
+        "artista": "Fear Factory",
+        "musica": "Bite The Hand That Bleeds",
+        "album": "BSO - SAW",
+        "imagem": "../images/imagensAlbuns/hqdefault.jpg",
+        "genero": "Metal",
+        "endereco": "./src/audios/BSO - Saw - Fear Factory - Bite The Hand That Bleeds.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "2004",
+        "id": 7
     }
 ]

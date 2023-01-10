@@ -15,7 +15,7 @@ module.exports = {
     },
 
     criaServico:(req,res) => {
-        console.log('requi ponto body => '+ req.body.musica)
+        console.log('req ponto body => '+ req.body.musica)
         ServicoModel.createOne(req)
         res.send("A Música " + req.body.musica + " Foi adicionada com sucesso!")
     },
@@ -27,7 +27,13 @@ module.exports = {
 
     removeServico: (req,res) =>{
         ServicoModel.deleteOne(req)
-        res.send("A Música " + req.body.musica + " Foi adicionada EXCLUÍDA!")
+        var music = req.body.id
+       res.send("A Música " + music + " Foi EXCLUÍDA com sucesso!")   
+       },
+
+       atualizaServico:(req,res)=>{
+       ServicoModel.updateOne(req)
+       res.send("A Música " + req.body.id+ " Foi ATUALIZADA com sucesso!")  
        }
 
 }

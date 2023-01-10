@@ -1,1 +1,38 @@
-[]
+[
+    {
+        "artista": "Skillet",
+        "musica": "Monster",
+        "album": "Awake",
+        "imagem": "../images/imagensAlbuns/ab67616d0000b27343e531d5f69170aba281ef43.jpg",
+        "genero": "Metal",
+        "endereco": "./src/audios/skillet - monster.mp3",
+        "preco": "49,90",
+        "relevancia": 0,
+        "ano": "2009",
+        "id": 9
+    },
+    {
+        "artista": "Smile.DK",
+        "musica": "Butterfly",
+        "album": "Version",
+        "imagem": "../images/imagensAlbuns/R-1291287-1218313462.jpg",
+        "genero": "Electronic",
+        "endereco": "./src/audios/butterfly.mp3",
+        "preco": "149,90",
+        "relevancia": 0,
+        "ano": "1998",
+        "id": 10
+    },
+    {
+        "artista": "Acústicos e Valvulados",
+        "musica": "Quintal",
+        "album": "AntiDoto",
+        "imagem": "../images/imagensAlbuns/315291380300968.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Acústicos e Valvulados - Quintal.mp3",
+        "preco": "9,90",
+        "relevancia": 0,
+        "ano": "1999",
+        "id": 8
+    }
+]

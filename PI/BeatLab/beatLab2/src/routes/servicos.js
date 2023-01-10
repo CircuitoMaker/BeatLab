@@ -10,7 +10,8 @@ router.get('/',        ServicosController.listaServicos)
 router.get('/admin',   ServicosController.mostraAdminServicos)
 router.post('/create', ServicosController.criaServico)
 router.get('/search',  servicosController.buscaServico)
-router.get('/remove',  servicosController.removeServico)
+router.post('/remove',  servicosController.removeServico)
+router.post('/edit', servicosController.atualizaServico)
 
 
 

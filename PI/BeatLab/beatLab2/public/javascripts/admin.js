@@ -1,11 +1,6 @@
 
 let id = document.getElementById('id')
 
-
-
-
-
-
     document.getElementById("botaoRead").addEventListener("click", function() {
         //  document.getElementById("botaoRead").innerHTML = "Hello World";
         preventDefault()

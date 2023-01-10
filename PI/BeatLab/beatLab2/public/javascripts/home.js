@@ -38,6 +38,16 @@ let botaoRew = document.getElementById('rew')
  
 let carrinho = document.getElementById('carinhoLabel')
 
+// // Animação do carrinho andando
+// var cont = 0;
+// setInterval(myTimer, 10);
+// function myTimer() {
+//    cont+=5
+// carrinho.style.marginLeft=cont+'px'
+// } 
+
+
+
 
 // carrega os dados na tela ao iniciar ************
 window.onload = () => {
@@ -63,8 +73,6 @@ const atualizaCarrinho = fetch('/carrinhoApi/a')
       carrinho.innerHTML = dados.length
    }
 })
-
-
 }
 //************************************************* */
 
@@ -117,7 +125,7 @@ botaoNext.addEventListener('click', async _ => {
  // INCLUI AS TOP 5 COVERS DA SEMANA NO CARRINHO 
  for(let x=0; x<5; x++){
    document.getElementById("imgTop5-" + x).addEventListener("click", function() {
-      console.log('teste' + x)
+     // console.log('teste' + x)
       var product = document.getElementById('imgTop5-' + x).getAttribute('alt');
       carrinhoImg(product)
    },);

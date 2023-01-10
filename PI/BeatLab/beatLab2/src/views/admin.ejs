@@ -7,15 +7,15 @@
 
     <main class="container-main">
 
-      <!-- POST                                   multipart/form-data funcao que permite enviar arquivos -->
+      <!-- POST                  enctype="multipart/form-data">     -->
       
       <!-- <input type="file" name="userImage">  para usar o multer-->
       
-      <form method="post" action="/servicos/create" >
+      <form method="post" action="/servicos/create">
         <h2>CREATE</h2>
         <input type="text" name="artista" required placeholder="Artista" value="gato">
-        <input type="text" name="musica" required placeholder="Música" value="ahan">
-        <input type="text" name="album" required placeholder="Álbum" value="miau">
+        <input type="text" name="musica"  required placeholder="Música"  value="ahan">
+        <input type="text" name="album"   required placeholder="Álbum"   value="miau">
 
 
         <select name="genero">
@@ -39,7 +39,7 @@
         <div class="imagem">
         <p>Capa Album</p>
         <img src="../images/imagensAlbuns/wait.jpg" alt="">
-        <input type="file" name="imagem" accept="image/*" placeholder="imagem">
+        <input type="file" name="imagem" accept="image/*" placeholder="imagem" >
       </div>
 
         
@@ -80,18 +80,21 @@
       <form method="post" action="/servicos/edit">
         <h2>UPDATE</h2>
         <input type="text" name="id" placeholder="id">
-        <input type="text" name="nome" placeholder="nome">
+        <input type="text" name="artista" placeholder="artista">
         <textarea type="text" name="descricao" placeholder="descricao"></textarea>
         <input type="text" name="valor" placeholder="valor">
         <input type="text" name="imagem" placeholder="imagem">
-        <button>editar</button>
+        <button>Editar</button>
       </form>
 
-      <!-- DELETE post -->
-      <form method="get" action="/servicos/remove">
+      <!-- DELETE post
+       -->
+      <form method="post" action="/servicos/remove">
         <h2>DELETE</h2>
+        <label for="id">ID:</label>
         <input type="text" name="id" placeholder="id">
-        <button>apagar</button>
+
+        <button>Apagar</button>
       </form>
       
     </main>
