@@ -1,14 +1,14 @@
 [
     {
-        "artista": "Fear Factory",
-        "musica": "Bite The Hand That Bleeds",
-        "album": "BSO - SAW",
-        "imagem": "../images/imagensAlbuns/hqdefault.jpg",
-        "genero": "Metal",
-        "endereco": "./src/audios/BSO - Saw - Fear Factory - Bite The Hand That Bleeds.mp3",
-        "preco": "2,99",
+        "artista": "Peyton Parrish",
+        "musica": "VALHALLA CALLING",
+        "album": "Miracle Os Sound",
+        "imagem": "../images/imagensAlbuns/ddddd.jpg",
+        "genero": "Viking",
+        "endereco": "./src/audios/VALHALLA CALLING by Miracle Of Sound ft. Peyton Parrish (DUET VERSION).mp3",
+        "preco": "30,00",
         "relevancia": 0,
-        "ano": "2004",
-        "id": 7
+        "ano": "2022",
+        "id": 12
     }
 ]

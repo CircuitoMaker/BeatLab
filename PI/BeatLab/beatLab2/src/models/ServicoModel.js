@@ -3,15 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const { receiveMessageOnPort } = require('worker_threads')
 
-
 const ServicoModel = require('../models/ServicoModel')
-
-
-
-
-//app.use(express.json());
-//express.urlencoded({ extended: true });
-
 
 
 module.exports={
@@ -20,39 +12,21 @@ module.exports={
     },
     createOne:(req,file)=> {
         console.log('req ====>> ' + req.body.artista)
-
-        const multer = require('multer')
-        const uploadsFolder = path.resolve(__dirname,'../images/imagensAlbuns/')
-
-        // exemplo de uso do multer *****
-         const storage = multer.diskStorage({  
-            destination:uploadsFolder,
-             filename: (req, file, cb)=> { 
-                cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
-           })
         
-        
-        //definindo a variavel que sera usada como middleware
-        const uploadFile = multer({ storage });
-        
-        //Na rota onde queremos processar arquivos com o Multer, teremos que passar isso como middleware:
-       // router.post('/servicos/create', uploadFile.single('imagem'), rota ); 
-        
-        
-console.log("Teste imagem 1 = " + req.body.imagem)
-console.log("Teste imagem 2 = " + req.file)
-
-
-
+        console.log("fieldnameeeee " + req.files['imagem'][0].filename)
 
         let novaMusica={
 
+
 artista: req.body.artista,
 musica: req.body.musica,
-imagem: '../images/imagensAlbuns/' + req.body.imagem,
+
+
+imagem: '../images/imagensAlbuns/' + req.files['imagem'][0].filename,
+
 album: './src/imagensAlbuns/' + req.body.album,
 genero: req.body.genero,
-endereco: './src/audios/' + req.body.endereco,
+endereco: './src/audios/' + req.files['endereco'][0].filename,
 preco: req.body.preco,
 relevancia:0,
 ano:req.body.ano,

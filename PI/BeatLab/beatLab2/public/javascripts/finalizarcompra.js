@@ -5,7 +5,7 @@ button.addEventListener("click", function(){
     var dados = document.getElementById("dados");
 
     dados.classList.toggle("hide");
-});
+});    
 //JANELA MODAL
 // function finalizar(){
 //     const modal = document.getElementById('janela-modal')

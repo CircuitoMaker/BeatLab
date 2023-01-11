@@ -4,7 +4,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+   /* height: 45rem; */
     /* justify-content: space-around; */
 
    color: white;
@@ -22,7 +22,7 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
-width: 100%;
+width: 20rem;
 height: 4rem;
 margin-bottom: 1rem;
 border-color: white;
@@ -36,7 +36,7 @@ border-radius: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 20rem;
     height: 4rem;
    
     margin-top: 3rem;

@@ -11,11 +11,11 @@
       
       <!-- <input type="file" name="userImage">  para usar o multer-->
       
-      <form method="post" action="/servicos/create">
+      <form method="post" action="/servicos/create" enctype="multipart/form-data">
         <h2>CREATE</h2>
-        <input type="text" name="artista" required placeholder="Artista" value="gato">
-        <input type="text" name="musica"  required placeholder="Música"  value="ahan">
-        <input type="text" name="album"   required placeholder="Álbum"   value="miau">
+        <input type="text" name="artista" required placeholder="Artista" >
+        <input type="text" name="musica"  required placeholder="Música"  >
+        <input type="text" name="album"   required placeholder="Álbum"   >
 
 
         <select name="genero">
@@ -38,17 +38,41 @@
         
         <div class="imagem">
         <p>Capa Album</p>
-        <img src="../images/imagensAlbuns/wait.jpg" alt="">
-        <input type="file" name="imagem" accept="image/*" placeholder="imagem" >
+
+        <img id="newAlbum" src = "../images/imagensAlbuns/wait.jpg" alt="" >
+
+        <input id="escolherArquivo" type="file" name="imagem" accept="image/*" placeholder="imagem" >
+
+<script defer>
+
+  
+ var img = document.getElementById('newAlbum');
+ var escolherArquivoBTN = document.getElementById('escolherArquivo')
+
+ escolherArquivoBTN.onchange = function(e) { 
+ 
+ //img.src = files[0].name() //"https://picsum.photos/200/301";
+
+  console.log(escolherArquivoBTN.files[0])
+ 
+};
+
+console.log("teste")
+console.log(img.src)
+//console.log(escolherArquivoBTN.files[0].name)
+ console.log("teste2")
+
+</script>
+
       </div>
 
         
         <!-- <textarea type="text" name="descricao" placeholder="descricao"></textarea> -->
-        <input type="text" name="preco" required placeholder="Preco R$" value="reais">
+        <input type="text" name="preco" required placeholder="Preco R$">
 
           
         <!-- <textarea type="text" name="descricao" placeholder="descricao"></textarea> -->
-        <input type="text" name="ano" required placeholder="Ano" value="1999">
+        <input type="text" name="ano" required placeholder="Ano" >
 
         <p>Musica</p>
         <input type="file" name="endereco" accept="audio/mp3" placeholder="MP3">
@@ -77,7 +101,7 @@
 
 
       <!-- PUT -->
-      <form method="post" action="/servicos/edit">
+      <form method="post" action="/servicos/edit?_method=PUT">
         <h2>UPDATE</h2>
         <input type="text" name="id" placeholder="id">
         <input type="text" name="artista" placeholder="artista">
@@ -89,7 +113,7 @@
 
       <!-- DELETE post
        -->
-      <form method="post" action="/servicos/remove">
+      <form method="post" action="/servicos/remove?_method=DELETE">
         <h2>DELETE</h2>
         <label for="id">ID:</label>
         <input type="text" name="id" placeholder="id">

@@ -15,6 +15,10 @@ module.exports = {
     },
 
     criaServico:(req,res) => {
+    //  if(!req.file){
+    //  res.send("Por favor, envie um arquivo!")
+    //  }
+
         console.log('req ponto body => '+ req.body.musica)
         ServicoModel.createOne(req)
         res.send("A Música " + req.body.musica + " Foi adicionada com sucesso!")

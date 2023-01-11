@@ -144,15 +144,27 @@
         "id": 11
     },
     {
-        "artista": "kllkhilhghjkh",
-        "musica": "ahan",
-        "imagem": "../images/imagensAlbuns/",
-        "album": "./src/imagensAlbuns/miau",
-        "genero": "rock",
-        "endereco": "./src/audios/",
-        "preco": "reais",
+        "artista": "Peyton Parrish",
+        "musica": "VALHALLA CALLING",
+        "album": "Miracle Os Sound",
+        "imagem": "../images/imagensAlbuns/ddddd.jpg",
+        "genero": "Viking",
+        "endereco": "./src/audios/VALHALLA CALLING by Miracle Of Sound ft. Peyton Parrish (DUET VERSION).mp3",
+        "preco": "30,00",
         "relevancia": 0,
-        "ano": "1999",
+        "ano": "2022",
         "id": 12
+    },
+    {
+        "artista": "Nickel Back",
+        "musica": "How You Remind Me",
+        "imagem": "../images/imagensAlbuns/1673421368957.jpg",
+        "album": "./src/imagensAlbuns/Silver Side Up",
+        "genero": "rock",
+        "endereco": "./src/audios/1673421368960.mp3",
+        "preco": "5,00",
+        "relevancia": 0,
+        "ano": "2001",
+        "id": 13
     }
 ]
