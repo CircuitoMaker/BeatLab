@@ -4,34 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/home.css">
-    <script src="/javascripts/home.js" defer></script>
+    <link rel="stylesheet" href="/stylesheets/partials.css">
+    
+    <!-- <script src="/javascripts/home.js" defer></script> -->
+    <script src="/javascripts/header.js" defer></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>BeatLab</title>
-    <link rel="icon" href="/favicon1.ico" type="image/x-icon">
-    
+    <link rel="icon" href="/favicon1.ico" type="image/x-icon">  
 </head>
-<body>
 
+<body>
 
   <header class="header"> 
 
-    
-    <section id="banner">
        
         <div class="banner"><a href="/home"  ><img  src="/images/home-img/hand-1850120 1.png" alt="dj" ></a>
            <div class="banner-inf">
-            <h1>BeatLab</h1>
-            <h2>Your voice to the World!</h2>
+            <h1 class="beat">BeatLab</h1>
+            <h2 class="your">Your voice to the World!</h2>
          </div> 
         </div>
-    </section>
-
-
+   
 
 
     <audio id="player" controls="controls" hidden  preload="preload" >
-        <!-- <source src="/audio" type="audio/ogg">  -->
         <source src="/audio" type="audio/ogg"> 
     </audio>
 
@@ -60,9 +57,9 @@
             </div>
     
             <div class="btnsPlayer">             
-                <button id="rew" onclick="rew()" > << </button>                           
+                <button id="rew"  > << </button>                           
                 <button id="playPauseBtn" onclick="playPause()">PLAY</button>                                                         
-                <button id="next" onclick="next()"> >> </button>                                            
+                <button id="next" > >> </button>                                            
                 <button id="like" onclick="document.getElementById('playerLike').play()"> like </button>
             </div>
         </div>

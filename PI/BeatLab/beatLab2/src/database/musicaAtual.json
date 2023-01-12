@@ -1,14 +1,14 @@
 [
     {
-        "artista": "Peyton Parrish",
-        "musica": "VALHALLA CALLING",
-        "album": "Miracle Os Sound",
-        "imagem": "../images/imagensAlbuns/ddddd.jpg",
-        "genero": "Viking",
-        "endereco": "./src/audios/VALHALLA CALLING by Miracle Of Sound ft. Peyton Parrish (DUET VERSION).mp3",
-        "preco": "30,00",
+        "artista": "OneRepublic",
+        "musica": "Counting Stars",
+        "album": "Native",
+        "imagem": "https://i1.sndcdn.com/artworks-000040814493-eu3kr3-t500x500.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Counting Stars.mp3",
+        "preco": "2,99",
         "relevancia": 0,
-        "ano": "2022",
-        "id": 12
+        "ano": "2013",
+        "id": 0
     }
 ]

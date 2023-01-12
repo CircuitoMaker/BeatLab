@@ -41,16 +41,26 @@ if(index[0].index > coletanea.length-1){
 
 musicaAtual[0] = coletanea[index[0].index]
 
-console.log('imprimindo o index  ===== ' + index[0].index);
-console.log('imprimindo a Musica ===== ' + musicaAtual[0].musica);
+console.log('Imprimindo o index  ===== ' + index[0].index);
+console.log('Imprimindo a Musica ===== ' + musicaAtual[0].musica);
 
 // gera historico de musicas ouvidas
-if(ouvidasRecentes[ouvidasRecentes.length-1].id != musicaAtual[0].id){
+//SE receber "I" -> INCREMENTA as musicas ouvidas recentes
+if(recebe == 'I'){
+
+var salva = true;
+for(var x=0; x < ouvidasRecentes.length; x++){
+  if(musicaAtual[0].id == ouvidasRecentes[x].id){
+    salva = false
+}}
+
+  if(salva == true){
+//if(ouvidasRecentes[ouvidasRecentes.length-1].id != musicaAtual[0].id){
 ouvidasRecentes.shift();
 ouvidasRecentes.push(musicaAtual[0])
 fs.writeFileSync(path.join(__dirname , "../database/ouvidasRecentes.json"), JSON.stringify(ouvidasRecentes,null,4))
+}}
 
-}
 
 fs.writeFileSync(path.join(__dirname , "../database/musicaAtual.json"), JSON.stringify(musicaAtual,null,4))
 fs.writeFileSync(path.join(__dirname , "../database/index.json"), JSON.stringify(index,null,4))

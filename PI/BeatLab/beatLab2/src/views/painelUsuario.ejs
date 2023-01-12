@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -27,16 +27,23 @@
             <h4 class="nomePerfil">nome do usuario</h1>            
 
         </section>          
-    </header>  
- 
+    </header>  -->
+
+    <link rel="stylesheet" href="/stylesheets/painel-usuario.css">
+    <script src="/javascripts/painelUsuario.js" defer></script>
+
+    <title>Document</title>
+
+    <%- include('partials/header')%>
     
+
+
     <main class="conteudo">
         <section>
             <nav class="conteudoprincipal">
                 <button class="botao">Conta</button>
                 <button class="botao">Alterar Cadastro</button>
-                <button class="botao">Histórico de compras</button>          
-                      
+                <button class="botao">Histórico de compras</button>                              
             </nav> 
         </section>
 
@@ -56,16 +63,10 @@
             </div>  
                 <div class="conteudoprincipal2">
                     <img class="fotoPerfil" src="/images/painelUsario-img/bottao perfil (1).png" alt="">
-                    <button class="AlterarSenha"> Alterar foto? </button>
+                    <button class="AlterarSenha"> Alterar foto </button>
                 </div>       
 
             </form>       
     </main>
 
-    <footer>
-
-    </footer>
-      
-    
-</body>
-</html>
+    <%- include('partials/footer')%>

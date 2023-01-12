@@ -1,19 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100&display=swap');
+
 body{ 
 display: flex;
 flex-direction: column;
-align-items: center;
-
-
-background: linear-gradient(49.5deg, #1B1B2C 57.92%, #3C3C73 89.34%);
-font-family: Arial, Helvetica, sans-serif;
-display: flex;
 justify-content: center;
 align-items: center;
+background: linear-gradient(49.5deg, #1B1B2C 57.92%, #3C3C73 89.34%);
+font-family: Arial, Helvetica, sans-serif;
 }
-
-
 
 
 main{
@@ -21,8 +16,8 @@ main{
  flex-direction: column-reverse;
  align-items: center;
   margin-bottom: 3rem;
+  margin-top: 3rem;
  color: white;
- 
 }
 
 #msgAlerta {
@@ -38,9 +33,7 @@ main{
 }
 
 #msgAlerta p{
-    
    margin-top: 8px;
-
 }
 
 .caixa-login h1{
@@ -55,14 +48,13 @@ main{
 }
 
 .tela-login{
-margin: auto;
+ display: flex;
+ flex-direction: column;
  background-color: #3A3359;
  width: 26.3rem;
  height: 28.3rem;
  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 3px 4px 4px 5px rgba(0, 0, 0, 0.25);
  border-radius: 29px;
- display: flex;
- flex-direction: column;
 }
 
 .login{
@@ -72,8 +64,8 @@ margin: auto;
  align-items: center;
  position: relative;
  bottom: 4rem;
-
 }
+
 .login label{
  display: flex;
  justify-content: flex-start;
@@ -84,8 +76,8 @@ margin: auto;
  line-height: 32px;
  letter-spacing: 0.03em;
  color: #FFFFFF;
- 
 }
+
 .login input{
    color: white;
  width: 59%;
@@ -94,9 +86,7 @@ margin: auto;
  box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
  border-radius: 10px;
  display: flex;
- justify-content: center;
- 
-
+ justify-content: center; 
 }
 
 
@@ -113,15 +103,11 @@ font-size: 25px;
 transition: ALL 450ms;
 position: relative;
 top: 1rem;
-
 }
 
 .bt-login:hover{
  background-color: #514869;
  filter: brightness(125%);
-
-
-
 }
 
 .caixa-login a {
@@ -144,13 +130,13 @@ border-radius: 29px;
 display: flex;
 justify-content: center;
 }
+
 .registrar  h4{
  display: flex;
  justify-content: center;
  font-size: 12px;
-  
-
 }
+
 .registrar h4 a {
  color: aqua;
  margin-left: 5px;
@@ -169,7 +155,6 @@ justify-content: center;
  display: flex;
  justify-content: space-around;
  align-items: center;
-
 }
 
 .banner{
@@ -191,9 +176,7 @@ align-items: center;
  background: url(hand-1850120.jpg);
  border-radius: 47px;
  z-index: 50;
-
 }
-
 
 
 
@@ -224,22 +207,20 @@ margin-bottom: 1rem;
 top: 5rem;
 left: 7.6rem; */
 color: #08F3C9;
-
 }
 
 @media (max-width:600px){
  body{
    display: flex;
    flex-direction: column;
-justify-self: center;
-   
+   justify-self: center;
  }
 
 main{
    margin-bottom: 0.5rem;
 }
 
-    .tela-login{
+ .tela-login{
     left: 19rem;
     margin-bottom: 2rem;
  }
@@ -248,7 +229,6 @@ main{
  .banner1{
   width: 12rem;
   height: 7rem;
- 
  }
  
 
@@ -261,8 +241,9 @@ main{
     width: 10.5rem;
     border-top-right-radius: 25px;
     font-size: 25px;
-display: none;
+    display: none;
  }
+
  .banner h6{
     /* top: 7rem; */
     font-size: 15px;
@@ -271,4 +252,5 @@ display: none;
     margin-bottom: 1rem;
     display: none;
  }
+
 }

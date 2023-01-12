@@ -1,33 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/listadepordutos.css">
-    <script src="/javascripts/listaDeProdutos.js" defer></script>
+<script src="/javascripts/listaDeProdutos.js" defer></script>
     <title>ListadeProdutos</title>
-</head>
+<link rel="stylesheet" href="/stylesheets/listadepordutos.css">
 
-<body>
-    <header class="menuprincipal">
-       
-        <section id="banner">
-           
-            <div class="banner"><a href="/home"><img src="/images/home-img/hand-1850120 1.png" alt="dj"></a>
-               <div class="banner-inf">
-                <h1>BeatLab</h1>
-                <h2>Your voice to the world!</h2>
-                <input type="text" placeholder="Search">
-                </div>                         
-        </section>
-
-        <section class="perfil">
-            <img class="fotoPerfil" src="/images/painelUsario-img/bottao perfil (1).png" alt="">
-            <h4 class="nomePerfil">Nome do Usuário</h1>            
-        </section>          
-        
-</header>    
+<%- include('partials/header')%>
 
     <main>
         <div class="nome-lista">
@@ -36,24 +11,18 @@
 
 
         <div class="produtos-container" id="quantidade" tagDeQuantidade=<%=coletanea.length %>>
-
-            <% for(var i=0; i < coletanea.length; i++) { %>
-                
+            <% for(var i=0; i < coletanea.length; i++) { %>             
                 <div class="produto">
                     <img class="img"  src= <%= coletanea[i].imagem %> alt="">
                     <h2 class="nome-artista"> <%= coletanea[i].artista %> </h2>
                     <p  class="descricao"><%= coletanea[i].musica %> </p>
                     <p  class="categoria"><%= coletanea[i].genero %> </p>
                     <p  class="preco">R$ <%= coletanea[i].preco %> </p> 
-                    <button class="Comprar" novaTag=<%= coletanea[i].ID %> id=<%="ID" + i %>>Comprar</button>           
-                </div>
-             
-             <% } %>
-            
+                    <button class="Comprar" novaTag=<%= coletanea[i].id %> id=<%="ID" + i %>>Comprar</button>           
+                </div>            
+             <% } %>           
         </div>
           
-
-      
           
           <div class="modal-container">
             <div class="modal">
@@ -63,10 +32,7 @@
               <input id="botaoCarrinho" type="button" value="Seguir para Carrinho" onclick="location.href='/carrinho'">
             </div>
           </div>
-          
-
-
-              
+        
     </main>
 
 <div class="marginFooter"></div>

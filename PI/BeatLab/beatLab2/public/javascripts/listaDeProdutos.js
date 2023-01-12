@@ -1,12 +1,12 @@
 
 
- // INCLUI AS TOP 5 COVERS DA SEMANA NO CARRINHO 
+ // INCLUI A MÚSICA CLICADA NO CARRINHO 
  let quantidade = document.getElementById('quantidade').getAttribute('tagDeQuantidade')
  for(let x=0; x<quantidade; x++){
     document.getElementById("ID" + x).addEventListener("click", function() {
-       console.log('teste' + x)
+      // console.log('teste' + x)
        var product = document.getElementById('ID' + x).getAttribute('novaTag');
-      console.log(product)
+    //  console.log(product)
        carrinhoImg(product)
     },);
   }
@@ -33,13 +33,9 @@ function carrinhoImg(add){
 
 
  // *****  modal *****
-
- //const getElement = (...queries) => document.querySelector(...queries);
-
 const buttons = document.querySelectorAll('.Comprar');
 const container = document.querySelector('.modal-container');
 const modal = document.querySelector('.modal');
- 
 
  const activeModalClass = 'modal-show';
  

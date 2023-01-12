@@ -1,0 +1,675 @@
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(49.5deg, #1B1B2C 57.92%, #3C3C73 89.34%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+    align-items: center;
+   
+    height: 9rem;
+    width: 100%;
+    top: 0%;
+   /* position: fixed; */
+    background:  #1B1B2C;
+    right: 0%;
+    z-index: 100;
+    padding-top: .5rem;
+}
+
+
+.container-imagen-label{
+    display: flex;
+    flex-direction: row;
+   }
+   
+   .container-imagen-label img{
+    height: 2.6rem;
+    width: 3rem;
+    margin-right: 1rem;
+   }
+
+
+   .artista-musica{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+   }
+
+
+.search{
+    color: white;
+    margin-top: 8px;
+}
+
+.search input{
+    color: white;
+}
+
+
+#btn-mobile{
+    display: none;
+    border-style: solid white;
+}
+
+
+.headerM{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1;
+    background: linear-gradient(-45deg, red, green, blue, yellow);
+    background-size: 400% 400%;
+    box-sizing: border-box;    
+    height: 70px;
+    width: 100%;
+    padding: 1rem;
+    animation: animate 15s ease infinite;
+}
+
+
+.menuH{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ margin: 0px;
+ height: 70px;
+} 
+
+
+
+.menuH input{
+ background: #514869;
+ box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
+ border-radius: 8px;
+ width: 10rem;
+ height: 1.6rem;
+ /* position: relative; */
+ bottom: 3.7rem;
+ margin-left: 1rem;
+}
+
+#menu{
+    display: flex;
+    list-style: none;
+}
+
+#menu a {
+ display: block;
+ padding: .1rem;
+/* position: relative; */
+ bottom: 4.5rem;
+ margin-left: 1rem;
+ margin-right: 1rem;
+ color: white;
+ text-decoration: none;
+ font-family: sans-serif;
+ font-weight: bold;
+}
+
+#menu a:hover{
+    background: #fff;  
+	color: black;  
+}
+
+#btn-mobile{
+    display: none;
+   
+    /* position: relative;  */
+     bottom: 3rem; 
+ 
+}
+
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: sans-serif;
+}
+
+ .profile img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-bottom: .2rem;
+ }
+
+ 
+ .profile h2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+   /* position: relative; */
+    right: 1.5rem;
+    bottom: 1rem;
+    }
+   
+   .profile a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 15px;   
+   }
+
+
+
+   .carrinho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+   }
+   
+   .carrinho label{
+    color: white;
+    margin-bottom: -10px;
+    margin-right: -9px;
+    width: 22px;
+    height: 16px;
+    background-color: red;
+    text-align: center;
+    border-radius: 1px;
+    font-size: 15px;
+   }
+
+
+
+
+.banner img{
+    width: 15rem;
+    height: 7rem;
+    /* position: relative; */
+}
+
+ .banner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: row nowrap;
+}
+.banner-inf{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.banner-inf .beat{
+font-family: 'Kantumruy';
+font-style: normal;
+font-size: 28px;
+color: #FFFFFF;
+background-color: #08F3C9;
+width: 10rem;
+height: 1.8rem;
+border-top-right-radius: 15px;
+
+}
+
+.banner-inf .your{
+    color: #08F3C9;
+    font-size: 18px;
+    height: 1rem;
+    margin-top: -15px;
+}
+
+
+
+
+.player{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 7rem;
+    border-radius: 1rem;
+      /* padding-right: 5rem; */
+      /* position: relative; */
+     
+     /* temporario */
+      border-width: 2px; 
+      border-style: solid; 
+      border-color:  white;
+  }
+  
+  .btnsPlayer{
+  width: 20rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+  }
+  
+  .btnsPlayer button{
+      border-radius: 8px;
+      height: 2.2rem;
+      width: 3.5rem;
+      color: white;
+      font-family: sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      background-color:#3498db;
+      border-width: 1px; 
+      border-style: solid; 
+      border-color:  rgb(217, 11, 231);
+      transition: 0.1s all ease-in-out;
+      cursor: pointer;
+  }
+  
+  #formBtn{
+      width: 10px;
+      height: 10px;
+  }
+  
+  #playPauseBtn:hover  {
+      transform: scale(1.1);
+      background: linear-gradient(45deg, red, green, blue, yellow,orange);
+  background-size: 1000% 1000%;
+  animation: animate 1s ease infinite;
+  
+  transform:rotate(360deg);
+  transition: 0.5s;
+      
+  }
+  
+  #next:hover  {
+      transform: scale(1.1);
+  }
+  #rew:hover  {
+      transform: scale(1.1);
+  }
+  #like:hover  {
+      transform: scale(1.1);
+  }
+  
+  #myProgress {
+      width: 60%;
+      background-color: grey;
+      margin: 5px;
+    }
+    
+    #myBar {
+      width: 1%;
+      height: 5px;
+      background-color: red;
+  
+    }
+  
+  
+    .progress-label{
+      width: 20rem;
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .progress-label label{
+      color: white;
+    }
+  
+
+    
+.navigation-auto div{
+    border:  2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    position: absolute;
+    top: 35rem;
+    left: -6rem;
+}
+
+
+.navigation-auto{  
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+
+
+
+@media (max-width:600px){
+
+header{
+    height: 7rem;
+    margin-bottom: 0.5rem;
+    
+}
+.banner img{
+    display: none;
+    
+}
+
+.banner-inf{
+    display: none;
+}
+
+
+.search{
+    display: none;
+}
+
+
+
+.menuH input{
+    margin-top: 30px;
+    left: 1.3rem;
+    bottom: 3.9rem;
+    width: 5rem;
+
+}
+
+.profile{
+    display: none;
+}
+
+.player{
+   right: 0rem;
+   
+}
+
+
+#btn-mobile{
+    display: block;
+}
+
+#menu{
+    display: block;
+
+    position: absolute; 
+    width: 100%;
+    margin-top: 120px;
+    top: 70px;
+    right: 0;
+    background: #e7e7e7;
+    
+    transition: .1s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+
+}
+
+#nav.active #menu{
+  
+   height: calc(100vh - 70px);
+   visibility: visible;
+   overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    bottom: -1rem;
+    border-bottom: 2px solid rgba(0,0,0,.05);
+}
+
+#btn-mobile{
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+ 
+
+   
+}
+#hamburguer{
+color: #fff;
+display: block;
+border-top: 2px solid;
+width: 20px;
+
+}
+
+#hamburguer::after, #hamburguer::before{
+content: '';
+display: block;
+width: 20px;
+height: 2px;
+background: currentColor;
+margin-top: 5px;
+transition: .3s;
+position: relative; 
+}
+
+#nav.active #hamburguer{
+
+border-top-color: transparent;
+
+}
+
+#nav.active #hamburguer::before{
+
+transform: rotate(135deg);
+}
+
+#nav.active #hamburguer::after{
+border-top-color: transparent;
+transform: rotate(-135deg);
+top: -7px;
+
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+/* footer */
+
+.footerPartials{
+    bottom: 0px;
+    width: 100%;
+    background: linear-gradient(49.5deg,  rgb(83, 3, 76) 57.92%, #3C3C73 89.34%); 
+    color: #d9d9d9; 
+}
+
+
+.main-content{
+    display: flex;
+}
+
+.main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+.box h2{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.box .content{
+    margin: 20px 0 0 0;
+    /* position: relative; */
+}
+.box .content:after{
+    /* position: absolute; */
+    content: '';
+    width: 15%;
+    height: 2px;
+    background: #f12020;
+    top: -10px;
+}
+.box .content:before{
+    /* position: absolute; */
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+    top: -10px;
+}
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+.left .content .social a{
+    padding: 0 2px;
+}
+.left .content .social a span{
+    width: 40px;
+    height: 40px;
+    background: #1a1a1a;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.left .content .social a span:hover{
+    background: #f12020;
+}
+
+.left .content p{
+    text-align: justify;
+}
+
+.center .content .fas{
+    font-size: 23px;
+    background: #1a1a1a;
+    width: 45px;
+    height: 45px ;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .content .fas:hover{
+    background: #f12020;
+}
+
+.center .content .text{
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.center .content .phone{
+    margin: 10px 0;
+}
+.center .content .msg{
+    margin-top: 10px;
+}
+.right form input, .right form textarea{
+    width: 100%;
+    font-size: 17px;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid #222222;
+}
+.right form input{
+    height: 35px;
+}
+.right form input:focus,
+.right form textarea:focus{
+    outline-color: #3498db;
+}
+.right form .text{
+    font-size: 17px;
+    margin-bottom: 2px;
+    color: #656565;
+}
+.right form .btn{
+    margin-top: 10px;
+}
+.right form .btn button{
+    height: 40px;
+    width: 100%;
+    background: #f12020;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+.right form .btn button:hover{
+    background: #000;
+}
+
+.bottom .center{
+    padding: 5px;
+    font-size: 15px;
+    background: #151515;
+    text-align: center;
+}
+.bottom .center span{
+    color: #656565;
+}
+.bottom .center a{
+    color: #f12020;
+    text-decoration: none;
+}
+.bottom .center a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+@media screen and (max-width: 900px){
+    footer{
+        /* position: fixed; */
+        bottom: 0px;
+    }
+    .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+   
+
+    .main-content .center{
+        display: none;
+    }
+    
+    .main-content .right{
+        display: none;
+    }
+
+.main-content .left h2 {
+   margin: auto;
+}
+
+.main-content .left p {
+    margin: auto;
+ }
+
+.main-content .content{
+    margin: auto;
+
+
+
+}
+    .bottom{
+        display: none; 
+    }
+}
