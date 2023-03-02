@@ -1,14 +1,14 @@
 [
     {
-        "artista": "Charlie Brown Jr",
-        "musica": "Confisco",
-        "album": "Acústico MTV",
-        "imagem": "https://i.ytimg.com/vi/26n5o0QJILQ/mqdefault.jpg",
+        "artista": "Vinny",
+        "musica": "Mexe a Cadeira",
+        "album": "Na Gandaia",
+        "imagem": "../images/imagensAlbuns/vinny.jpg",
         "genero": "Rock",
-        "endereco": "./src/audios/Charlie-Brown-JR-Confisco.mp3",
+        "endereco": "./src/audios/VINNY - MEXE A CADEIRA.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano": "1997",
-        "id": 3
+        "ano": "1998",
+        "id": 6
     }
 ]
