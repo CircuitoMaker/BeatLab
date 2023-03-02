@@ -1,3 +1,5 @@
 node_modules
 audios
 imagensAlbuns
+package-lock.json
+package.json
