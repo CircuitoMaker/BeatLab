@@ -1,14 +1,14 @@
 [
     {
-        "artista": "OneRepublic",
-        "musica": "Counting Stars",
-        "album": "Native",
-        "imagem": "https://i1.sndcdn.com/artworks-000040814493-eu3kr3-t500x500.jpg",
+        "artista": "Charlie Brown Jr",
+        "musica": "Confisco",
+        "album": "Acústico MTV",
+        "imagem": "https://i.ytimg.com/vi/26n5o0QJILQ/mqdefault.jpg",
         "genero": "Rock",
-        "endereco": "./src/audios/Counting Stars.mp3",
+        "endereco": "./src/audios/Charlie-Brown-JR-Confisco.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano": "2013",
-        "id": 0
+        "ano": "1997",
+        "id": 3
     }
 ]
