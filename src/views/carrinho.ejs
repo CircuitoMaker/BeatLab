@@ -31,8 +31,18 @@
      <span><%= 'Quantidade de itens: ' + carrinho.length%></span>
 
      <div>
+
+<div class="cupon">
+    <input type="button" class="button" value="Cupom" onclick="calculaTotal()">
+    <input type="text" width="5" id="cupom" placeholder="cupom ex: 20%OFF">
+</div>
+
+<div class="fatura">
     <span  id="valorTotal" >Total: R$</span>
+    <span  id="exibeDesconto">Desconto de: R$</span>   
     <input type="button" value="Pagar" class="button">
+</div>
+
 </div>
 
 </div> 

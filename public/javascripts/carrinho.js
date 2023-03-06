@@ -47,11 +47,32 @@ function carrinhoImg(remove){
 
 
 
-
-
  // CALCULA VALORES DO CARRINHO  
 function calculaTotal(){
   
+  // exemplo de cupom de de desconto 
+  // 10%OFF
+  // 30%OFF
+  // 78%OFF
+
+  var desconto = document.getElementById('cupom')
+  var valida = desconto.value.substr(-4)
+  var descontoAplicado = Number(desconto.value.substr(0,2)) 
+  var cupomValido = false
+  var valorDescontado = 0;
+
+  // verifica se o campo de desconto está preenchido e se é válido
+  if(desconto.value != 0){
+  if(valida == "%OFF"){
+   desconto.value = "Cupom Válido";
+   cupomValido = true;
+  }else{
+    desconto.value = "Cupom Inválido"
+  }
+}
+ 
+  
+
     var valorTotal = document.getElementById('valorTotal')
    
     if(quantidade1 != null){
@@ -66,12 +87,23 @@ soma += converte
 console.log(converte)
 }
 
+// Aplica a prcentagem de desconto 
+if(cupomValido == true){
+var aux1 = soma
+var aux2 =  descontoAplicado * aux1
+valorDescontado = aux2 / 100
+soma = aux1 - (aux2 / 100)
+}
+
 valor = soma.toFixed(2).replace('.',',')
 
 valorTotal.innerHTML='Total: R$' + valor
 
+document.getElementById('exibeDesconto').innerHTML="Desconto de: R$" + valorDescontado.toFixed(2).replace('.',',')
+
 }else{
     valorTotal.innerHTML = 'Total: R$0,00'
+    
 }
 
 
