@@ -27,24 +27,36 @@
 
 
 <div class="card-pagar">
-
+    
      <span><%= 'Quantidade de itens: ' + carrinho.length%></span>
 
-     <div>
+    
 
 <div class="cupon">
-    <input type="button" class="button" value="Cupom" onclick="calculaTotal()">
+    <input type="button" class="button"  value="Cupom" onclick="calculaTotal()">
     <input type="text" width="5" id="cupom" placeholder="cupom ex: 20%OFF">
 </div>
 
+<span  id="insiraCEP">Insira seu CEP para receber um brinde</span>
+<div class="CEP">
+    
+    <input type="button" class="button" id="botao" value="Receber" onclick="buscaCEP()">
+    <input type="text" width="5" id="recebeCEP" placeholder="CEP">
+</div>
+
+
 <div class="fatura">
-    <span  id="valorTotal">Total: R$</span>
+    <span  id="frete">Frete: R$0,00</span>
+    <span  id="valorTotalProdutos">Valor Produtos: R$</span>
     <span  id="exibeDesconto">Desconto de: R$</span>   
+    <span  id="valorComDesconto">Valor Produtos com desconto: R$</span>
+    <span  id="valorFinal">Total (Prod + Frete): R$</span>
+
     <input type="button" value="Pagar" class="button">
 </div>
 
 </div>
-</div> 
+
 
 
 

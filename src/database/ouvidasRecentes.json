@@ -1,41 +1,5 @@
 [
     {
-        "artista": "Fear Factory",
-        "musica": "Bite The Hand That Bleeds",
-        "album": "BSO - SAW",
-        "imagem": "../images/imagensAlbuns/hqdefault.jpg",
-        "genero": "Metal",
-        "endereco": "./src/audios/BSO - Saw - Fear Factory - Bite The Hand That Bleeds.mp3",
-        "preco": "2,99",
-        "relevancia": 0,
-        "ano": "2004",
-        "id": 7
-    },
-    {
-        "artista": "Acústicos e Valvulados",
-        "musica": "Quintal",
-        "album": "AntiDoto",
-        "imagem": "../images/imagensAlbuns/315291380300968.jpg",
-        "genero": "Rock",
-        "endereco": "./src/audios/Acústicos e Valvulados - Quintal.mp3",
-        "preco": "9,90",
-        "relevancia": 0,
-        "ano": "1999",
-        "id": 8
-    },
-    {
-        "artista": "Imagine Dragons",
-        "musica": "Radioactive",
-        "album": "Night Visions",
-        "imagem": "../images/imagensAlbuns/maxresdefault.jpg",
-        "genero": "Electronic",
-        "endereco": "./src/audios/Imagine Dragons - Radioactive.mp3",
-        "preco": "19,90",
-        "relevancia": 0,
-        "ano": "2022",
-        "id": 11
-    },
-    {
         "artista": "Peyton Parrish",
         "musica": "VALHALLA CALLING",
         "album": "Miracle Os Sound",
@@ -58,5 +22,41 @@
         "relevancia": 0,
         "ano": "2001",
         "id": 13
+    },
+    {
+        "artista": "Horizonte",
+        "musica": "Solo Tu",
+        "album": "Horizonte",
+        "imagem": "https://i.ytimg.com/vi/AduJZV8-SX8/0.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Solo Tu.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "2019",
+        "id": 5
+    },
+    {
+        "artista": "Smile.DK",
+        "musica": "Butterfly",
+        "album": "Version",
+        "imagem": "../images/imagensAlbuns/R-1291287-1218313462.jpg",
+        "genero": "Electronic",
+        "endereco": "./src/audios/butterfly.mp3",
+        "preco": "149,90",
+        "relevancia": 0,
+        "ano": "1998",
+        "id": 10
+    },
+    {
+        "artista": "Seether",
+        "musica": "Hang On",
+        "album": "Disclaimer ll",
+        "imagem": "https://i.ytimg.com/vi/DhCHniOZC6s/0.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Seether - Hang On.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "2003",
+        "id": 1
     }
 ]

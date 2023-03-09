@@ -37,7 +37,7 @@ border-radius: 10px;
     align-items: center;
     justify-content: space-between;
     width: 20rem;
-    height: 9rem;
+    height: 20rem;
    
     margin-top: 3rem;
     margin-bottom: 2rem;
@@ -52,6 +52,14 @@ border-radius: 10px;
     align-items: center;
     justify-content: space-between;
     margin: 0;
+}
+
+.CEP{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
 }
 
 .fatura{

@@ -1,5 +1,8 @@
 let quantidade1=document.getElementById('quantidade')
 
+var valorFrete = 0;
+var UF = '';
+
 if(quantidade1 != null){
 var quantidade = quantidade1.getAttribute('quantidade')
 }
@@ -44,6 +47,51 @@ function carrinhoImg(remove){
  }
 
 
+ // função que busca o CEP
+
+function buscaCEP(){
+
+var listaUF=['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO']
+var valores =[10,12,22,45,54,32,21,80,66,45,33,32,67,27,38,90,45,32,51,38,56,73,63,99,93,28,87,75]
+  
+//dados do CEP
+  var recebeCEP = document.getElementById('recebeCEP')
+  var CEPValido = false
+  
+  //verifica se o campo do CEP esta preenchido
+  if(recebeCEP.value != 0){   
+    if(recebeCEP.value.length != 8 ){
+      recebeCEP.value = "CEP Inválido"
+    }
+  }
+  
+    
+     var requestURL = 'https://viacep.com.br/ws/' + recebeCEP.value + '/json'
+    
+      var request = new XMLHttpRequest()
+      request.open('GET', requestURL)
+      request.responseType = 'json'
+      request.send()
+
+     //var meu_callback=''
+      request.onload = async() =>{
+        var meu_callback = await request.response;
+        var valor = 0;
+        for(var x=0; x<27;x++){
+         if(meu_callback.uf == listaUF[x]){
+          valor=valores[x]
+          UF = listaUF[x]
+         }
+        }
+
+        //recebeCEP.value = 'Frete - ' + meu_callback.uf  +" = R$" + valor + ',00'
+        valorFrete = valor;
+        calculaTotal();
+      }
+      
+    }
+  
+  //
 
 
 
@@ -71,10 +119,12 @@ function calculaTotal(){
   }
 }
  
-  
 
-    var valorTotal = document.getElementById('valorTotal')
-   
+    var valorComDesconto = document.getElementById('valorComDesconto')
+    var valorTotalProdutos = document.getElementById('valorTotalProdutos')
+    var frete = document.getElementById('frete').innerHTML = 'Frete: ' + UF + ' = R$' + valorFrete + ',00';
+    var valorFinal = document.getElementById('valorFinal')
+
     if(quantidade1 != null){
 var soma = 0;
 
@@ -87,6 +137,8 @@ soma += converte
 console.log(converte)
 }
 
+valorTotalProdutos.innerHTML='Valor Produtos: R$' + soma.toFixed(2).replace('.',',')
+
 // Aplica a prcentagem de desconto 
 if(cupomValido == true){
 var aux1 = soma
@@ -97,14 +149,16 @@ soma = aux1 - (aux2 / 100)
 
 valor = soma.toFixed(2).replace('.',',')
 
-valorTotal.innerHTML='Total: R$' + valor
+valorComDesconto.innerHTML='Valor produtos com desconto: R$' + valor
 
 document.getElementById('exibeDesconto').innerHTML="Desconto de: R$" + valorDescontado.toFixed(2).replace('.',',')
 
 }else{
-    valorTotal.innerHTML = 'Total: R$0,00'
+    valorComDesconto.innerHTML = 'Total: R$0,00'
     
 }
+ 
+var calculo = soma + valorFrete
 
-
+valorFinal.innerHTML = 'Total (Prod + Frete): R$' + calculo.toFixed(2).replace('.',',')
 }

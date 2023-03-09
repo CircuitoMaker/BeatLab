@@ -10,17 +10,5 @@
         "relevancia": 0,
         "ano": "2022",
         "id": 11
-    },
-    {
-        "artista": "Smile.DK",
-        "musica": "Butterfly",
-        "album": "Version",
-        "imagem": "../images/imagensAlbuns/R-1291287-1218313462.jpg",
-        "genero": "Electronic",
-        "endereco": "./src/audios/butterfly.mp3",
-        "preco": "149,90",
-        "relevancia": 0,
-        "ano": "1998",
-        "id": 10
     }
 ]
