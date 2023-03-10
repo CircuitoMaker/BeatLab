@@ -1,14 +1,14 @@
 [
     {
-        "artista": "Seether",
-        "musica": "Hang On",
-        "album": "Disclaimer ll",
-        "imagem": "https://i.ytimg.com/vi/DhCHniOZC6s/0.jpg",
-        "genero": "Rock",
-        "endereco": "./src/audios/Seether - Hang On.mp3",
+        "artista": "Fear Factory",
+        "musica": "Bite The Hand That Bleeds",
+        "album": "BSO - SAW",
+        "imagem": "../images/imagensAlbuns/hqdefault.jpg",
+        "genero": "Metal",
+        "endereco": "./src/audios/BSO - Saw - Fear Factory - Bite The Hand That Bleeds.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano": "2003",
-        "id": 1
+        "ano": "2004",
+        "id": 7
     }
 ]

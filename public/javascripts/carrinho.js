@@ -52,7 +52,7 @@ function carrinhoImg(remove){
 function buscaCEP(){
 
 var listaUF=['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO']
-var valores =[10,12,22,45,54,32,21,80,66,45,33,32,67,27,38,90,45,32,51,38,56,73,63,99,93,28,87,75]
+var valores =[10,12,22,45,54,32,21,80,66,43,33,39,67,27,38,90,47,32,51,38,56,73,63,99,93,28,87,75]
   
 //dados do CEP
   var recebeCEP = document.getElementById('recebeCEP')
@@ -73,7 +73,7 @@ var valores =[10,12,22,45,54,32,21,80,66,45,33,32,67,27,38,90,45,32,51,38,56,73,
       request.responseType = 'json'
       request.send()
 
-     //var meu_callback=''
+     
       request.onload = async() =>{
         var meu_callback = await request.response;
         var valor = 0;
@@ -84,7 +84,6 @@ var valores =[10,12,22,45,54,32,21,80,66,45,33,32,67,27,38,90,45,32,51,38,56,73,
          }
         }
 
-        //recebeCEP.value = 'Frete - ' + meu_callback.uf  +" = R$" + valor + ',00'
         valorFrete = valor;
         calculaTotal();
       }
@@ -139,7 +138,7 @@ console.log(converte)
 
 valorTotalProdutos.innerHTML='Valor Produtos: R$' + soma.toFixed(2).replace('.',',')
 
-// Aplica a prcentagem de desconto 
+// Aplica a porcentagem de desconto 
 if(cupomValido == true){
 var aux1 = soma
 var aux2 =  descontoAplicado * aux1
