@@ -35,16 +35,6 @@
   let capaAlbum     = document.getElementById('capaAlbum')
   let carrinho = document.getElementById('carinhoLabel')
  
- // // Animação do carrinho andando
- // var cont = 0;
- // setInterval(myTimer, 10);
- // function myTimer() {
- //    cont+=5
- // carrinho.style.marginLeft=cont+'px'
- // } 
- 
- 
- 
  
  // carrega os dados na tela ao iniciar ************
  window.onload = () => {
@@ -210,14 +200,7 @@ let contPlayPause = false;
  }, 1000);
 
 
- 
-// // // Animação do carrinho andando
-// // var cont = 0;
-// // setInterval(myTimer, 10);
-// // function myTimer() {
-// //    cont+=5
-// // carrinho.style.marginLeft=cont+'px'
-// // } 
+
 
 
 
@@ -238,3 +221,15 @@ let contPlayPause = false;
  
  }
  /// FIM DA FUNCAO
+
+
+ const inputEle = document.getElementById('barraDeBusca');
+inputEle.addEventListener('keyup', function(e){
+  var key = e.which || e.keyCode;
+  if (key == 13) { // codigo da tecla enter
+    // colocas aqui a tua função a rodar
+
+    window.location='/listadeprodutos/' +  this.value
+   // alert('carregou enter o valor digitado foi: ' + this.value);
+  }
+});

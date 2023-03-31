@@ -3,6 +3,12 @@ var router = express.Router();
 var fs = require('fs')
 var getStat = require('util').promisify(fs.stat);
 const { isAsyncFunction } = require('util/types');
+
+
+
+const musica = require('../models/musica')
+const database = require('../models/db');
+
 const coletanea = require('../database/repertorio.json');
 const musicaAtual = require('../database/musicaAtual.json')
 const ouvidasRecentes = require('../database/ouvidasRecentes.json')
@@ -14,7 +20,7 @@ const path = require('path')
 
  router.get('/:id', async(req, res)=> {
  
-  //  const filePath = musicaAtual[0].endereco
+  recebeBd = await musica.findAll();
 
    
    //const recebe = req.query.id
@@ -65,9 +71,10 @@ fs.writeFileSync(path.join(__dirname , "../database/ouvidasRecentes.json"), JSON
 fs.writeFileSync(path.join(__dirname , "../database/musicaAtual.json"), JSON.stringify(musicaAtual,null,4))
 fs.writeFileSync(path.join(__dirname , "../database/index.json"), JSON.stringify(index,null,4))
 
-// res.send(musicaAtual)
 
-res.send([musicaAtual[0],ouvidasRecentes])
+//res.send([musicaAtual[0],ouvidasRecentes],{recebeDb})
+
+res.send([recebeBd[0],ouvidasRecentes])
 
 });
 

@@ -1,14 +1,30 @@
+const database = require('../models/db')
+const musica = require('../models/musica')
 
-let id = document.getElementById('id')
 
-    document.getElementById("botaoRead").addEventListener("click", function() {
-        //  document.getElementById("botaoRead").innerHTML = "Hello World";
-        preventDefault()
-    fetch('/servicos/search').then(response =>{
-    return response.json();
-        })
-    .then(data =>{
-        id.value(data);
-    })
+
+
+async function vai(){
+
+const id = document.getElementById('id')
+const artista = document.getElementById('artista')
+
+
+//let msc = await musica.findOne()
+//console.log(msc.preco)
+
+
+
+   document.getElementById('busca').innerHTML = 'OLA';
+  
+    window.location='/servicos/admin' + id.value
+
+   // id.value = document.getElementById('enviaId').value
+
+  
+}
+
+
+
+
     
-    }); 

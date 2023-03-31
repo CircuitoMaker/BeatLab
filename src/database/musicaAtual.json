@@ -1,14 +1,14 @@
 [
     {
-        "artista": "Fear Factory",
-        "musica": "Bite The Hand That Bleeds",
-        "album": "BSO - SAW",
-        "imagem": "../images/imagensAlbuns/hqdefault.jpg",
-        "genero": "Metal",
-        "endereco": "./src/audios/BSO - Saw - Fear Factory - Bite The Hand That Bleeds.mp3",
-        "preco": "2,99",
+        "artista": "Acústicos e Valvulados",
+        "musica": "Quintal",
+        "album": "AntiDoto",
+        "imagem": "../images/imagensAlbuns/315291380300968.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Acústicos e Valvulados - Quintal.mp3",
+        "preco": "9,90",
         "relevancia": 0,
-        "ano": "2004",
-        "id": 7
+        "ano": "1999",
+        "id": 8
     }
 ]

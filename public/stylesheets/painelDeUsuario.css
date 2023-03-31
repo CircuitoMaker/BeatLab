@@ -15,13 +15,8 @@ header{
     margin:  1rem;
     flex-wrap: wrap;
 }
-#player{
-    width: 17rem;
-    height: 7rem;
-    background-color: #514869;
-    border-radius: 15px;
-    box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25); 
-}
+
+
 .menu{
  display: flex;
  flex-direction: column;
@@ -29,15 +24,18 @@ header{
  right: 25rem;
  top: 2.5rem;
 }
+
 .menu a{
     text-decoration: none;
     color: #ffffff;
     font-size: 20px;
 }
+
 .menu a:hover{
     font-size: 20px;
     color: #08F3C9;
 }
+
 .profile{
     font-size: 20px;
     width: 29rem;
@@ -47,6 +45,7 @@ header{
     justify-content: flex-end;
     margin-right: 2.9rem;
 }
+
 main{
     display: flex;
     flex-direction: row;
@@ -54,6 +53,7 @@ main{
     align-items: center;
     flex-wrap: wrap;
 }
+
 #container1{
     display: flex;
     flex-direction: column;
@@ -66,6 +66,7 @@ main{
     border-radius: 15px;
     box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25); 
 }
+
 #container1 button{
     width: 100%;
     height: 2.5rem;
@@ -75,6 +76,7 @@ main{
     font-size: 22px;
     transition: 200ms;
 }
+
 #container1 button:hover{
     width: 80%;
     background-color: #08F3C9;
@@ -82,16 +84,18 @@ main{
     left: 1.7rem;
     box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
 }
+
 #container2{
     display: block;
     flex-direction: row;
     position: relative;
     top: 0rem;
 }
+
 #container2 h1{
     position: relative;
-    
 }
+
 .inf-profile{
  display: flex;
  flex-direction: column;
@@ -99,6 +103,7 @@ main{
  right: 50rem;
  top: 4rem;
 }
+
 .inf-profile input{
     width: 17rem;
     height: 1.9rem;
@@ -108,6 +113,7 @@ main{
     box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
+
 #password{
     width: 12rem;
     height: 2rem;
@@ -117,14 +123,17 @@ main{
     border-radius: 10px;
     border-color: transparent;
 }
+
 #password a{
     text-decoration: none;
     color: #ffffff;
     font-size: 15px;
 }
+
 #password:hover{
     background-color: #5449729c;
 }
+
 #bt-save{
     width: 15rem;
     height: 3rem;
@@ -138,9 +147,11 @@ main{
     transition: 150ms;
     font-size: 19px;
 }
+
 #bt-save:hover{
     background-color: rgba(8, 243, 200, 0.705);
 }
+
 #container3{
     display: flex;
     flex-direction: column;
@@ -149,6 +160,7 @@ main{
     right: 22rem;
     bottom: 19rem; 
 }
+
 #container3 img{
     width: 10rem;
     height: 10rem;
@@ -157,6 +169,7 @@ main{
     bottom: 4.5rem;
     right: .1rem;
 }
+
 .inf-img{
     background-color: #514869;
     width: 12rem;
@@ -164,6 +177,7 @@ main{
     box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
+
 .inf-img button{
     position: relative;
     bottom: 4rem;
@@ -176,6 +190,7 @@ main{
     transition: 150ms;
     border-radius: 15px;
 }
+
 .inf-img button:hover{
     background-color: #63548bf3;
 }
@@ -186,16 +201,19 @@ main{
     right: 12rem;
     bottom: 8rem;
 }
+
 #aboutMe label{
    position: relative;
    bottom: 7.7rem;
    right: 12rem;
 }
+
 #aboutMe textarea{
     background-color: #514869;
     color: #ffffff;
     margin-top: .5rem;
 }
+
 #container4{
     display: none;
     flex-direction: column;
@@ -203,25 +221,24 @@ main{
     position: fixed;
     left: 24rem;
     bottom: 25rem;
-
 }
+
 #card{
     display: flex;
     flex-direction: row;
     width: 25rem;
     height: 10rem;
     background-color: #514869;
-    
 }
+
 #card footer{
     text-align: justify;
     color: #FFFFFF;
     font-size: 22px;
     display: flex;
     flex-direction: column;
-  
-
 }
+
 #card span{
     width: 8rem;
     height: 4rem;
@@ -231,7 +248,6 @@ main{
 #card img{
  width: 15rem;
 height: 10rem;
-
 }
 
 

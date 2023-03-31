@@ -1,0 +1,33 @@
+.novoUser{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    color:white;
+
+}
+
+.img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 100px;
+}
+
+
+.button{
+   width: 100px;
+   height: 40px;
+   color: white;
+   font-size: 20px;
+   font-weight: 400;
+   border-radius: 6px;
+   background-color: #08F3C9;
+   cursor: pointer;
+   margin-top: 1rem;
+   margin-bottom: 2rem;
+}
+
+.button:hover{
+    zoom: 1.1;
+}

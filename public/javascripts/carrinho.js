@@ -159,5 +159,11 @@ document.getElementById('exibeDesconto').innerHTML="Desconto de: R$" + valorDesc
  
 var calculo = soma + valorFrete
 
-valorFinal.innerHTML = 'Total (Prod + Frete): R$' + calculo.toFixed(2).replace('.',',')
+// if(calculo.isNaN()){
+//   valorFinal.innerHTML = 'Total (Prod + Frete): R$0,00'
+// }else{
+  valorFinal.innerHTML = 'Total (Prod + Frete): R$' + calculo.toFixed(2).replace('.',',')
+//}
+
+
 }

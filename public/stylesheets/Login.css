@@ -103,11 +103,13 @@ font-size: 25px;
 transition: ALL 450ms;
 position: relative;
 top: 1rem;
+cursor: pointer;
 }
 
 .bt-login:hover{
  background-color: #514869;
  filter: brightness(125%);
+ zoom: 1.1;
 }
 
 .caixa-login a {

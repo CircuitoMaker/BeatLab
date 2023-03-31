@@ -1,63 +1,15 @@
 [
     {
-        "artista": "Imagine Dragons",
-        "musica": "Radioactive",
-        "album": "Night Visions",
-        "imagem": "../images/imagensAlbuns/maxresdefault.jpg",
-        "genero": "Electronic",
-        "endereco": "./src/audios/Imagine Dragons - Radioactive.mp3",
-        "preco": "19,90",
-        "relevancia": 0,
-        "ano": "2022",
-        "id": 11
-    },
-    {
-        "artista": "Horizonte",
-        "musica": "Solo Tu",
-        "album": "Horizonte",
-        "imagem": "https://i.ytimg.com/vi/AduJZV8-SX8/0.jpg",
+        "artista": "Detonautas",
+        "musica": "Melhor Plantar o Bem",
+        "album": "Melhor Plantar o bem",
+        "imagem": "https://i.ytimg.com/vi/vzvMKWS2rf4/maxresdefault.jpg",
         "genero": "Rock",
-        "endereco": "./src/audios/Solo Tu.mp3",
+        "endereco": "./src/audios/Detonautas - Melhor plantar o bem.mp3",
         "preco": "2,99",
         "relevancia": 0,
-        "ano": "2019",
-        "id": 5
-    },
-    {
-        "artista": "Rammstein",
-        "musica": "Rosenrot",
-        "album": "Rosenrot",
-        "imagem": "https://m.media-amazon.com/images/I/41-ADvqGMFL._AC_.jpg",
-        "genero": "Metal",
-        "endereco": "./src/audios/rammstein_rosenrot.mp3",
-        "preco": "2,99",
-        "relevancia": 0,
-        "ano": "2011",
-        "id": 2
-    },
-    {
-        "artista": "Seether",
-        "musica": "Hang On",
-        "album": "Disclaimer ll",
-        "imagem": "https://i.ytimg.com/vi/DhCHniOZC6s/0.jpg",
-        "genero": "Rock",
-        "endereco": "./src/audios/Seether - Hang On.mp3",
-        "preco": "2,99",
-        "relevancia": 0,
-        "ano": "2003",
-        "id": 1
-    },
-    {
-        "artista": "Fear Factory",
-        "musica": "Bite The Hand That Bleeds",
-        "album": "BSO - SAW",
-        "imagem": "../images/imagensAlbuns/hqdefault.jpg",
-        "genero": "Metal",
-        "endereco": "./src/audios/BSO - Saw - Fear Factory - Bite The Hand That Bleeds.mp3",
-        "preco": "2,99",
-        "relevancia": 0,
-        "ano": "2004",
-        "id": 7
+        "ano": "2015",
+        "id": 4
     },
     {
         "artista": "Nickel Back",
@@ -70,5 +22,17 @@
         "relevancia": 0,
         "ano": "2001",
         "id": 13
+    },
+    {
+        "artista": "Peyton Parrish",
+        "musica": "VALHALLA CALLING",
+        "album": "Miracle Os Sound",
+        "imagem": "../images/imagensAlbuns/ddddd.jpg",
+        "genero": "Viking",
+        "endereco": "./src/audios/VALHALLA CALLING by Miracle Of Sound ft. Peyton Parrish (DUET VERSION).mp3",
+        "preco": "30,00",
+        "relevancia": 0,
+        "ano": "2022",
+        "id": 12
     }
 ]

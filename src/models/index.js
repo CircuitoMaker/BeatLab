@@ -1,43 +1,78 @@
-'use strict';
+(async()=> {
 
-const fs = require('fs');
-const path = require('path');
-const Sequelize = require('sequelize');
-const process = require('process');
-const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../config/config.json')[env];
-const db = {};
+    // criando as tabelas - 
+    const database = require('../models/db');
+    const musica = require('../models/musica')
+    const usuario = require('../models/usuario')
+    const sequelize = require('sequelize')
+    await database.sync();
 
-let sequelize;
-if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config);
-} else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
-}
+    // testa se o banco esta ativo ou inativo
+   
+   
+    try {
+        await database.sync();
+        await sequelize.authenticate()
+        console.log('CONECTADO!')
+      } catch (err) {
+        console.log('Sem Conexao com o BD')
+      }
 
-fs
-  .readdirSync(__dirname)
-  .filter(file => {
-    return (
-      file.indexOf('.') !== 0 &&
-      file !== basename &&
-      file.slice(-3) === '.js' &&
-      file.indexOf('.test.js') === -1
-    );
-  })
-  .forEach(file => {
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
-    db[model.name] = model;
-  });
+     
+/*
+// criando os produtos (inserindo produtos na tabela)
+const novaMusica = await musica.create({
+  "artista": "Nickel Back",
+  "musica": "How You Remind Me",
+  "imagem": "../images/imagensAlbuns/1673421368957.jpg",
+  "album": "./src/imagensAlbuns/Silver Side Up",
+  "genero": "rock",
+  "endereco": "./src/audios/1673421368960.mp3",
+  "preco": "5,00",
+  "relevancia": 0,
+  "ano": "2001",
+  
 
-Object.keys(db).forEach(modelName => {
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
-  }
-});
+        "gravadora":"Indie",
+        "ativo":1,
+        "oferta":0
+}) 
+*/
 
-db.sequelize = sequelize;
-db.Sequelize = Sequelize;
 
-module.exports = db;
+//console.log('A NOVA MUSICA É ' + novaMusica)
+
+//Lendo dados do banco
+//traz todos os elementos da tabela
+//const recebe = await musica.findAll();
+//return recebe
+
+//traz apenas os produtos com o ID selecionado
+//const recebe = await musica.findByPk(1); 
+
+//filtra produto por algum atributo
+/*
+const recebe = await musica.findAll({
+    where:{
+preco:'2'
+    }
+}); 
+*/
+//console.log(recebe);
+
+
+/*
+// atualizando um produto
+//antes temos que fazer a busca do produto pelo ID
+const altera = await musica.findByPk(2); 
+altera.nome = 'Stalone';
+await altera.save();
+
+
+//deletando produtos
+const deleta = await musica.findByPk(2); 
+deleta.nome = 'Stalone';
+await deleta.destroy();
+*/
+
+})();

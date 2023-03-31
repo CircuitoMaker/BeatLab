@@ -1,8 +1,6 @@
-
 const Sequelize = require('sequelize')
-const database = require('./db')
-
-const musica = database.define('musica',{
+const database = require('../models/db')
+const musica = database.define('repertorio',{
   
     id: {
       type: Sequelize.INTEGER,
@@ -10,8 +8,13 @@ const musica = database.define('musica',{
       allowNull: false,
       primaryKey: true
     },
+    
+    artista: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
 
-    nome: {
+    musica: {
       type: Sequelize.STRING,
       allowNull: false
     },
@@ -59,15 +62,8 @@ const musica = database.define('musica',{
     oferta: {
       type: Sequelize.INTEGER,
       allowNull: false
-    },
-    
-    artista: {
-      type: Sequelize.STRING,
-      allowNull: false
     }
- 
-
-
+    
 });
 
 module.exports = musica;

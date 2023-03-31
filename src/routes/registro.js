@@ -3,24 +3,29 @@ const playerController = require('../controller/playerController')
 const servicosController = require('../controller/servicosController')
 const router = express.Router()
 const ServicosController = require('../controller/servicosController')
+
 var musicaAtual = require('../database/musicaAtual.json')
+
 const path = require('path')
 const multer = require('multer')
 
-
+const usuario = require('../models/usuario') 
+const usuarioController = require('../controller/usuarioController')
 const musica = require('../models/musica')
-const usuario = require('../models/usuario')
 const database = require('../models/db');
 let auth = require('../auth')
+
 
 // Validações do Form
 const { body } = require('express-validator')
 const validacoes=[
-    body('artista').notEmpty(),
-    body('musica').notEmpty(),
-    body('album').notEmpty(),
-    body('preco').notEmpty(),
-    body('ano').notEmpty()
+    body('nome').notEmpty(),
+    body('sobrenome').notEmpty(),
+    body('nasc').notEmpty(),
+    body('userName').notEmpty(),
+    body('email').notEmpty(),
+    body('phone').notEmpty(),
+    body('senha').notEmpty()
 ]
 
 
@@ -29,11 +34,9 @@ const storage = multer.diskStorage({
     destination:(req,file,cb)=>{
       
        if(file.fieldname === "imagem"){
-        cb(null,"public/images/imagensAlbuns" )
+        cb(null,"public/images/imagensUsers" )
        }
-       if(file.fieldname === "endereco"){
-        cb(null,"src/audios" )
-       }
+       
     } ,
 
     filename:(req,file,cb)=>{
@@ -43,21 +46,25 @@ const storage = multer.diskStorage({
 const upload = multer({storage:storage})// 10Mb em bytes
 
 
-router.get('/',        ServicosController.listaServicos)
-router.get('/admin:id?',   ServicosController.mostraAdminServicos)
+//router.post('/', usuarioController.listaServicos)
+//router.get('/admin:id?',   ServicosController.mostraAdminServicos)
 
 
-router.post('/create', validacoes, upload.fields([
+router.post('/', validacoes, upload.fields([
     { name: "imagem", maxCount: 1 },
-    { name: 'endereco', maxCount: 1 }
-  ]), ServicosController.criaServico)
+  ]), usuarioController.listaServicos)
+
+  
+// router.post('/', validacoes, upload.fields([
+//     { name: "imagem", maxCount: 1 },
+//   ]), usuarioController.criaUsuario)
 
 
-router.get('/search:id?',  servicosController.buscaServico)
+//router.get('/search:id?',  servicosController.buscaServico)
 
-router.delete('/remove',  servicosController.removeServico)
+//router.delete('/remove',  servicosController.removeServico)
 
-router.put('/edit', servicosController.atualizaServico)
+//router.put('/edit', servicosController.atualizaServico)
 
 
 module.exports = router;

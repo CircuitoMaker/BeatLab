@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<link rel="stylesheet" href="/stylesheets/novoUsuario.css">
+    <script src="/javascripts/novoUsuario.js" defer></script>
+
+
+
+<div class="novoUser">
+<h2>Seja bem Vindo!</h2>
+
+    <img class="img" src= <%= newUsuario.foto%> alt="">
+
+    <h2 class="usernameText"><%- newUsuario.nomeDeUsuario %></h2>
+
+    <button class="button" onclick="location.href='/home'" >Home</button>
+</div>
+
+
+
+
+
+<%- include('partials/footer') %>

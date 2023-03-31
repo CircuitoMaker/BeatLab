@@ -1,0 +1,56 @@
+
+    <link rel="stylesheet" href="/stylesheets/cadastro.css">
+    <script src="/javascripts/cadastro.js" defer></script>
+
+    <title>Cadastro</title>
+
+    <!-- <%- include('partials/header')%> -->
+    
+
+
+    <main class="conteudo">
+        <section>
+            <nav class="conteudoprincipal">
+                <button class="botao">Conta</button>
+                <button class="botao">Alterar Cadastro</button>
+                <button class="botao">Histórico de compras</button>                              
+            </nav> 
+        </section>
+
+
+
+        <form class="conteudoprincipal1" method="post" action="/registro" enctype="multipart/form-data"> 
+            <div class="alterardados1">          
+                <h2 class="alterarDados">Cadastro de Usuários</h2>                          
+                       
+                <input class="imput1" type="text"  name="name" placeholder="Nome" required>
+                <input class="imput1" type="text"  name="surname" placeholder="Sobrenome" required>
+                <input class="imput1" type="text"  name="nasc" placeholder="Data de nascimento" required>
+                <input class="imput1" type="text"  name="username" placeholder="Nome de usuario" required>
+                <input class="imput1" type="email" name="email" placeholder="Seu melhor E-mail" required>                
+                <input class="imput1" type="text"  name="phone" placeholder="Telefone" required>                
+                <input class="imput1" type="password" name="senha" placeholder="Senha" required>
+                <button type="submit" class="AlterarSenha">Cadastrar</button> 
+                </div>  
+
+                <div class="conteudoprincipal2">
+
+                    <img class="fotoPerfil" src="/images/painelUsario-img/bottao perfil (1).png" alt="">
+                    <input required id="escolherArquivo" class="file-personalizada" type="file" name="imagem" accept="image/*" placeholder="imagem" >
+
+                   
+                    <script defer>     
+                        var img = document.getElementById('fotoPerfil');
+                        var escolherArquivoBTN = document.getElementById('escolherArquivo')
+                        escolherArquivoBTN.onchange = function(e){ 
+                        console.log(escolherArquivoBTN.files[0])
+                      };
+                      </script>
+                   
+               
+                </div>       
+
+            </form>       
+    </main>
+
+    <%- include('partials/footer')%>

@@ -3,19 +3,27 @@ var router = express.Router();
 var fs = require('fs')
 var getStat = require('util').promisify(fs.stat);
 const { isAsyncFunction } = require('util/types');
+
 const coletanea = require('../database/repertorio.json');
 const musicaAtual = require('../database/musicaAtual.json')
 
 
+const musica = require('../models/musica')
+const database = require('../models/db');
+
 
  router.get('/', async(req, res)=> {
  
+  recebeBd = await musica.findByPk(8);
   
-const filePath = musicaAtual[0].endereco
+//const filePath = musicaAtual[0].endereco
+
+const filePath = recebeBd.endereco
 
 
- const stat = await getStat(filePath);
-//       console.log(stat);    
+const stat = await getStat(filePath);
+ 
+   
         
 //         // informações sobre o tipo do conteúdo e o tamanho do arquivo
        res.writeHead(200, {

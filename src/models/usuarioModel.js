@@ -1,38 +1,41 @@
-const servicos = require('../database/repertorio.json')
+
 const fs = require('fs')
 const path = require('path')
 const { receiveMessageOnPort } = require('worker_threads')
 
-const ServicoModel = require('../models/ServicoModel')
+const ServicoModel = require('./ServicoModel')
 
-const database = require('../models/db')
-const musica = require('../models/musica')
+const database = require('./db')
+const usuario = require('./usuario')
 const sequelize = require('sequelize')
 
 
 module.exports={
     index:async()=>{
-        return servicos
+        return usuario
     },
-    
-    createOne:async(req,file)=> {
-        console.log('req ====>> ' + req.body.artista)      
+
+    criaUsuario:async(req,file)=> {
+        console.log('Nome ====>> ' + req.body.nome)  
+        console.log('Sobrenome ====>> ' + req.body.sobrenome) 
+        console.log('nasc ====>> ' + req.body.nasc) 
+        console.log('UserName ====>> ' + req.body.userName) 
+
         console.log("fieldnameeeee " + req.files['imagem'][0].filename)
 
 // criando os produtos (inserindo produtos na tabela do banco)
- const novaMusica = await musica.create({
-    musica:req.body.musica,
-    album: req.body.album,
-    genero:req.body.genero,
-    imagem:'../images/imagensAlbuns/' + req.files['imagem'][0].filename,
-    endereco:'./src/audios/' + req.files['endereco'][0].filename,
-    preco:req.body.preco,
-    ano:req.body.ano,
-    gravadora:req.body.gravadora,
-    ativo:req.body.ativo,
-    oferta:req.body.oferta,
-    artista:req.body.artista
+ const novoUsuario = await usuario.create({
+    nome:req.body.nome,
+    sobrenome: req.body.surname,
+    nasc:req.body.nasc,
+    userName:req.body.username,
+    email:req.body.email,
+    phone:req.body.phone,
+    senha:req.body.senha
+   // imagem:'../images/imagensUsers/' + req.files['imagem'][0].filename  
 })
+
+res.send('usuario criado!')
 }, 
     
 

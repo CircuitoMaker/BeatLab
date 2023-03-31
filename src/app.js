@@ -3,7 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var methodOverride = require('method-override')
+var methodOverride = require('method-override');
+var session = require('express-session');
 
 // para stream
 var fs = require('fs')
@@ -16,9 +17,11 @@ var usersRouter = require('./routes/users');
 var finalizarCompraRouter = require('./routes/finalizarCompra');
 var listaDeProdutosRouter = require('./routes/listaDeProdutos');
 var loginRouter = require('./routes/login');
-var painelUsuarioRouter = require('./routes/painelUsuario');
+var cadastroRouter = require('./routes/cadastro');
 var signupRouter = require('./routes/signup');
 var servicosRouter = require('./routes/servicos');
+
+var registroRouter = require('./routes/registro');
 
 var apiRouter = require('./routes/api')
 
@@ -30,8 +33,13 @@ var ListaDeProdutosRouter = require('./routes/listaDeProdutos');
 var carrinhoApiRouter = require('./routes/carrinhoApi')
 var carrinhoRouter = require('./routes/carrinho')
 
-
+// criptografia
 var app = express();
+app.use(session({
+  secret:"projetoExpress",
+  resave:true,
+  saveUninitialized:true
+}))
 
 
 
@@ -46,7 +54,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'))
 
-// const upload = multer({storage})
+
    
 
 
@@ -56,10 +64,13 @@ app.use('/users', usersRouter);
 app.use('/home', homeRouter);
 app.use('/finalizarCompra', finalizarCompraRouter);
 app.use('/listaDeProdutos', listaDeProdutosRouter);
+
 app.use('/login', loginRouter);
-app.use('/painelUsuario', painelUsuarioRouter);
+app.use('/cadastro', cadastroRouter);
 app.use('/signup', signupRouter);
 app.use('/servicos', servicosRouter);
+
+app.use('/registro', registroRouter);
 
 app.use('/api', apiRouter);
 app.use('/audio', audioRouter);

@@ -1,6 +1,6 @@
 <script src="/javascripts/listaDeProdutos.js" defer></script>
     <title>ListadeProdutos</title>
-<link rel="stylesheet" href="/stylesheets/listadepordutos.css">
+<link rel="stylesheet" href="/stylesheets/listadeprodutos.css">
 
 <%- include('partials/header')%>
 
@@ -8,42 +8,43 @@
         <div class="nome-lista">
             <h1>Escolha seu estilo!</h1>  
             
-            <select name="genero" class="lista">
-                <option value="rock" selected>Rock</option>
-                <option value="dance" >Dance</option>
-                <option value="hiphop">Hip Hop</option>
-                <option value="sertanejo">Sertanejo</option>
-                <option value="axe">Axé</option>
-                <option value="blues">Blues</option>
-                <option value="funk">Funk</option>
-                <option value="forro">Forró</option>]
-                <option value="reggae">Reggae</option>
-                <option value="pop">Pop</option>
-                <option value="samba">Samba</option>
-                <option value="pagode">Pagode</option>
-                <option value="mpb">MPB</option>
-              </select>
+            <% const generosValues = ["rock","dance","hiphop","sertanejo","axe","blues","funk","forro","reggae","pop","samba","pagode","mpb"]  %>
+            <% const generosLabels = ["Rock","Dance","HipHop","Sertanejo","Axé","Blues","Funk","Forro","Reggae","Pop","Samba","Pagode","MPB"]  %>
+            <select name="genero" class="lista" id="lista">
+            <% for( let index = 0; index < generosValues.length; index++ ) { %>          
+                <option value="<%=generosValues[index]%>"><%=generosLabels[index]%></option>        
+            <% } %>
+           </select>
+          
+              <input type="button" id="filtrarBtn" class="filtrar" value="Buscar" onclick="filtrar()">
+              <input type="button" id="removeFiltroBtn" class="filtrar" value="Sem Filtro" onclick="removeFiltro()">
+            </div>
+    
+            
+
+        <p class="descricao"> <%= recebe.musica %> </p>
+
+           <% if (recebe.length <= 0) { %>
+            <h1 id="semDados" class="nome-lista">Sem Resultados!</h1>
+           <% } %>
+
+        <div class="produtos-container" id="quantidade" tagDeQuantidade=<%=recebe.length %>>
+          <% for(var i=0; i < recebe.length; i++) { %>             
+              <div class="produto">
+                  <img class="img"  src= <%= recebe[i].imagem %> alt="">
+                  <h2 class="nome-artista"> <%= recebe[i].artista %> </h2>
+                  <p  class="descricao"><%= recebe[i].musica %> </p>
+                  <p  class="categoria"><%= recebe[i].genero %> </p>
+                  <p  class="preco">R$ <%= recebe[i].preco %> </p> 
               
-              <input type="button" class="filtrar"class="Comprar" value="Filtrar">
-
-        </div>
-
-
-        <div class="produtos-container" id="quantidade" tagDeQuantidade=<%=coletanea.length %>>
-            <% for(var i=0; i < coletanea.length; i++) { %>             
-                <div class="produto">
-                    <img class="img"  src= <%= coletanea[i].imagem %> alt="">
-                    <h2 class="nome-artista"> <%= coletanea[i].artista %> </h2>
-                    <p  class="descricao"><%= coletanea[i].musica %> </p>
-                    <p  class="categoria"><%= coletanea[i].genero %> </p>
-                    <p  class="preco">R$ <%= coletanea[i].preco %> </p> 
-                    <button class="Comprar" novaTag=<%= coletanea[i].id %> id=<%="ID" + i %>>Comprar</button>           
-                    <p>Ref: ID <%= coletanea[i].id %></p>
-                </div>            
-             <% } %>           
-        </div>
+                  <button class="Comprar" novaTag=<%= recebe[i].id %> id=<%="ID" + i %>>Comprar</button>           
+                  <p>Ref: ID <%= recebe[i].id %></p>
+              </div>            
+           <% } %>           
+      </div> 
           
-          
+
+
           <div class="modal-container">
             <div class="modal">
               <p>
