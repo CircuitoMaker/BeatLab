@@ -60,7 +60,7 @@ var valores =[10,12,22,45,54,32,21,80,66,43,33,39,67,27,38,90,47,32,51,38,56,73,
   
   //verifica se o campo do CEP esta preenchido
   if(recebeCEP.value != 0){   
-    if(recebeCEP.value.length != 8 ){
+    if(recebeCEP.value.length != 8){
       recebeCEP.value = "CEP Inválido"
     }
   }

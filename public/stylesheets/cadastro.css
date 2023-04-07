@@ -20,9 +20,10 @@ header{
 .fotoPerfil {
     width: 8rem;
     height: 8rem;
-    position: relative;   
-
+    position: relative;  
+    border-radius: 4rem; 
 }
+
 .nomePerfil  {
     font-family: 'Kantumruy';
     font-style: normal;

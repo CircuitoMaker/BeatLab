@@ -3,39 +3,32 @@
     <link rel="stylesheet" href="/stylesheets/admin.css" enctype="multipart/form-data">
     <script src="/javascripts/admin.js" defer></script>
     
+
+<H1 class="aga1">ADMINISTRAÇÃO DE PRODUTOS</H1>
+
     <main class="container-main">
 
 
-      <form method="post" action="/servicos/create" enctype="multipart/form-data">
+      <form class="form" method="post" action="/servicos/create" enctype="multipart/form-data">
         <h2>CREATE</h2>
 
         <input type="text" name="artista" id="artista" required placeholder="Artista" >
         <input type="text" name="musica"  required placeholder="Música">
         <input type="text" name="album"   required placeholder="Álbum">
 
-        <% const generosValues = ["rock","dance","hiphop","sertanejo","axe","blues","funk","forro","reggae","pop","samba","pagode","mpb"]  %>
         <% const generosLabels = ["Rock","Dance","HipHop","Sertanejo","Axé","Blues","Funk","Forro","Reggae","Pop","Samba","Pagode","MPB"]  %>
 
         <select name="genero">
-        <% for( let index = 0; index < generosValues.length; index++ ) { %>          
-            <option value="<%=generosValues[index]%>"><%=generosLabels[index]%></option>        
+        <% for( let index = 0; index < generosLabels.length; index++ ) { %>          
+            <option value="<%=generosLabels[index]%>"><%=generosLabels[index]%></option>        
         <% } %>
        </select>
                
         <div class="imagem">
         <p>Capa Album</p>
-       
-        <input id="escolherArquivo" type="file" name="imagem" accept="image/*" placeholder="imagem" >
 
-<script defer>
-  
-  var img = document.getElementById('newAlbum');
-  var escolherArquivoBTN = document.getElementById('escolherArquivo')
-  escolherArquivoBTN.onchange = function(e){ 
-  console.log(escolherArquivoBTN.files[0])
-};
-</script>
-
+       <img id="imagemAL"  src = "../images/imagensAlbuns/wait.jpg" alt="">
+        <input required id="escolheArquivo" type="file" name="imagem" accept="image/*" placeholder="imagem" >
       </div>    
 
         <input type="text" name="preco" required placeholder="Preço R$">
@@ -56,7 +49,7 @@
         </div>
 
         <p>Arquivo MP3</p>
-        <input type="file" name="endereco" accept="audio/mp3" placeholder="MP3">
+        <input required type="file" name="endereco" accept="audio/mp3" placeholder="MP3">
         
         <button >Adicionar Música</button>
       </form>
@@ -68,15 +61,15 @@
       <!-- <form method="get" action="/servicos/search"> -->
         <h2>READ</h2>
         <input type="text" name="id" id="id" placeholder="id">   
-        <input type="text" name="artista" placeholder="Artista" value="<%= envia.artista %>">
-        <input type="text" name="musica" placeholder="Música" value="<%= envia.musica %>">
-        <input type="text" name="album" placeholder="Álbum" value="<%= envia.album %>">
-        <input type="text" name="genero" placeholder="Genero" value="<%= envia.genero %>">
-        <input type="text" name="preco" placeholder="Preco" value="<%= envia.preco %>">
-        <input type="text" name="gravadora" placeholder="Gravadora" value="<%= envia.gravadora %>">
-        <input type="text" name="ano" placeholder="Ano" value="<%= envia.ano %>">
-        <label for="">Ativo = "<%= envia.ativo %>"</label>
-        <label for="">Oferta = "<%= envia.oferta %>"</label>
+        <input type="text" name="artista" placeholder="Artista" >
+        <input type="text" name="musica" placeholder="Música">
+        <input type="text" name="album" placeholder="Álbum" >
+        <input type="text" name="genero" placeholder="Genero" >
+        <input type="text" name="preco" placeholder="Preco" >
+        <input type="text" name="gravadora" placeholder="Gravadora" >
+        <input type="text" name="ano" placeholder="Ano" >
+        <label for="">Ativo = </label>
+        <label for="">Oferta = </label>
         
         <button id="busca" onclick="vai()">Buscar</button>
       <!-- </form> -->
@@ -87,7 +80,7 @@
 
       <!-- PUT -->
      
-      <form method="post" action="/servicos/edit?_method=PUT">
+      <form class="form" method="post" action="/servicos/edit?_method=PUT">
         <h2>UPDATE</h2>
         <input type="text" name="id" placeholder="id" >
         <input type="text" name="artista" placeholder="Artista">
@@ -134,15 +127,51 @@
 
       <!-- DELETE post-->
       
-      <form method="post" action="/servicos/remove?_method=DELETE">
+      <!-- <form class="form" method="post" action="/servicos/remove?_method=DELETE">
         <h2>DELETE</h2>
         <label for="id">ID:</label>
         <input type="text" name="id" placeholder="id">
 
         <button>Excluir</button>
       </form>
-  
+   -->
 
     </main>
+
+
+    <table class="table">
+    
+      <tr>
+        <th>Capa</th>
+        <th>Produto</th>
+        <th>Ações</th>
+      </tr>
+      
+      <% for( let index = 0; index < produtos.length; index++ ){ %>
+        <tr>
+<td>
+<img class="imgTable" src=<%- produtos[index].imagem %> alt="">
+</td>
+
+          <td>
+            <span>ID:<%- produtos[index].id %> - </span>
+            <span>Artista: <%- produtos[index].artista %> - </span> 
+            <span>Música: <%- produtos[index].musica %></span> 
+            
+           
+
+          </td>
+          <td>
+            <form method="POST" action="/servicos/remove?_method=DELETE">
+              <input type="text" name="id" value=<%= produtos[index].id %> hidden>
+              <button type="submit" class="btTable">Excluir</button>
+            </form>
+          </td>
+
+        </tr>
+      <% }; %>
+  
+  </table>
+
 
 <%- include('partials/footer') %> 

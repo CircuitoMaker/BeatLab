@@ -8,7 +8,10 @@ const sequelize = require('sequelize')
 
 
 module.exports = {
-    listaServicos: (req,res)=>{
+    listaServicos:async (req,res)=>{
+
+     
+
         const servicos = ServicoModel.index();
         return res.render('servicos', {listaServicos: servicos, title:"Lista de Serviços"})
     }, 
@@ -16,35 +19,32 @@ module.exports = {
 
     mostraAdminServicos:async(req,res) => {
     const busca = req.params.id
+    console.log("RECEBIDO NA BUSCA -- " + req.params.id);   
+    const envia = await musica.findByPk(busca)   
+    console.log('TESTESSSSSS ' + envia)
 
-    console.log("RECEBIDO NA BUSCA -- " + req.params.id);
+const produtos = await musica.findAll();
+console.log(produtos[0])
+
+
+  //  if(envia != null){
+    res.render("admin",{produtos})
+    // }else{
+    //   res.render("admin",{produtos:produtos},{envia:{
+    //     artista:'Artista',
+    //     musica:'Musica',
+    //     album:'Album',
+    //     genero:'Gênero',
+    //     preco:'Preco R$',
+    //     gravadora:'Gravadora',
+    //     ano:'Ano',
+    //     id:'id',
+    //     ativo:'0',
+    //     oferta:'0'
+    //   }
+    //   })
+    // }
     
-    const envia = await musica.findByPk(busca)
-    
-console.log('TESTESSSSSS' + envia)
-
-    if(envia != null){
-    res.render("admin",{envia})
-    }else{
-      res.render("admin",{envia:{
-        artista:'Artista',
-        musica:'Musica',
-        album:'Album',
-        genero:'Gênero',
-        preco:'Preco R$',
-        gravadora:'Gravadora',
-        ano:'Ano',
-        id:'id',
-        ativo:'0',
-        oferta:'0'
-      }
-      })
-    }
-    
-
-
-
-
     },
 
 
@@ -54,27 +54,9 @@ console.log('TESTESSSSSS' + envia)
         console.log('req ponto body => '+ req.body.musica)
         ServicoModel.createOne(req)
         
-var envia='';
+        const produtos = await musica.findAll();
 
-        if(req.params.id){
-            envia = await musica.findAll({
-              where:{
-                id:6 //req.params.id
-              }
-            })
-
-          }else{
-
-            envia = await musica.findByPk(11);           
-          }
-
-
-
-console.log('recebido +++ ====== ' + envia.musica)
-
-    //    res.redirect('/servicos/admin')
-      res.render('admin',{title: 'express', message: envia});
-        
+        res.render('admin',{produtos})
       //res.send("A Música " + req.body.musica + " Foi adicionada com sucesso!")
     },
 
@@ -94,13 +76,24 @@ console.log('CONSULTA ----  ' + busca);
 
 
 
-    removeServico: (req,res) =>{
+    removeServico:async (req,res) =>{
         ServicoModel.deleteOne(req)
-        var music = req.body.id
 
-        res.render('admin')
+        var music = req.body.id
+      
+        musica.destroy({
+          where:{
+            id:music
+          }
+        });
+
+        const produtos = await musica.findAll();
+
+        res.render('admin',{produtos})
       // res.send("A Música " + music + " Foi EXCLUÍDA com sucesso!")   
        },
+
+
 
 
        atualizaServico:async(req,res)=>{

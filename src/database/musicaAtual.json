@@ -1,14 +1,14 @@
 [
     {
-        "artista": "Acústicos e Valvulados",
-        "musica": "Quintal",
-        "album": "AntiDoto",
-        "imagem": "../images/imagensAlbuns/315291380300968.jpg",
+        "artista": "Vinny",
+        "musica": "Mexe a Cadeira",
+        "album": "Na Gandaia",
+        "imagem": "../images/imagensAlbuns/vinny.jpg",
         "genero": "Rock",
-        "endereco": "./src/audios/Acústicos e Valvulados - Quintal.mp3",
-        "preco": "9,90",
+        "endereco": "./src/audios/VINNY - MEXE A CADEIRA.mp3",
+        "preco": "2,99",
         "relevancia": 0,
-        "ano": "1999",
-        "id": 8
+        "ano": "1998",
+        "id": 6
     }
 ]

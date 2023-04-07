@@ -14,11 +14,11 @@ const database = require('../models/db');
 
  router.get('/', async(req, res)=> {
  
-  recebeBd = await musica.findByPk(8);
+ // recebeBd = await musica.findByPk(8);
   
-//const filePath = musicaAtual[0].endereco
+const filePath = musicaAtual[0].endereco
 
-const filePath = recebeBd.endereco
+//const filePath = recebeBd.endereco
 
 
 const stat = await getStat(filePath);
@@ -36,7 +36,7 @@ const stat = await getStat(filePath);
         
         
         stream.on('end', function(){
-          console.log('acabou');
+          //console.log('acabou');
         }); 
 
         // faz streaming do audio 

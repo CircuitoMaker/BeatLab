@@ -13,7 +13,7 @@ const usuario = require('../models/usuario')
 const usuarioController = require('../controller/usuarioController')
 const musica = require('../models/musica')
 const database = require('../models/db');
-let auth = require('../auth')
+let auth = require('../middlewares/auth')
 
 
 // Validações do Form

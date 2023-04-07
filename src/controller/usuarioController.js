@@ -1,9 +1,9 @@
 const ServicoModel = require('../models/ServicoModel')
 var coletanea = require('../database/repertorio.json')
 var musicaAtual = require('../database/musicaAtual.json')
+const musica = require('../models/musica')
 
 const database = require('../models/db')
-const musica = require('../models/musica')
 const usuario = require('../models/usuario') 
 const sequelize = require('sequelize')
 const usuarioModel = require('../models/usuarioModel')
@@ -26,7 +26,7 @@ console.log('Nome ====>> ' + req.body.nome)
        // console.log("fieldnameeeee " + req.files['imagem'][0].filename)
 
 //cripptografando a senha
-let senhaCriptografada = bcrypt.hashSync(req.body.senha,10);
+let senhaCriptografada = bcrypt.hashSync(req.body.senha, 10);
 
 
 // criando os produtos (inserindo produtos na tabela do banco)
@@ -56,7 +56,7 @@ let senhaCriptografada = bcrypt.hashSync(req.body.senha,10);
  }
  
  //salva o novo usuario na session
-req.session.usuario = newUsuario;
+//req.session.usuario = newUsuario;
 
 //*************************** */
 

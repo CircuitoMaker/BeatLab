@@ -8,14 +8,18 @@ var carrinho = require('../database/carrinho.json')
 const musica = require('../models/musica')
 const database = require('../models/db');
 
-let auth = require  ('../auth');
+let auth = require('../middlewares/auth')
+
+
 
 /* GET home page. */
-router.get('/',auth, async function(req, res, next) {
+router.get('/', async function(req, res, next) {
 
   recebeBd = await musica.findAll();
 
-  res.render('home', { title: 'Express', musicaAtual, coletanea, ouvidasRecentes, carrinho,recebeBd, usuario:req.session.usuario});
+let userLogged = req.session.userLogged
+
+  res.render('home', { title: 'Express', musicaAtual, coletanea, ouvidasRecentes, carrinho,recebeBd, userLogged});
 });
 
 module.exports = router;

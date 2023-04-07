@@ -19,7 +19,7 @@
 
 
 
-        <form class="conteudoprincipal1" method="post" action="/registro" enctype="multipart/form-data"> 
+        <form class="conteudoprincipal1" method="post" action="/registro" enctype="multipart/form-data" onsubmit="testaSenhas()"> 
             <div class="alterardados1">          
                 <h2 class="alterarDados">Cadastro de Usuários</h2>                          
                        
@@ -29,24 +29,17 @@
                 <input class="imput1" type="text"  name="username" placeholder="Nome de usuario" required>
                 <input class="imput1" type="email" name="email" placeholder="Seu melhor E-mail" required>                
                 <input class="imput1" type="text"  name="phone" placeholder="Telefone" required>                
-                <input class="imput1" type="password" name="senha" placeholder="Senha" required>
-                <button type="submit" class="AlterarSenha">Cadastrar</button> 
+                
+                <input class="imput1" id="senha1" type="password" name="senha" placeholder="Senha" required>
+                <input class="imput1" id="senha2" type="password"  placeholder="Repita a Senha" required>
+
+                <button type="submit" class="AlterarSenha" >Cadastrar</button> 
                 </div>  
 
                 <div class="conteudoprincipal2">
 
-                    <img class="fotoPerfil" src="/images/painelUsario-img/bottao perfil (1).png" alt="">
+                    <img class="fotoPerfil" id="imagem" src="/images/painelUsario-img/bottao perfil (1).png" alt="">
                     <input required id="escolherArquivo" class="file-personalizada" type="file" name="imagem" accept="image/*" placeholder="imagem" >
-
-                   
-                    <script defer>     
-                        var img = document.getElementById('fotoPerfil');
-                        var escolherArquivoBTN = document.getElementById('escolherArquivo')
-                        escolherArquivoBTN.onchange = function(e){ 
-                        console.log(escolherArquivoBTN.files[0])
-                      };
-                      </script>
-                   
                
                 </div>       
 

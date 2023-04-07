@@ -23,7 +23,7 @@ module.exports={
 
         console.log("fieldnameeeee " + req.files['imagem'][0].filename)
 
-// criando os produtos (inserindo produtos na tabela do banco)
+// criando os usuarios (inserindo usuarios na tabela do banco)
  const novoUsuario = await usuario.create({
     nome:req.body.nome,
     sobrenome: req.body.surname,

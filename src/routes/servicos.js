@@ -11,7 +11,7 @@ const multer = require('multer')
 const musica = require('../models/musica')
 const usuario = require('../models/usuario')
 const database = require('../models/db');
-let auth = require('../auth')
+let auth = require('../middlewares/auth')
 
 // Validações do Form
 const { body } = require('express-validator')
@@ -43,8 +43,12 @@ const storage = multer.diskStorage({
 const upload = multer({storage:storage})// 10Mb em bytes
 
 
+
+
+
+
 router.get('/',        ServicosController.listaServicos)
-router.get('/admin:id?',   ServicosController.mostraAdminServicos)
+router.get('/admin:id?',auth,   ServicosController.mostraAdminServicos)
 
 
 router.post('/create', validacoes, upload.fields([

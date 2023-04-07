@@ -4,7 +4,21 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
-var session = require('express-session');
+var session = require("express-session");
+var cookies = require('cookie-parser')
+
+
+// criptografia
+var app = express();
+
+app.use(session({
+  secret:"projetoExpress",
+  resave:true,
+  saveUninitialized:true
+}))
+
+
+
 
 // para stream
 var fs = require('fs')
@@ -17,14 +31,14 @@ var usersRouter = require('./routes/users');
 var finalizarCompraRouter = require('./routes/finalizarCompra');
 var listaDeProdutosRouter = require('./routes/listaDeProdutos');
 var loginRouter = require('./routes/login');
+var logoutRouter = require('./routes/logout');
+var validaLoginRouter = require('./routes/validaLogin');
+
 var cadastroRouter = require('./routes/cadastro');
 var signupRouter = require('./routes/signup');
 var servicosRouter = require('./routes/servicos');
-
 var registroRouter = require('./routes/registro');
-
 var apiRouter = require('./routes/api')
-
 var audioRouter = require("./routes/audio")
 var imagemRouter = require('./routes/imagem')
 var mobileRouter = require('./routes/mobile');
@@ -32,15 +46,6 @@ var ListaDeProdutosRouter = require('./routes/listaDeProdutos');
 
 var carrinhoApiRouter = require('./routes/carrinhoApi')
 var carrinhoRouter = require('./routes/carrinho')
-
-// criptografia
-var app = express();
-app.use(session({
-  secret:"projetoExpress",
-  resave:true,
-  saveUninitialized:true
-}))
-
 
 
 // view engine setup
@@ -54,9 +59,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'))
 
-
-   
-
+app.use(cookies());
 
 
 app.use('/', indexRouter);
@@ -64,8 +67,10 @@ app.use('/users', usersRouter);
 app.use('/home', homeRouter);
 app.use('/finalizarCompra', finalizarCompraRouter);
 app.use('/listaDeProdutos', listaDeProdutosRouter);
-
 app.use('/login', loginRouter);
+app.use('/logout', logoutRouter);
+app.use('/validaLogin', validaLoginRouter);
+
 app.use('/cadastro', cadastroRouter);
 app.use('/signup', signupRouter);
 app.use('/servicos', servicosRouter);
@@ -74,6 +79,7 @@ app.use('/registro', registroRouter);
 
 app.use('/api', apiRouter);
 app.use('/audio', audioRouter);
+
 app.use('/imagem', imagemRouter);
 app.use('/mobile', mobileRouter);
 app.use('/carrinhoApi', carrinhoApiRouter);

@@ -67,9 +67,24 @@
       
 
         <div class="profile">
-            <a href="/painelUsuario"> <img src="../images/painelUsario-img/bottao perfil (1).png" alt="#"></a>
-            <span> usuario.nomeDeUsuario </span>
-            <button class="btnSair">Sair</button>
+            <% if (typeof userLogged !== 'undefined'){ %>
+
+            <a href="/painelUsuario"> <img src="<%= userLogged.foto %>" alt="#"></a>
+            <span><%= userLogged.nomeDeUsuario %></span>  
+            <form method="get" action="/logout">              
+            <button class="btnSair">Sair</button> 
+            </form>
+               
+              <% } else { %>
+                <a href="/login"> <img src="../images/painelUsario-img/bottao perfil (1).png" alt="#"></a>
+                <span>nomeDeUsuario</span>
+
+
+              <% } %>
+            
+            
+           
+
         </div>
 
   
