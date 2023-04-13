@@ -18,16 +18,15 @@ module.exports = {
         const registro = usuarioModel.index();
      
 //********************* */
-console.log('Nome ====>> ' + req.body.nome)  
-        console.log('Sobrenome ====>> ' + req.body.surname) 
-        console.log('nasc ====>> ' + req.body.nasc) 
-        console.log('UserName ====>> ' + req.body.username) 
+        // console.log('Nome ====>> ' + req.body.nome)  
+        // console.log('Sobrenome ====>> ' + req.body.surname) 
+        // console.log('nasc ====>> ' + req.body.nasc) 
+        // console.log('UserName ====>> ' + req.body.username) 
 
        // console.log("fieldnameeeee " + req.files['imagem'][0].filename)
 
 //cripptografando a senha
 let senhaCriptografada = bcrypt.hashSync(req.body.senha, 10);
-
 
 // criando os produtos (inserindo produtos na tabela do banco)
  const novoUsuario = await usuario.create({
@@ -55,76 +54,27 @@ let senhaCriptografada = bcrypt.hashSync(req.body.senha, 10);
     admin:0
  }
  
- //salva o novo usuario na session
-//req.session.usuario = newUsuario;
 
-//*************************** */
-
-        //res.send('Seja bem vindo '  + req.body.username + ' agora vc pode curtir suas músicas preferidas!')
-        //  return res.render('registro', {listaServicos: registro, title:"Usuarios"})
+    
         res.render('novoUsuario',{newUsuario})
     }, 
 
 
     mostraAdminServicos:async(req,res) => {
 //     const busca = req.params.id
-
 //     console.log("RECEBIDO NA BUSCA -- " + req.params.id);
     
-//     const envia = await musica.findByPk(busca)
-    
-// console.log('TESTESSSSSS' + envia)
-
-//     if(envia != null){
-//     res.render("admin",{envia})
-//     }else{
-//       res.render("admin",{envia:{
-//         artista:'Artista',
-//         musica:'Musica',
-//         album:'Album',
-//         genero:'Gênero',
-//         preco:'Preco R$',
-//         gravadora:'Gravadora',
-//         ano:'Ano',
-//         id:'id',
-//         ativo:'0',
-//         oferta:'0'
-//       }
-//       })
-//     }
-    
-
     },
 
 
 
     criaUsuario:(req,res) => {
- 
         console.log('req ponto body name  => '+ req.body.nome)
         usuario.criaUsuario(req)
-        
-// var envia='';
-
-//         if(req.params.id){
-//             envia = await musica.findAll({
-//               where:{
-//                 id:6 //req.params.id
-//               }
-//             })
-
-//           }else{
-
-//             envia = await musica.findByPk(11);           
-//           }
-
-
-
-console.log('recebido +++ ====== ' + envia.musica)
-
-    //    res.redirect('/servicos/admin')
-    //  res.render('admin',{title: 'express', message: envia});
-        
-      res.send("o usuario " + req.body.name + " Foi cadastrado com sucesso!")
+        //console.log('recebido +++ ====== ' + envia.musica)
+        // res.redirect('/servicos/admin')
+        //res.render('admin',{title: 'express', message: envia});
+        res.send("o usuario " + req.body.name + " Foi cadastrado com sucesso!")
     },
 
   
@@ -132,29 +82,58 @@ console.log('recebido +++ ====== ' + envia.musica)
     buscaServico: async(req,res) =>{
     // ServicoModel.findOne(req)
      var busca = req.body.id
-
-const envia = await musica.findByPk(11);
-console.log('CONSULTA ----  ' + busca);
-     res.render('admin',{envia})
-    
+     const envia = await musica.findByPk(11);
+     console.log('CONSULTA ----  ' + busca);
+     res.render('admin',{envia})  
      //res.send('Buscando ' + busca + ' id')
     },
 
 
-
-
-    removeServico: (req,res) =>{
+        removeUsuario: (req,res) =>{
         ServicoModel.deleteOne(req)
-        var music = req.body.id
 
-        res.render('admin')
+        var userId = req.body.id
+
+        usuario.destroy({
+            where:{
+              id:userId
+            }
+          });
+     
+
+        res.render('cadastro')
       // res.send("A Música " + music + " Foi EXCLUÍDA com sucesso!")   
        },
 
 
+
+
+
        atualizaServico:async(req,res)=>{
-       ServicoModel.updateOne(req);
-       res.send("A Música " + req.body.id + " Foi ATUALIZADA com sucesso!")  
+
+     console.log("Atualizando o usuario do ID = " + req.body.id);
+
+    const atualiza = await usuario.findByPk(req.body.id);
+    atualiza.nome = req.body.nome;
+    atualiza.sobrenome = req.body.sobrenome;
+    atualiza.dataNasc = req.body.dataNasc;
+    atualiza.nomeDeUsuario = req.body.nomeDeUsuario;
+    //atualiza.foto = '../images/imagensUsers/' + req.files['imagem'][0].filename;
+   // atualiza.foto = "../images/imagensUsers/" + req.body.foto;
+    atualiza.telefone = req.body.telefone;
+    await atualiza.save();
+
+//refaz o cookie para atualizar as views
+    const busca = await usuario.findAll({
+        where:{
+             id:req.body.id
+         }
+     })
+    res.cookie('userLogged', busca[0], { maxAge: 3600000 }); // expira em 1 hora
+    
+       const userLogged = req.cookies.userLogged;
+       res.render('load');
+    //    res.render('meuPerfil',userLogged);  
        }
 
 }

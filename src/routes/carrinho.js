@@ -4,8 +4,8 @@ var carrinho = require('../database/carrinho.json')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-   
-    res.render('carrinho', { title: 'Express',carrinho });
+    const userLogged = req.cookies.userLogged;
+    res.render('carrinho', { title: 'Express',carrinho,userLogged });
 });
 
 module.exports = router;

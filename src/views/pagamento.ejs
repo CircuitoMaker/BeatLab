@@ -1,0 +1,28 @@
+<%- include('partials/header')%>
+
+<link rel="stylesheet" href="/stylesheets/pagamento.css">
+<script src="/javascripts/pagamento.js" defer ></script>
+ <title>Loading</title>
+
+<main class="main">
+
+  <% if (typeof userLogged !== "undefined"){ %>
+    <input type="text" id="logado" hidden value="1">
+    <% } else { %> 
+        <input type="text" id="logado" hidden value="0">
+      <% } %>
+
+<audio controls  id="cash" hidden>
+    <source src="/CashRegister.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio> 
+
+    <h1 id="aga1">Aguarde...</h1>
+    <p class="tagP" id="tagP">Por favor, aguarde .</p>
+
+<canvas id="UgCanvas" width="400" height="200">
+</canvas>
+
+</main>
+
+<%- include('partials/footer')%>

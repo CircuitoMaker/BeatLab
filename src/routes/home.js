@@ -1,4 +1,5 @@
-var express = require('express');
+const express = require('express');
+
 var router = express.Router();
 var coletanea = require('../database/repertorio.json')
 var musicaAtual = require('../database/musicaAtual.json')
@@ -17,9 +18,10 @@ router.get('/', async function(req, res, next) {
 
   recebeBd = await musica.findAll();
 
-let userLogged = req.session.userLogged
+const userLogged = req.cookies.userLogged;
+//console.log('teste de session no home '+ userLogged)
 
-  res.render('home', { title: 'Express', musicaAtual, coletanea, ouvidasRecentes, carrinho,recebeBd, userLogged});
+  res.render('home', { title: 'Express', musicaAtual, coletanea, ouvidasRecentes, carrinho,recebeBd,userLogged});
 });
 
 module.exports = router;

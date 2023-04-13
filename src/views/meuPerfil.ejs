@@ -1,0 +1,102 @@
+<%- include('partials/header')%>
+
+<link rel="stylesheet" href="/stylesheets/meuPerfil.css">
+<script src="/javascripts/meuPerfil.js" defer ></script>
+ <title>Meu Perfil</title>
+
+
+
+
+<main class="conteudo">
+    <section>
+        <nav class="conteudoprincipal">
+            <button id="comprasBtn" class="botao">Histórico de compras</button>      
+            
+            <span id="comprasLabel" class="comprasLabel">----</span>
+            
+        </nav> 
+    </section>
+
+<div class="conteudoprincipal1">
+
+    <form  method="post" action="/alteraRegistro/edit?_method=PUT"> 
+          
+        <div class="alterardados1">          
+            <% if (typeof userLogged !== "undefined"){ %>
+            
+                <h2 class="alterarDados">Editar Perfil</h2>  
+                <img class="fotoPerfil" id="imagem" src="<%=userLogged.foto%>" alt="">
+                <input class="imput1" type="text"  name="id" value="<%=userLogged.id%>" required hidden>  
+                <label class="labels" >Nome:</label>
+                <input class="imput1" type="text"  name="nome" placeholder="Nome" value="<%=userLogged.nome%>" required>   
+                <label class="labels" >Sobrenome:</label>
+                <input class="imput1" type="text"  name="sobrenome" placeholder="Sobrenome" value="<%=userLogged.sobrenome%>" required>   
+                <label class="labels" >Data de Nascimento:</label>
+                <input class="imput1" type="text"  name="dataNasc" placeholder="Data de Nascimento" value="<%=userLogged.dataNasc%>"  required>
+                <label class="labels" >Nome de Usuário:</label>
+                <input class="imput1" type="text"  name="nomeDeUsuario" placeholder="Nome de usuário" value="<%=userLogged.nomeDeUsuario%>" required> 
+                <label class="labels" >Telefone:</label>
+               <input class="imput1" type="text"  name="telefone" placeholder="Telefone" value="<%=userLogged.telefone%>" required> 
+                
+               <% } else { %>    
+                <h2 class="alterarDados">Editar Perfil</h2> 
+                <img class="fotoPerfil" id="imagem" src="/images/painelUsario-img/bottao perfil (1).png" alt="">
+                <input class="imput1" type="text"  name="id" placeholder="id" value="60" required hidden>
+                <label class="labels" >Nome:</label>
+                <input class="imput1" type="text"  name="nome" placeholder="Nome" required>       
+                <label class="labels" >Sobrenome:</label>
+                <input class="imput1" type="text"  name="sobrenome" placeholder="Sobrenome" required>
+                <label class="labels" >Data de Nascimento:</label>
+                <input class="imput1" type="text"  name="dataNasc" placeholder="Data de Nascimento" required>          
+                <label class="labels" >Nome de Usuário:</label>
+                <input class="imput1" type="text"  name="nomeDeUsuario" placeholder="Nome de usuário" required>                         
+                <label class="labels" >Telefone:</label>
+                <input class="imput1" type="text"  name="telefone" placeholder="Telefone" required>  
+
+             <% } %>                     
+            
+            <button type="submit" class="AlterarSenha">Salvar Alterações</button>        
+        </form>       
+    
+
+        <form  method="post" action="/deletarPerfil?_method=DELETE"> 
+            
+            <% if (typeof userLogged !== "undefined"){ %>
+            <input type="text" name="id" value=<%= userLogged.id %> hidden> 
+                <% } %>      
+
+            <button type="submit" onclick="sairSistema()"  class="AlterarSenha">Deletar Perfil</button> 
+            </form>
+
+
+           <script>
+            //
+function sairSistema(){
+   console.log("Sessão finalizada 1!");
+var data = new Date(2020,0,01);
+data = data.toGMTString();
+document.cookie = 'userLogged=busca; expires=' + data + ';';
+console.log("Sessão finalizada 2!");
+//window.location.href = "/login";
+}
+           </script>
+
+        </div>
+    </div> 
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('partials/footer')%>

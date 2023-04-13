@@ -1,3 +1,6 @@
+const session = require('express-session');
+const express = require('express');
+
 const servicos = require('../database/repertorio.json')
 const fs = require('fs')
 const path = require('path')
@@ -54,11 +57,13 @@ await  musica.destroy({where:{
 id: idADeletar
  }});
 console.log('deletando =====>>> ' + idADeletar);
+
 }, 
 
 
 // Atualizando um produto da tabela
 updateOne:async(req,res)=>{
+console.log("Atualizando a musica do ID = " + req.body.id);
 
     const atualiza = await musica.findByPk(req.body.id);
     atualiza.artista = req.body.artista;

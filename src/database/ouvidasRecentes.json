@@ -1,17 +1,5 @@
 [
     {
-        "artista": "Smile.DK",
-        "musica": "Butterfly",
-        "album": "Version",
-        "imagem": "../images/imagensAlbuns/R-1291287-1218313462.jpg",
-        "genero": "Electronic",
-        "endereco": "./src/audios/butterfly.mp3",
-        "preco": "149,90",
-        "relevancia": 0,
-        "ano": "1998",
-        "id": 10
-    },
-    {
         "artista": "Seether",
         "musica": "Hang On",
         "album": "Disclaimer ll",
@@ -58,5 +46,17 @@
         "relevancia": 0,
         "ano": "2011",
         "id": 2
+    },
+    {
+        "artista": "Charlie Brown Jr",
+        "musica": "Confisco",
+        "album": "Acústico MTV",
+        "imagem": "https://i.ytimg.com/vi/26n5o0QJILQ/mqdefault.jpg",
+        "genero": "Rock",
+        "endereco": "./src/audios/Charlie-Brown-JR-Confisco.mp3",
+        "preco": "2,99",
+        "relevancia": 0,
+        "ano": "1997",
+        "id": 3
     }
 ]

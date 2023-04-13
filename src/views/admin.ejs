@@ -1,5 +1,8 @@
 <%- include('partials/header') %>
 
+
+
+
     <link rel="stylesheet" href="/stylesheets/admin.css" enctype="multipart/form-data">
     <script src="/javascripts/admin.js" defer></script>
     
@@ -26,11 +29,10 @@
                
         <div class="imagem">
         <p>Capa Album</p>
-
-       <img id="imagemAL"  src = "../images/imagensAlbuns/wait.jpg" alt="">
-        <input required id="escolheArquivo" type="file" name="imagem" accept="image/*" placeholder="imagem" >
-      </div>    
-
+        <img id="imagemAL"  src = "../images/imagensAlbuns/wait.jpg" alt="">
+         </div>    
+         <input required id="escolheArquivo" type="file" name="imagem" accept="image/*" placeholder="imagem" >
+       
         <input type="text" name="preco" required placeholder="Preço R$">
         <input type="text" name="gravadora" required placeholder="Gravadora">
         <input type="text" name="ano" required placeholder="Ano" >
@@ -57,23 +59,36 @@
 
 
       <!-- GET -->
-     <div class="get">
-      <!-- <form method="get" action="/servicos/search"> -->
+     <!-- <div class="get"> -->
+       <form class="get" method="post" action="/servicos/search"> 
         <h2>READ</h2>
-        <input type="text" name="id" id="id" placeholder="id">   
-        <input type="text" name="artista" placeholder="Artista" >
-        <input type="text" name="musica" placeholder="Música">
-        <input type="text" name="album" placeholder="Álbum" >
-        <input type="text" name="genero" placeholder="Genero" >
-        <input type="text" name="preco" placeholder="Preco" >
-        <input type="text" name="gravadora" placeholder="Gravadora" >
-        <input type="text" name="ano" placeholder="Ano" >
-        <label for="">Ativo = </label>
-        <label for="">Oferta = </label>
         
-        <button id="busca" onclick="vai()">Buscar</button>
-      <!-- </form> -->
-      </div>
+        <select name="id">
+          <% for( let index = 0; index < produtos.length; index++ ) { %>          
+              <option value="<%=produtos[index].id%>">ID: <%=produtos[index].id%> - <%=produtos[index].musica %></option>        
+          <% } %>
+         </select>
+         
+
+        <% if (typeof cardMusic !== "undefined"){ %>
+          <div class="miniCard"> 
+          
+          <img src="<%=cardMusic.imagem%>" alt="">
+          <span><%=cardMusic.artista%></span>
+          <span><%=cardMusic.musica%></span>
+          <span><%=cardMusic.genero%></span>
+          <span>R$<%=cardMusic.preco%></span>
+
+          <span>Ref ID:<%=cardMusic.id %></span>
+          </div>
+
+           <% } else { %>           
+          <span>VAZIO</span>
+                    <% } %>
+        
+        <button id="busca" >Buscar</button>
+       </form>
+      <!-- </div> -->
 
       
 
@@ -82,31 +97,34 @@
      
       <form class="form" method="post" action="/servicos/edit?_method=PUT">
         <h2>UPDATE</h2>
-        <input type="text" name="id" placeholder="id" >
-        <input type="text" name="artista" placeholder="Artista">
-        <input type="text" name="musica" placeholder="Música">
-        <input type="text" name="album" placeholder="Álbum">
-       
-        <select name="genero">
-          <option value="rock" selected>Rock</option>
-          <option value="dance" >Dance</option>
-          <option value="hiphop">Hip Hop</option>
-          <option value="sertanejo">Sertanejo</option>
-          <option value="axe">Axé</option>
-          <option value="blues">Blues</option>
-          <option value="funk">Funk</option>
-          <option value="forro">Forró</option>]
-          <option value="reggae">Reggae</option>
-          <option value="pop">Pop</option>
-          <option value="samba">Samba</option>
-          <option value="pagode">Pagode</option>
-          <option value="mpb">MPB</option>
-        </select>
+        
 
+         <% if (typeof cardMusic !== "undefined"){ %>
+          
+            <span>ID = <%=cardMusic.id %></span>
+            <input type="text" name="id" placeholder="id" value="<%=cardMusic.id%>" hidden required>
+            <input type="text" name="artista" placeholder="Artista" value="<%=cardMusic.artista%>" required>
+            <input type="text" name="musica" placeholder="Música" value="<%=cardMusic.musica%>" required>
+            <input type="text" name="album" placeholder="Álbum" value="<%=cardMusic.album%>" required>
 
-        <input type="text" name="preco" placeholder="Preco">
-        <input type="text" name="gravadora" placeholder="Gravadora">
-        <input type="text" name="ano" placeholder="Ano">
+            <select name="genero">
+              <% for( let index = 0; index < generosLabels.length; index++ ) { %>                            
+                <% if(cardMusic.genero === generosLabels[index]) { %>
+                  <option value="<%=generosLabels[index]%>" selected><%=generosLabels[index]%></option>
+                <% } else { %>
+                  <option value="<%=generosLabels[index]%>"><%=generosLabels[index]%></option>
+                <% } %>                 
+              <% } %>
+             </select>
+
+             <div class="imagem">
+              <p>Capa Album</p>
+              <img id="imagemAL"  src = "<%=cardMusic.imagem%>" alt="">
+               </div>  
+         
+        <input type="text" name="preco" placeholder="Preco" value="<%=cardMusic.preco%>" required>
+        <input type="text" name="gravadora" placeholder="Gravadora" value="<%=cardMusic.gravadora %>" required>
+        <input type="text" name="ano" placeholder="Ano" value="<%=cardMusic.ano %>" required>
 
         <div>
           <label for="ativo">Ativo</label>       
@@ -119,6 +137,39 @@
           <input type="radio" id="radio_yes" name="oferta" value="1" /> Sim
           <input type="radio" id="radio_no"  name="oferta" value="0" checked="checked" /> Não
           </div>
+         
+           <% } else { %>           
+         
+
+        <input type="text" name="artista" placeholder="Artista" required>
+        <input type="text" name="musica" placeholder="Música" required>
+        <input type="text" name="album" placeholder="Álbum" required>
+       
+        
+        <select name="genero" required>
+        <% for( let index = 0; index < generosLabels.length; index++ ) { %>          
+            <option value="<%=generosLabels[index]%>"><%=generosLabels[index]%></option>        
+        <% } %>
+       </select>
+
+
+        <input type="text" name="preco" placeholder="Preco" required>
+        <input type="text" name="gravadora" placeholder="Gravadora" required>
+        <input type="text" name="ano" placeholder="Ano" required>
+
+        <div>
+          <label for="ativo">Ativo</label>       
+          <input type="radio" id="radio_yes" name="ativo" value="1" checked="checked"/> Sim
+          <input type="radio" id="radio_no"  name="ativo" value="0"/> Não    
+          </div>
+  
+          <div>
+          <label for="oferta">Oferta</label>
+          <input type="radio" id="radio_yes" name="oferta" value="1" /> Sim
+          <input type="radio" id="radio_no"  name="oferta" value="0" checked="checked" /> Não
+          </div>
+
+          <% } %>
 
         <button>Editar</button>
       </form>
@@ -138,13 +189,18 @@
 
     </main>
 
+   <div>
+    <h1 class="aga1">Existem <%- produtos.length%> Produtos Cadastrados</h1>
+   </div>
+
 
     <table class="table">
     
       <tr>
         <th>Capa</th>
         <th>Produto</th>
-        <th>Ações</th>
+        <th>Audio</th>
+        <th>Ação</th>
       </tr>
       
       <% for( let index = 0; index < produtos.length; index++ ){ %>
@@ -152,15 +208,20 @@
 <td>
 <img class="imgTable" src=<%- produtos[index].imagem %> alt="">
 </td>
-
           <td>
             <span>ID:<%- produtos[index].id %> - </span>
             <span>Artista: <%- produtos[index].artista %> - </span> 
-            <span>Música: <%- produtos[index].musica %></span> 
-            
-           
-
+            <span>Música: <%- produtos[index].musica %></span>             
           </td>
+<td> 
+  
+  <audio class="pla<%= index %>" controls> 
+  <source src="<%= caminho[index] %>" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio> 
+
+</td>
+
           <td>
             <form method="POST" action="/servicos/remove?_method=DELETE">
               <input type="text" name="id" value=<%= produtos[index].id %> hidden>

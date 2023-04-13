@@ -165,5 +165,9 @@ var calculo = soma + valorFrete
   valorFinal.innerHTML = 'Total (Prod + Frete): R$' + calculo.toFixed(2).replace('.',',')
 //}
 
+}
 
+
+function pagar(){
+  window.location.href = "/pagamento";
 }

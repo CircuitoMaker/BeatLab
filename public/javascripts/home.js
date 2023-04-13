@@ -49,7 +49,7 @@ function carrinhoImg(add){
 }
 /// FIM DA FUNCAO
 
- 
+ /*
  // controlar o volume com as teclas up e down
  document.addEventListener("keydown", function(apertar){
  if(apertar.key === "a"){
@@ -99,7 +99,7 @@ function carrinhoImg(add){
  
  })
  
-
+*/
 
 //********************************* */
 

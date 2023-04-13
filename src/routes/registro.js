@@ -31,12 +31,10 @@ const validacoes=[
 
 // Upload de Arquivos
 const storage = multer.diskStorage({
-    destination:(req,file,cb)=>{
-      
+    destination:(req,file,cb)=>{  
        if(file.fieldname === "imagem"){
         cb(null,"public/images/imagensUsers" )
-       }
-       
+       }     
     } ,
 
     filename:(req,file,cb)=>{
@@ -44,6 +42,7 @@ const storage = multer.diskStorage({
     }
 })
 const upload = multer({storage:storage})// 10Mb em bytes
+// upload de arquivos
 
 
 //router.post('/', usuarioController.listaServicos)
@@ -53,12 +52,10 @@ const upload = multer({storage:storage})// 10Mb em bytes
 router.post('/', validacoes, upload.fields([
     { name: "imagem", maxCount: 1 },
   ]), usuarioController.listaServicos)
-
   
 // router.post('/', validacoes, upload.fields([
 //     { name: "imagem", maxCount: 1 },
 //   ]), usuarioController.criaUsuario)
-
 
 //router.get('/search:id?',  servicosController.buscaServico)
 

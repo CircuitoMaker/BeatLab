@@ -1,4 +1,6 @@
-const express = require('express')
+const express = require('express');
+const session = require('express-session');
+
 const playerController = require('../controller/playerController')
 const servicosController = require('../controller/servicosController')
 const router = express.Router()
@@ -44,11 +46,8 @@ const upload = multer({storage:storage})// 10Mb em bytes
 
 
 
-
-
-
-router.get('/',        ServicosController.listaServicos)
-router.get('/admin:id?',auth,   ServicosController.mostraAdminServicos)
+router.get('/', ServicosController.listaServicos)
+router.get('/admin:id?',auth,ServicosController.mostraAdminServicos)
 
 
 router.post('/create', validacoes, upload.fields([
@@ -57,7 +56,7 @@ router.post('/create', validacoes, upload.fields([
   ]), ServicosController.criaServico)
 
 
-router.get('/search:id?',  servicosController.buscaServico)
+router.post('/search:id?',  servicosController.buscaServico)
 
 router.delete('/remove',  servicosController.removeServico)
 

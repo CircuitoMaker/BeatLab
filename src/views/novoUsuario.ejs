@@ -6,13 +6,21 @@
 
 
 <div class="novoUser">
-<h2>Seja bem Vindo!</h2>
+    <% if (typeof newUsuario !== "undefined"){ %>
+<h2>Seja bem Vindo </h2> <h2 class="usernameText"><%- newUsuario.nomeDeUsuario %>!</h2>
 
     <img class="img" src= <%= newUsuario.foto%> alt="">
+    
+     <% } else { %>   
 
-    <h2 class="usernameText"><%- newUsuario.nomeDeUsuario %></h2>
+       
+    <h2 class="usernameText">teste</h2>
+        
+     
+        <% } %>
+     
 
-    <button class="button" onclick="location.href='/home'" >Home</button>
+    <button class="button" onclick="location.href='/login'">Login</button>
 </div>
 
 

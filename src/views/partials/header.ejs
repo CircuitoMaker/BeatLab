@@ -65,29 +65,30 @@
         </div>
 
       
-
+       
         <div class="profile">
-            <% if (typeof userLogged !== 'undefined'){ %>
+          <% if (typeof userLogged !== "undefined"){ %>
 
-            <a href="/painelUsuario"> <img src="<%= userLogged.foto %>" alt="#"></a>
-            <span><%= userLogged.nomeDeUsuario %></span>  
-            <form method="get" action="/logout">              
-            <button class="btnSair">Sair</button> 
-            </form>
+            <a href="/login"> <img src= <%= userLogged.foto %> alt="#Foto de perfil"></a>
+            <span><%= userLogged.nomeDeUsuario %>
+            
+              <% if (userLogged.admin == '1') { %>
+                 [ Admin ]
+              <% } %>
+            </span>  
+
+            <!-- <form method="get" action="/logout">               -->
+            <!-- <button class="btnSair" id="btnSair" onclick="sairSistema()">Sair</button>  -->
+            <!-- </form> -->
                
               <% } else { %>
-                <a href="/login"> <img src="../images/painelUsario-img/bottao perfil (1).png" alt="#"></a>
-                <span>nomeDeUsuario</span>
+                <a href="/login"> <img src="../images/painelUsario-img/bottao perfil (1).png" alt="#Foto de perfil"></a>
+                <span>Nome De Usuário</span>
 
 
-              <% } %>
-            
-            
-           
+              <% } %>        
 
         </div>
-
-  
 </header>
 
 
@@ -101,10 +102,28 @@
            <span id="hamburguer"></span>
           
              <ul id="menu" role="menu">
-               <li><a href="/login">Login</a></li>
-               <li><a href="/cadastro">Cadastro</a></li>
-               <li><a href="/listadeprodutos">Catálogo</a></li>
-            </ul>
+
+              <% if (typeof userLogged !== "undefined"){ %>
+                <li><a onclick="sairSistema()">Sair</a></li>
+                <li><a href="/meuPerfil">Meu Perfil</a></li>              
+                <li><a href="/meuPlayer">Meu Player</a></li>
+                <li><a href="/listadeprodutos">Catálogo</a></li>
+              
+                <% if (userLogged.admin == '1') { %>
+                  <li><a href="/servicos/admin">Admin</a></li>
+                <% } %>
+
+                <% } else { %>    
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="/cadastro">Cadastro</a></li>
+                  <li><a href="/listadeprodutos">Catálogo</a></li>
+                <% } %>
+
+             
+               
+            
+            
+              </ul>
 
         </nav>
        

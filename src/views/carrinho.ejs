@@ -7,13 +7,18 @@
 
     <main>
 
+
+        
+
+
+
+
     <h1 id="label">Seu Carrinho</h1>
 
 <div class="carrinho-container">
 
     <% for( let x = 0; x < carrinho.length; x++ ) { %>
-    
-      
+     
     <div class="card-carrinho" id="quantidade" quantidade=<%= carrinho.length %>>
     <img class="imagem" src=<%= carrinho[x].imagem %> alt="">  
     <div class="pilha">
@@ -28,7 +33,7 @@
 
 <div class="card-pagar">
     
-     <span><%= 'Quantidade de itens: ' + carrinho.length%></span>
+     <span class="qtdItens"><%= 'Quantidade de itens: ' + carrinho.length%></span>
 
     
 
@@ -51,10 +56,9 @@
     <span  id="exibeDesconto">Desconto de: R$</span>   
     <span  id="valorComDesconto">Valor Produtos com desconto: R$</span>
     <span  id="valorFinal">Total (Prod + Frete): R$0,00</span>
-
-    <input type="button" value="Pagar" class="button">
 </div>
 
+<input type="button" value="Pagar" class="buttonPagar" onclick="pagar()">
 </div>
 
 

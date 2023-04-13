@@ -7,9 +7,11 @@ const carrinho = require('../database/carrinho.json')
 var getStat = require('util').promisify(fs.stat);
 const path = require('path')
 
+const musica = require('../models/musica');
+const database = require('../models/db');
 
 /* GET home page. */
-router.get('/:id', function(req, res, next) {
+router.get('/:id', async function(req, res, next) {
   
     var recebe = req.params.id
     if(recebe == undefined){recebe = 0}
@@ -24,12 +26,19 @@ console.log(recebe)
 
 // Adiciona itens diferentes no carrinho 
  
-if(funcao=='A'){ // "A" de adiciona item
-let item = coletanea.find(function(item) {
-    return item.id == recebe;
-  });
+//funciona
+// if(funcao=='A'){ // "A" de adiciona item
+// let item = coletanea.find(function(item){
+//     return item.id == recebe;
+//   });
 
-  console.log(item)
+if(funcao=='A'){ // "A" de adiciona item
+  let item = await musica.findByPk(recebe)
+
+    
+  
+
+  console.log('ITEM = ' + item)
 
 
 if(item){

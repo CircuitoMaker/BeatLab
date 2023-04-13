@@ -6,6 +6,7 @@
 
     <main>
         <div class="nome-lista">
+       
             <h1>Escolha seu estilo!</h1>  
             
             <% const generosValues = ["rock","dance","hiphop","sertanejo","axe","blues","funk","forro","reggae","pop","samba","pagode","mpb"]  %>
@@ -20,7 +21,7 @@
               <input type="button" id="removeFiltroBtn" class="filtrar" value="Sem Filtro" onclick="removeFiltro()">
             </div>
     
-            
+           
 
         <p class="descricao"> <%= recebe.musica %> </p>
 
@@ -29,17 +30,31 @@
            <% } %>
 
         <div class="produtos-container" id="quantidade" tagDeQuantidade=<%=recebe.length %>>
-          <% for(var i=0; i < recebe.length; i++) { %>             
+          <% for(var i=0; i < recebe.length; i++) { %>            
+
               <div class="produto">
+                <% if ( recebe[i].oferta == '1') { %>
+                  <img class="oferta" src="/oferta.png" alt="">
+                 <% } %>
                   <img class="img"  src= <%= recebe[i].imagem %> alt="">
+
                   <h2 class="nome-artista"> <%= recebe[i].artista %> </h2>
-                  <p  class="descricao"><%= recebe[i].musica %> </p>
-                  <p  class="categoria"><%= recebe[i].genero %> </p>
-                  <p  class="preco">R$ <%= recebe[i].preco %> </p> 
-              
+                  <p class="descricao"><%= recebe[i].musica %> </p>                  
+                   <p class="categoria"><%= recebe[i].genero %> </p>
+                   <p class="preco">R$ <%= recebe[i].preco %> </p> 
+                             
+                  <audio class="pla<%= i %>" controls hidden> 
+                    <source src="<%= caminho[i] %>" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    </audio> 
+
+                    <button idi="<%= i %>" class="play" id="play<%= i %>" qtd="<%= caminho.length %>" >Play</button>
+
                   <button class="Comprar" novaTag=<%= recebe[i].id %> id=<%="ID" + i %>>Comprar</button>           
                   <p>Ref: ID <%= recebe[i].id %></p>
-              </div>            
+              </div>   
+
+             
            <% } %>           
       </div> 
           
